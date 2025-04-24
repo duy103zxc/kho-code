@@ -1,0 +1,741 @@
+<!DOCTYPE HTML>
+<html lang="vi" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Math - Kho code của duykhanh471</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> HTML/CSS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../html-css/html.html"><strong aria-hidden="true">1.1.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../../html-css/css.html"><strong aria-hidden="true">1.2.</strong> CSS</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../js/co-ban.html"><strong aria-hidden="true">2.1.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../js/array.html"><strong aria-hidden="true">2.2.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../js/ngay-gio.html"><strong aria-hidden="true">2.3.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../js/string.html"><strong aria-hidden="true">2.4.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../js/object.html"><strong aria-hidden="true">2.5.</strong> TMP</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../java/index.html"><strong aria-hidden="true">3.1.</strong> Trang chủ khóa học</a></li><li class="chapter-item expanded "><a href="../../java/1.html"><strong aria-hidden="true">3.2.</strong> Giới thiệu Java, JVM và Hellooo world</a></li><li class="chapter-item expanded "><a href="../../java/2.html"><strong aria-hidden="true">3.3.</strong> Biến, phạm vi, kiểu dữ liệu, toán tử trong Java</a></li><li class="chapter-item expanded "><a href="../../java/3.html"><strong aria-hidden="true">3.4.</strong> Hàm và câu lệnh điều kiện</a></li><li class="chapter-item expanded "><a href="../../java/4.html"><strong aria-hidden="true">3.5.</strong> Nhập xuất dữ liệu trong Java</a></li><li class="chapter-item expanded "><a href="../../java/5.html"><strong aria-hidden="true">3.6.</strong> Vì sao nên sử dụng StringBuffer</a></li><li class="chapter-item expanded "><a href="../../java/6.html"><strong aria-hidden="true">3.7.</strong> Hướng dẫn Java Reflection</a></li><li class="chapter-item expanded "><a href="../../java/7.html"><strong aria-hidden="true">3.8.</strong> Hướng dẫn tự tạo một Annotations</a></li><li class="chapter-item expanded "><a href="../../java/8.html"><strong aria-hidden="true">3.9.</strong> Functional Interfaces & Lambda Expressions cực dễ hiểu</a></li><li class="chapter-item expanded "><a href="../../java/9.html"><strong aria-hidden="true">3.10.</strong> Hướng dẫn Stream API</a></li><li class="chapter-item expanded "><a href="../../java/10.html"><strong aria-hidden="true">3.11.</strong> Khái niệm ThreadPool và Executor trong Java</a></li><li class="chapter-item expanded "><a href="../../java/11.html"><strong aria-hidden="true">3.12.</strong> ThreadPoolExecutor và nguyên tắc quản lý pool size</a></li><li class="chapter-item expanded "><a href="../../java/12.html"><strong aria-hidden="true">3.13.</strong> Giới thiệu Reactive Programming với Reactor</a></li><li class="chapter-item expanded "><a href="../../java/13.html"><strong aria-hidden="true">3.14.</strong> Giới thiệu Reactor Core</a></li><li class="chapter-item expanded "><a href="../../java/14.html"><strong aria-hidden="true">3.15.</strong> Abstract Interface</a></li><li class="chapter-item expanded "><a href="../../java/15.html"><strong aria-hidden="true">3.16.</strong> Thread</a></li><li class="chapter-item expanded "><a href="../../java/16.html"><strong aria-hidden="true">3.17.</strong> Optional</a></li><li class="chapter-item expanded "><a href="../../java/snippets/index.html"><strong aria-hidden="true">3.18.</strong> Kho snippets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../java/snippets/algorithms.html"><strong aria-hidden="true">3.18.1.</strong> Algorithms</a></li><li class="chapter-item expanded "><a href="../../java/snippets/array.html"><strong aria-hidden="true">3.18.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../../java/snippets/cls.html"><strong aria-hidden="true">3.18.3.</strong> CLS</a></li><li class="chapter-item expanded "><a href="../../java/snippets/date.html"><strong aria-hidden="true">3.18.4.</strong> Date</a></li><li class="chapter-item expanded "><a href="../../java/snippets/encoding.html"><strong aria-hidden="true">3.18.5.</strong> Encoding & Decoding</a></li><li class="chapter-item expanded "><a href="../../java/snippets/file.html"><strong aria-hidden="true">3.18.6.</strong> File</a></li><li class="chapter-item expanded "><a href="../../java/snippets/io.html"><strong aria-hidden="true">3.18.7.</strong> IO</a></li><li class="chapter-item expanded "><a href="../../java/snippets/math.html" class="active"><strong aria-hidden="true">3.18.8.</strong> Math</a></li><li class="chapter-item expanded "><a href="../../java/snippets/media.html"><strong aria-hidden="true">3.18.9.</strong> Media</a></li><li class="chapter-item expanded "><a href="../../java/snippets/network.html"><strong aria-hidden="true">3.18.10.</strong> Network</a></li><li class="chapter-item expanded "><a href="../../java/snippets/string.html"><strong aria-hidden="true">3.18.11.</strong> String</a></li><li class="chapter-item expanded "><a href="../../java/snippets/thread.html"><strong aria-hidden="true">3.18.12.</strong> Thread</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Spring Boot</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../spring-boot/index.html"><strong aria-hidden="true">4.1.</strong> Trang chủ khóa học</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Core</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../spring-boot/core1.html"><strong aria-hidden="true">4.2.1.</strong> Khái niệm tight-coupling (liên kết ràng buộc) và cách loosely coupled</a></li><li class="chapter-item expanded "><a href="../../spring-boot/core2.html"><strong aria-hidden="true">4.2.2.</strong> Giải thích Dependency Injection (DI) và IoC</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> Spring Boot</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../spring-boot/sb1.html"><strong aria-hidden="true">4.3.1.</strong> Hướng dẫn @Component và @Autowired</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb2.html"><strong aria-hidden="true">4.3.2.</strong> @Autowired - @Primary - @Qualifier</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb3.html"><strong aria-hidden="true">4.3.3.</strong> Spring Bean Life Cycle + @PostConstruct và @PreDestroy</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb4.html"><strong aria-hidden="true">4.3.4.</strong> @Component vs @Service vs @Repository</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb5.html"><strong aria-hidden="true">4.3.5.</strong> Component Scan là gì?</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb6.html"><strong aria-hidden="true">4.3.6.</strong> @Configuration và @Bean</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb7.html"><strong aria-hidden="true">4.3.7.</strong> Spring Boot Application Config và @Value</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb8.html"><strong aria-hidden="true">4.3.8.</strong> Tạo Web Helloworld với @Controller + Thymeleaf</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb9.html"><strong aria-hidden="true">4.3.9.</strong> Giải thích cách Thymeleaf vận hành + Expression + Demo Full</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb10.html"><strong aria-hidden="true">4.3.10.</strong> @RequestMapping + @PostMapping + @ModelAttribute + @RequestParam + Web To-Do với Thymeleaf</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb11.html"><strong aria-hidden="true">4.3.11.</strong> Hướng dẫn Spring Boot JPA + MySQL</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb12.html"><strong aria-hidden="true">4.3.12.</strong> Spring JPA Method + @Query</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb13.html"><strong aria-hidden="true">4.3.13.</strong> Chi tiết Spring Boot + Thymeleaf + MySQL + i18n + Web Demo</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb14.html"><strong aria-hidden="true">4.3.14.</strong> Restful API + @RestController + @PathVariable + @RequestBody</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb15.html"><strong aria-hidden="true">4.3.15.</strong> Exception Handling @ExceptionHandler + @RestControllerAdvice / @ControllerAdvice + @ResponseStatus</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb16.html"><strong aria-hidden="true">4.3.16.</strong> Hướng dẫn sử dụng @ConfigurationPropertie</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb17.html"><strong aria-hidden="true">4.3.17.</strong> Chạy nhiều môi trường với Spring Profile</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb18.html"><strong aria-hidden="true">4.3.18.</strong> Hướng dẫn chi tiết Test Spring Boot</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb19.html"><strong aria-hidden="true">4.3.19.</strong> Hướng dẫn chi tiết Test Spring Boot (Phần 2)</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb20.html"><strong aria-hidden="true">4.3.20.</strong> Hướng dẫn toàn tập Mockito</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb21.html"><strong aria-hidden="true">4.3.21.</strong> Hướng dẫn tạo Bean có điều kiện với @Conditional</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb22.html"><strong aria-hidden="true">4.3.22.</strong> Hướng dẫn tự tạo custom @Conditional</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb23.html"><strong aria-hidden="true">4.3.23.</strong> Xử lý sự kiện với @EventListener + @Async</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb24.html"><strong aria-hidden="true">4.3.24.</strong> RESTful API Document Tạo với Spring Boot + Swagger</a></li><li class="chapter-item expanded "><a href="../../spring-boot/sb25.html"><strong aria-hidden="true">4.3.25.</strong> RESTful API Document với Spring Boot + OpenApi 3.0</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Jpa</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../spring-boot/jpa1.html"><strong aria-hidden="true">4.4.1.</strong> 「Jpa」Hibernate là gì?</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa2.html"><strong aria-hidden="true">4.4.2.</strong> 「Jpa」Hướng dẫn sử dụng Specification (Phần 1)</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa3.html"><strong aria-hidden="true">4.4.3.</strong> 「Jpa」Hướng dẫn sử dụng @OneToOne</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa4.html"><strong aria-hidden="true">4.4.4.</strong> 「Jpa」@OneToMany và @ManyToOne</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa5.html"><strong aria-hidden="true">4.4.5.</strong> 「Jpa」Hướng dẫn @ManyToMany</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa6.html"><strong aria-hidden="true">4.4.6.</strong> 「Jpa」Hướng dẫn Query phân trang bằng Pageable (Phần 1)</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa7.html"><strong aria-hidden="true">4.4.7.</strong> 「Jpa」Hướng dẫn sử dụng Criteria API trong Hibernate</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa8.html"><strong aria-hidden="true">4.4.8.</strong> 「Jpa」Hướng dẫn sử dụng Criteria API trong Hibernate (Phần 2)</a></li><li class="chapter-item expanded "><a href="../../spring-boot/jpa9.html"><strong aria-hidden="true">4.4.9.</strong> 「Jpa」Hướng dẫn tự tạo Validator để kiểm tra Model & Entity</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.5.</strong> Spring Security</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../spring-boot/ss1.html"><strong aria-hidden="true">4.5.1.</strong> 「SS」Hướng dẫn Spring Security cơ bản, dễ hiểu</a></li><li class="chapter-item expanded "><a href="../../spring-boot/ss2.html"><strong aria-hidden="true">4.5.2.</strong> 「SS」Hướng dẫn Spring Security + Jpa Hibernate</a></li><li class="chapter-item expanded "><a href="../../spring-boot/ss3.html"><strong aria-hidden="true">4.5.3.</strong> 「SS」Hướng dẫn Spring Security + JWT (Json Web Token) + Hibernate</a></li></ol></li><li class="chapter-item expanded "><a href="../../spring-boot/redis.html"><strong aria-hidden="true">4.6.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Rust</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/thuat-toan.html"><strong aria-hidden="true">5.1.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../rust/command-line.html"><strong aria-hidden="true">5.2.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../rust/he-thong.html"><strong aria-hidden="true">5.3.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../rust/internet.html"><strong aria-hidden="true">5.4.</strong> TMP</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Tệp</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/tep/epub.html"><strong aria-hidden="true">5.5.1.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../rust/tep/git.html"><strong aria-hidden="true">5.5.2.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../rust/tep/html.html"><strong aria-hidden="true">5.5.3.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../rust/tep/rss.html"><strong aria-hidden="true">5.5.4.</strong> TMP</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/essentials/intro.html"><strong aria-hidden="true">5.6.</strong> Essentials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/intro.html"><strong aria-hidden="true">5.6.1.</strong> Core Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/function.html"><strong aria-hidden="true">5.6.1.1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/flow-control.html"><strong aria-hidden="true">5.6.1.2.</strong> Flow Control</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/pattern-matching.html"><strong aria-hidden="true">5.6.1.3.</strong> Pattern Matching</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/closure.html"><strong aria-hidden="true">5.6.1.4.</strong> Closures</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/ownership.html"><strong aria-hidden="true">5.6.1.5.</strong> Ownership</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/borrow.html"><strong aria-hidden="true">5.6.1.6.</strong> Borrow</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/macro.html"><strong aria-hidden="true">5.6.1.7.</strong> Macros</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/concurency.html"><strong aria-hidden="true">5.6.1.8.</strong> Concurency</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/error-handling.html"><strong aria-hidden="true">5.6.1.9.</strong> Error Handling</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/lifetime.html"><strong aria-hidden="true">5.6.1.10.</strong> Lifetime</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/module.html"><strong aria-hidden="true">5.6.1.11.</strong> Modules</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/core-concepts/crate.html"><strong aria-hidden="true">5.6.1.12.</strong> Crates</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/intro.html"><strong aria-hidden="true">5.6.2.</strong> Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/essentials/types/scalar.html"><strong aria-hidden="true">5.6.2.1.</strong> Scalar Types</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/compound.html"><strong aria-hidden="true">5.6.2.2.</strong> Compound Types</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/trait.html"><strong aria-hidden="true">5.6.2.3.</strong> Traits</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/struct.html"><strong aria-hidden="true">5.6.2.4.</strong> Structs</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/enum.html"><strong aria-hidden="true">5.6.2.5.</strong> Enums</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/struct-vs-enum.html"><strong aria-hidden="true">5.6.2.6.</strong> Structs vs Enums</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/generic.html"><strong aria-hidden="true">5.6.2.7.</strong> Generics</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/type-alias.html"><strong aria-hidden="true">5.6.2.8.</strong> Type Alias</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/pointer.html"><strong aria-hidden="true">5.6.2.9.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/types/vector.html"><strong aria-hidden="true">5.6.2.10.</strong> Vectors</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/essentials/operators/intro.html"><strong aria-hidden="true">5.6.3.</strong> Operators</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/essentials/operators/arithmetic-operations.html"><strong aria-hidden="true">5.6.3.1.</strong> Arithmetic Operations</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/operators/comparison-operations.html"><strong aria-hidden="true">5.6.3.2.</strong> Comparison Operators</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/operators/logical-operations.html"><strong aria-hidden="true">5.6.3.3.</strong> Logical Operators</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/operators/bitwise-operations.html"><strong aria-hidden="true">5.6.3.4.</strong> Bitwise Operators</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/operators/assignement-operations.html"><strong aria-hidden="true">5.6.3.5.</strong> Assignment Operators</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/intro.html"><strong aria-hidden="true">5.6.4.</strong> Packaging</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/no-std.html"><strong aria-hidden="true">5.6.4.1.</strong> ![no_std] Attribute</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/modules.html"><strong aria-hidden="true">5.6.4.2.</strong> Requiring Modules</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/package-names.html"><strong aria-hidden="true">5.6.4.3.</strong> Package Names</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/crates-tag.html"><strong aria-hidden="true">5.6.4.4.</strong> Tag your Crate</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/feature-attribute.html"><strong aria-hidden="true">5.6.4.5.</strong> Feature Attribute</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/packaging/features-compilation.html"><strong aria-hidden="true">5.6.4.6.</strong> Features Compilation</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/intro.html"><strong aria-hidden="true">5.6.5.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/refcell.html"><strong aria-hidden="true">5.6.5.1.</strong> RefCell Struct</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/rc.html"><strong aria-hidden="true">5.6.5.2.</strong> Rc Type</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/self-as-type.html"><strong aria-hidden="true">5.6.5.3.</strong> Self Type</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/self-vs-self.html"><strong aria-hidden="true">5.6.5.4.</strong> Self vs self</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/self.html"><strong aria-hidden="true">5.6.5.5.</strong> self Keyword</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/imp.html"><strong aria-hidden="true">5.6.5.6.</strong> imp Keyword</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/new.html"><strong aria-hidden="true">5.6.5.7.</strong> new Keyword</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/some.html"><strong aria-hidden="true">5.6.5.8.</strong> Some Keyword</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/option.html"><strong aria-hidden="true">5.6.5.9.</strong> Option Enum</a></li><li class="chapter-item expanded "><a href="../../rust/essentials/std-lib/drive(debug).html"><strong aria-hidden="true">5.6.5.10.</strong> #[derive(Debug)]</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../rust/patterns/intro.html"><strong aria-hidden="true">5.7.</strong> Patterns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/patterns/creational/intro.html"><strong aria-hidden="true">5.7.1.</strong> Creational</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/patterns/creational/singleton.html"><strong aria-hidden="true">5.7.1.1.</strong> Singleton</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/creational/factory-method.html"><strong aria-hidden="true">5.7.1.2.</strong> Factory Method</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/creational/abstract-method.html"><strong aria-hidden="true">5.7.1.3.</strong> Abstract Factory</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/creational/builder.html"><strong aria-hidden="true">5.7.1.4.</strong> Builder</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/creational/prototype.html"><strong aria-hidden="true">5.7.1.5.</strong> Prototype</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/intro.html"><strong aria-hidden="true">5.7.2.</strong> Behavioral</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/observer.html"><strong aria-hidden="true">5.7.2.1.</strong> Observer</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/strategy.html"><strong aria-hidden="true">5.7.2.2.</strong> Strategy</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/command.html"><strong aria-hidden="true">5.7.2.3.</strong> Command</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/chain-of-responsibility.html"><strong aria-hidden="true">5.7.2.4.</strong> Chain of Responsibility</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/iterator.html"><strong aria-hidden="true">5.7.2.5.</strong> Iterator</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/mediator.html"><strong aria-hidden="true">5.7.2.6.</strong> Mediator</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/behavioral/visitor.html"><strong aria-hidden="true">5.7.2.7.</strong> Visitor</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/intro.html"><strong aria-hidden="true">5.7.3.</strong> Structural</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/patterns/structural/adapter.html"><strong aria-hidden="true">5.7.3.1.</strong> Adapter</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/bridge.html"><strong aria-hidden="true">5.7.3.2.</strong> Bridge</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/composite.html"><strong aria-hidden="true">5.7.3.3.</strong> Composite</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/decorator.html"><strong aria-hidden="true">5.7.3.4.</strong> Decorator</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/facade.html"><strong aria-hidden="true">5.7.3.5.</strong> Facade</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/flyweight.html"><strong aria-hidden="true">5.7.3.6.</strong> Flyweight</a></li><li class="chapter-item expanded "><a href="../../rust/patterns/structural/proxy.html"><strong aria-hidden="true">5.7.3.7.</strong> Proxy</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../rust/algorithms/intro.html"><strong aria-hidden="true">5.8.</strong> Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/algorithms/sorting/intro.html"><strong aria-hidden="true">5.8.1.</strong> Sorting</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/algorithms/sorting/buble.html"><strong aria-hidden="true">5.8.1.1.</strong> Buble Sort</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/sorting/quick.html"><strong aria-hidden="true">5.8.1.2.</strong> Quick Sort</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/sorting/merge.html"><strong aria-hidden="true">5.8.1.3.</strong> Merge Sort</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/sorting/heap.html"><strong aria-hidden="true">5.8.1.4.</strong> Heap Sort</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/sorting/counting.html"><strong aria-hidden="true">5.8.1.5.</strong> Counting Sort</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/algorithms/searching/intro.html"><strong aria-hidden="true">5.8.2.</strong> Searching</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/algorithms/searching/linear.html"><strong aria-hidden="true">5.8.2.1.</strong> Linear Search</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/searching/binary.html"><strong aria-hidden="true">5.8.2.2.</strong> Binary Search</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/searching/depth-first.html"><strong aria-hidden="true">5.8.2.3.</strong> DFS</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/searching/breadth-first.html"><strong aria-hidden="true">5.8.2.4.</strong> BFS</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/algorithms/graph/intro.html"><strong aria-hidden="true">5.8.3.</strong> Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/algorithms/graph/shortest-path.html"><strong aria-hidden="true">5.8.3.1.</strong> Dijkstra’s Algorithm</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/graph/minimum-spanning-tree.html"><strong aria-hidden="true">5.8.3.2.</strong> Kruskal’s Algorithm </a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/graph/a-star.html"><strong aria-hidden="true">5.8.3.3.</strong> A* Algorithm </a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/graph/all-pairs-shortest-path.html"><strong aria-hidden="true">5.8.3.4.</strong> Floyd-Warshall Algorithm</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/algorithms/dynamic-programming/intro.html"><strong aria-hidden="true">5.8.4.</strong> Dynamic Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/algorithms/dynamic-programming/knapsack-problem.html"><strong aria-hidden="true">5.8.4.1.</strong> Knapsack Problem</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/dynamic-programming/longest-common-subsequence.html"><strong aria-hidden="true">5.8.4.2.</strong> Longest Common Subsequence</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/dynamic-programming/matrix-chain-multiplication.html"><strong aria-hidden="true">5.8.4.3.</strong> Matrix Chain Multiplication</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/dynamic-programming/fibonacci.html"><strong aria-hidden="true">5.8.4.4.</strong> Fibonacci Sequence</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/algorithms/cryptographic/intro.html"><strong aria-hidden="true">5.8.5.</strong> Cryptography</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../rust/algorithms/cryptographic/rsa.html"><strong aria-hidden="true">5.8.5.1.</strong> RSA</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/cryptographic/aes.html"><strong aria-hidden="true">5.8.5.2.</strong> AES</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/cryptographic/sha-256.html"><strong aria-hidden="true">5.8.5.3.</strong> SHA-256</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/cryptographic/diffie-hellman.html"><strong aria-hidden="true">5.8.5.4.</strong> Diffie-Hellman</a></li><li class="chapter-item expanded "><a href="../../rust/algorithms/cryptographic/bcrypt.html"><strong aria-hidden="true">5.8.5.5.</strong> Bcrypt</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> React</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../react/bai-1.html"><strong aria-hidden="true">6.1.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../react/bai-2.html"><strong aria-hidden="true">6.2.</strong> TMP</a></li><li class="chapter-item expanded "><a href="../../react/bai-3.html"><strong aria-hidden="true">6.3.</strong> TMP</a></li></ol></li><li class="chapter-item expanded "><a href="../../react-native/index.html"><strong aria-hidden="true">7.</strong> React Native</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> TypeScript</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../ts/bai-1.html"><strong aria-hidden="true">8.1.</strong> TMP</a></li></ol></li><li class="chapter-item expanded "><a href="../../bash/tong-hop.html"><strong aria-hidden="true">9.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../../regex/tong-hop.html"><strong aria-hidden="true">10.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../../khac/yt-dlp.html"><strong aria-hidden="true">11.</strong> yt-dlp</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kho code của duykhanh471</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="dicethrow"><a class="header" href="#dicethrow">DiceThrow</a></h3>
+<pre><code class="language-java">package math;
+
+import java.util.Random;
+
+/**
+ * Sum of Dice throw (Eg. 3d6 - 3 dice having 6 sides).
+ */
+public class DiceThrow {
+
+  private static Random random = new Random();
+
+  /**
+  * Enum for standardized sided dice (4,6,8,10,12 and 20).
+  */
+  public enum DiceSides {
+
+    FOUR(4), SIX(6), EIGHT(8), TEN(10), TWELVE(12), TWENTY(20);
+
+    private final int diSides;
+
+    DiceSides(int diceSides) {
+      this.diSides = diceSides;
+    }
+
+    /**
+     * Returns the number of sides of a dice.
+     *
+     * @return int denoting number of sides of a dice
+     */
+    public int getDiceSides() {
+      return this.diSides;
+    }
+
+  }
+
+  /**
+  * Returns the sum of sides for the given number of sides of each dice.
+  *
+  * @param noOfDice number of dice
+  * @param sides sides of a dice
+  * @return int sum of sides for number of dice
+  */
+  public static int throwDice(int noOfDice, DiceSides sides) {
+
+    int sum = 0;
+    for (int i = 0; i &lt; noOfDice; i++) {
+      sum = sum + (1 + random.nextInt(sides.getDiceSides()));
+    }
+    return sum;
+  }
+}
+</code></pre>
+<h3 id="eloratingsnippet"><a class="header" href="#eloratingsnippet">EloRatingSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * EloRatingSnippet.
+ */
+public class EloRatingSnippet {
+
+  static final int BASE = 400; //Two types are popular - 400 and 480. We will choose 400 here
+  static final int RATING_ADJUSTMENT_FACTOR = 32; //32 is the standard for Beginner Games
+
+  /**
+   * Elo Rating Snippet to calculate result after a single match.
+   *
+   * @param firstPlayerRating Rating of the first player.
+   * @param secondPlayerRating Rating of the second player.
+   * @param result Result of the match, always considered with respect to the first player.
+   *               1 indicates a win, 0.5 indicates a draw and 0 indicates a loss.
+   * @return Returns the new rating of the first player.
+   */
+  public static double calculateMatchRating(double firstPlayerRating, double secondPlayerRating,
+      double result) {
+    double ratingDiff = ((secondPlayerRating - firstPlayerRating) * 1.0) / BASE;
+    double logisticDiff = Math.pow(10, ratingDiff);
+    double firstPlayerExpectedScore = 1.0 / (1 + logisticDiff);
+    double firstPlayerActualScore = result;
+    double newRating = firstPlayerRating + RATING_ADJUSTMENT_FACTOR * (firstPlayerActualScore 
+                       - firstPlayerExpectedScore);
+    return newRating;
+  }
+}
+</code></pre>
+<h3 id="evenodd"><a class="header" href="#evenodd">EvenOdd</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * EvenOdd.
+ */
+public class EvenOdd {
+
+  /**
+   * Returns string denoting number is odd or even.
+   *
+   * @param num To check whether its even or odd
+   * @return string denoting its even or odd
+   */
+  public static String evenodd(int num) {
+    if (num % 2 == 0) {
+      return &quot;even&quot;;
+    } else {
+      return &quot;odd&quot;;
+    }
+  }
+}
+</code></pre>
+<h3 id="factorialsnippet"><a class="header" href="#factorialsnippet">FactorialSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * FactorialSnippet.
+ */
+public class FactorialSnippet {
+
+  /**
+   * Factorial. Works only for small numbers
+   *
+   * @param number for which factorial is to be calculated for
+   * @return factorial
+   */
+  public static int factorial(int number) {
+    var result = 1;
+    for (var factor = 2; factor &lt;= number; factor++) {
+      result *= factor;
+    }
+    return result;
+  }
+
+  /**
+   * Factorial. Example of what the recursive implementation looks like.
+   *
+   * @param number for which factorial is to be calculated for
+   * @return factorial
+   */
+  public static int recursiveFactorial(int number) {
+    var initial = 0;
+    if (number == initial) {
+      return initial + 1;
+    }
+    return number * recursiveFactorial(number - 1);
+  }
+}
+</code></pre>
+<h3 id="fibonaccisnippet"><a class="header" href="#fibonaccisnippet">FibonacciSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * FibonacciSnippet.
+ */
+public class FibonacciSnippet {
+
+  /**
+   * Recursive Fibonacci series. Works only for small n and is spectacularly inefficient
+   *
+   * @param n given number
+   * @return fibonacci number for given n
+   */
+  public static int fibonacci(int n) {
+    if (n &lt;= 1) {
+      return n;
+    } else {
+      return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+  }
+
+  /**
+   * Fibonacci series using dynamic programming. Works for larger ns as well.
+   *
+   * @param n given number
+   * @return fibonacci number for given n
+   */
+  public static int fibonacciBig(int n) {
+    int previous = 0;
+    int current = 1;
+    for (int i = 0; i &lt; n - 1; i++) {
+      int t = previous + current;
+      previous = current;
+      current = t;
+    }
+
+    return current;
+  }
+
+  /**
+   * Example of what an iterative implementation of Fibonacci looks like.
+   *
+   * @param number given number
+   * @return fibonacci number for given n
+   */
+  public static int iterativeFibonacci(int number) {
+    List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+    list.add(0);
+    list.add(1);
+    for (int i = 2; i &lt; number + 1; i++) {
+      list.add(list.get(i - 2) + list.get(i - 1));
+    }
+    return list.get(number);
+  }
+}
+</code></pre>
+<h3 id="greatestcommondivisorsnippet"><a class="header" href="#greatestcommondivisorsnippet">GreatestCommonDivisorSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * GreatestCommonDivisorSnippet.
+ */
+public class GreatestCommonDivisorSnippet {
+
+  /**
+   * Greatest common divisor calculation.
+   *
+   * @param a one of the numbers whose gcd is to be computed
+   * @param b other number whose gcd is to be computed
+   * @return gcd of the two numbers
+   */
+  public static int gcd(int a, int b) {
+    if (b == 0) {
+      return a;
+    }
+    return gcd(b, a % b);
+  }
+}
+</code></pre>
+<h3 id="haversineformulasnippet"><a class="header" href="#haversineformulasnippet">HaversineFormulaSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * HaversineFormulaSnippet.
+ */
+public class HaversineFormulaSnippet {
+
+  // Radius of sphere on which the points are, in this case Earth.
+  private static final double SPHERE_RADIUS_IN_KM = 6372.8;
+
+  /**
+   * Haversine formula for calculating distance between two latitude, longitude points.
+   *
+   * @param latA Latitude of point A
+   * @param longA Longitude of point A
+   * @param latB Latitude of point B
+   * @param longB Longitude of point B
+   * @return the distance between the two points.
+   */
+  public static double findHaversineDistance(double latA, double longA, double latB, double longB) {
+    if (!isValidLatitude(latA)
+        || !isValidLatitude(latB)
+        || !isValidLongitude(longA)
+        || !isValidLongitude(longB)) {
+      throw new IllegalArgumentException();
+    }
+
+    // Calculate the latitude and longitude differences
+    var latitudeDiff = Math.toRadians(latB - latA);
+    var longitudeDiff = Math.toRadians(longB - longA);
+
+    var latitudeA = Math.toRadians(latA);
+    var latitudeB = Math.toRadians(latB);
+
+    // Calculating the distance as per haversine formula
+    var a = Math.pow(Math.sin(latitudeDiff / 2), 2)
+            + Math.pow(Math.sin(longitudeDiff / 2), 2) * Math.cos(latitudeA) * Math.cos(latitudeB);
+    var c = 2 * Math.asin(Math.sqrt(a));
+    return SPHERE_RADIUS_IN_KM * c;
+  }
+
+  // Check for valid latitude value
+  private static boolean isValidLatitude(double latitude) {
+    return latitude &gt;= -90 &amp;&amp; latitude &lt;= 90;
+  }
+
+  // Check for valid longitude value
+  private static boolean isValidLongitude(double longitude) {
+    return longitude &gt;= -180 &amp;&amp; longitude &lt;= 180;
+  }
+}
+</code></pre>
+<h3 id="leastcommonmultiplesnippet"><a class="header" href="#leastcommonmultiplesnippet">LeastCommonMultipleSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * LeastCommonMultipleSnippet.
+ */
+public class LeastCommonMultipleSnippet {
+  /**
+   * Least common multiple  calculation.
+   *
+   * @param a one of the numbers whose lcm is to be computed
+   * @param b other number whose lcm is to be computed
+   * @return lcm of the two numbers
+   */
+  public static int lcm(int a, int b) {
+    int max = a &gt; b ? a : b;
+    int min = a &lt; b ? a : b;
+    for (int i = 1; i &lt;= min; i += 1) {
+      int prod = max * i;
+      if (prod % min == 0) {
+        return prod;
+      }
+    }
+    return max * min;
+  }
+}
+</code></pre>
+<h3 id="luhnsnippet"><a class="header" href="#luhnsnippet">LuhnSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * LuhnSnippet.
+ */
+public class LuhnSnippet {
+
+  /**
+   * Calculates checksum for a given number with Luhn's algorithm. Works only on non-negative
+   * integers not greater than {@link Long#MAX_VALUE} i.e., all numbers with a maximum of 18
+   * digits, plus 19-digit-long numbers start with 1..8 (also some with 9, too). For
+   * demonstration purposes, algorithm is not optimized for efficiency.
+   *
+   * @param num number whose checksum is to be calculated
+   * @return checksum value for num
+   * @see &lt;a href=&quot;https://patents.google.com/patent/US2950048A&quot;&gt;Hans P. LUHN's patent US2950048A&lt;/a&gt;
+   * @see &lt;a href=&quot;https://en.wikipedia.org/wiki/Luhn_algorithm&quot;&gt;Luhn algorithm on Wikipedia&lt;/a&gt;
+   */
+  public static int calculateLuhnChecksum(long num) {
+    if (num &lt; 0) {
+      throw new IllegalArgumentException(&quot;Non-negative numbers only.&quot;);
+    }
+    final var numStr = String.valueOf(num);
+
+    var sum = 0;
+    var isOddPosition = true;
+    // Loop on digits of numStr from right to left.
+    for (var i = numStr.length() - 1; i &gt;= 0; i--) {
+      final var digit = Integer.parseInt(Character.toString(numStr.charAt(i)));
+      final var substituteDigit = (isOddPosition ? 2 : 1) * digit;
+
+      final var tensPlaceDigit = substituteDigit / 10;
+      final var onesPlaceDigit = substituteDigit % 10;
+      sum += tensPlaceDigit + onesPlaceDigit;
+
+      isOddPosition = !isOddPosition;
+    }
+    final var checksumDigit = (10 - (sum % 10)) % 10;
+    // Outermost modulus handles edge case `num = 0`.
+    return checksumDigit;
+  }
+}
+</code></pre>
+<h3 id="naturalnumberbinaryconversionsnippet"><a class="header" href="#naturalnumberbinaryconversionsnippet">NaturalNumberBinaryConversionSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+import java.util.Stack;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+/**
+ * NaturalNumberBinaryConversionSnippet.
+ */
+public class NaturalNumberBinaryConversionSnippet {
+
+  /**
+   * Convert natural number to binary string. Only supports positive integers.Throws exception
+   * for negative integers
+   *
+   * @param naturalNumber given number
+   * @return Binary string representation of naturalNumber
+   */
+  public static String toBinary(long naturalNumber) {
+    if (naturalNumber &lt; 0) {
+      throw new NumberFormatException(&quot;Negative Integer, this snippet only accepts &quot;
+              + &quot;positive integers&quot;);
+    }
+    if (naturalNumber == 0) {
+      return &quot;0&quot;;
+    }
+    final Stack&lt;Long&gt; binaryBits =
+            Stream.iterate(naturalNumber, n -&gt; n &gt; 0, n -&gt; n / 2).map(n -&gt; n % 2)
+                    .collect(Stack::new, Stack::push, Stack::addAll);
+    return Stream.generate(binaryBits::pop)
+            .limit(binaryBits.size()).map(String::valueOf).collect(Collectors.joining());
+  }
+
+  /**
+   * Convert binary string representation to Long valued Integer. Throws exception if input
+   * string contains characters other than '0' and '1'
+   *
+   * @param binary given number
+   * @return Unsigned Long value for the binary number
+   */
+  public static Long fromBinary(String binary) {
+    binary.chars().filter(c -&gt; c != '0' &amp;&amp; c != '1').findFirst().ifPresent(in -&gt; {
+      throw new NumberFormatException(
+              &quot;Binary string contains values other than '0' and '1'&quot;);
+    });
+    return IntStream.range(0, binary.length())
+            .filter(in -&gt; binary.charAt(binary.length() - 1 - in) == '1')
+            .mapToLong(in -&gt; ((long) 0b1) &lt;&lt; in).sum();
+  }
+}
+</code></pre>
+<h3 id="performlotterysnippet"><a class="header" href="#performlotterysnippet">PerformLotterySnippet</a></h3>
+<pre><code class="language-java">package math;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+/**
+ * PerformLotterySnippet.
+ */
+public class PerformLotterySnippet {
+
+  /**
+   * Generate random lottery numbers.
+   *
+   * @param numNumbers    how many performLottery numbers are available (e.g. 49)
+   * @param numbersToPick how many numbers the player needs to pick (e.g. 6)
+   * @return array with the random numbers
+   */
+  public static Integer[] performLottery(int numNumbers, int numbersToPick) {
+    var numbers = new ArrayList&lt;Integer&gt;();
+    for (var i = 0; i &lt; numNumbers; i++) {
+      numbers.add(i + 1);
+    }
+    Collections.shuffle(numbers);
+    return numbers.subList(0, numbersToPick).toArray(new Integer[numbersToPick]);
+  }
+}
+</code></pre>
+<h3 id="primenumbersnippet"><a class="header" href="#primenumbersnippet">PrimeNumberSnippet</a></h3>
+<pre><code class="language-java">package math;
+
+/**
+ * PrimeNumberSnippet.
+ */
+public class PrimeNumberSnippet {
+
+  /**
+   * Checks if given number is a prime number. Prime number is a number that is greater than 1 and
+   * divided by 1 or itself only Credits: https://en.wikipedia.org/wiki/Prime_number
+   *
+   * @param number number to check prime
+   * @return true if prime
+   */
+  public static boolean isPrime(int number) {
+    //if number &lt; 2 its not a prime number
+    if (number &lt; 2) {
+      return false;
+    }
+    // 2 and 3 are prime numbers
+    if (number &lt; 3) {
+      return true;
+    }
+    // check if n is a multiple of 2
+    if (number % 2 == 0) {
+      return false;
+    }
+    // if not, then just check the odds
+    for (var i = 3; i * i &lt;= number; i += 2) {
+      if (number % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+</code></pre>
+<h3 id="randomnumber"><a class="header" href="#randomnumber">RandomNumber</a></h3>
+<pre><code class="language-java">package math;
+
+import java.util.Random;
+
+/**
+ * Random Number between given two values.
+ * Supported Data types - Byte, Short, Integer, Long, Float and Double.
+ */
+public class RandomNumber {
+
+  private RandomNumber() {}
+
+  private static Random random = new Random();
+
+  /**
+  * Return a random number between two given numbers.
+  *
+  * @param start Starting point to find the random number
+  * @param end Ending point to find the random number
+  * @return Number denoting the random number generated
+  */
+  public static &lt;T extends Number&gt; Number getRandomNumber(T start, T end) {
+
+    if (start instanceof Byte &amp;&amp; end instanceof Byte) {
+      return (byte) (start.byteValue()
+              + random.nextInt(end.byteValue() - start.byteValue() + 1));
+    } else if (start instanceof Short &amp;&amp; end instanceof Short) {
+      return (short) (start.shortValue()
+              + random.nextInt(end.shortValue() - start.shortValue() + 1));
+    } else if (start instanceof Integer &amp;&amp; end instanceof Integer) {
+      return start.intValue()
+              + random.nextInt(end.intValue() - start.intValue() + 1);
+    } else if (start instanceof Long &amp;&amp; end instanceof Long) {
+      return start.longValue()
+              + (long) (random.nextDouble() * end.longValue() - start.longValue() + 1);
+    } else if (start instanceof Float &amp;&amp; end instanceof Float) {
+      return start.floatValue()
+              + random.nextFloat() * (end.floatValue() - start.floatValue());
+    } else if (start instanceof Double &amp;&amp; end instanceof Double) {
+      return start.doubleValue()
+              + random.nextDouble() * (end.doubleValue() - start.doubleValue());
+    } else {
+      throw new IllegalArgumentException(&quot;Invalid Numbers As Arguments &quot;
+              + start.getClass() + &quot; and &quot; + end.getClass());
+    }
+  }
+}
+
+
+### SquareRoot
+
+```java
+package math;
+
+/**
+ * SquareRoot.
+ */
+public class SquareRoot {
+
+  /**
+   * Returns square root of a number.
+   *
+   * @param num To find SquareRoot
+   * @param p   precision till how many decimal numbers we want accurate ans
+   */
+  public static double sqrt(int num, int p) {
+    int start = 0;
+    int end = num;
+    double root = 0.0;
+
+    while (start &lt;= end) {
+      int mid = start + (end - start) / 2;
+
+      if ((mid * mid) &gt; num) {
+        end = mid - 1;
+      } else if ((mid * mid) &lt; num) {
+        start = mid + 1;
+      } else {
+        return mid;
+      }
+    }
+    double incr = 0.1;
+    for (int i = 0; i &lt; p; i++) {
+      while (root * root &lt; num) {
+        root = root + incr;
+      }
+      root = root - incr;
+      incr = incr / 10;
+    }
+    return root;
+  }
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../java/snippets/io.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../java/snippets/media.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../java/snippets/io.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../java/snippets/media.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
