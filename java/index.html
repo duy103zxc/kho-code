@@ -1,0 +1,2108 @@
+<!DOCTYPE HTML>
+<html lang="vi" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java - Kho code của duykhanh471</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Trang chủ dự án</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> HTML/CSS/JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../html-css/index.html"><strong aria-hidden="true">2.1.</strong> HTML/CSS</a></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.2.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/co-ban.html"><strong aria-hidden="true">2.2.1.</strong> Cơ bản</a></li><li class="chapter-item expanded "><a href="../js/array.html"><strong aria-hidden="true">2.2.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../js/ngay-gio.html"><strong aria-hidden="true">2.2.3.</strong> Ngày giờ</a></li><li class="chapter-item expanded "><a href="../js/string.html"><strong aria-hidden="true">2.2.4.</strong> String</a></li><li class="chapter-item expanded "><a href="../js/object.html"><strong aria-hidden="true">2.2.5.</strong> Object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../java/index.html" class="active"><strong aria-hidden="true">3.</strong> Java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/index.html"><strong aria-hidden="true">3.1.</strong> Kho snippets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/algorithms.html"><strong aria-hidden="true">3.1.1.</strong> Algorithms</a></li><li class="chapter-item expanded "><a href="../java/snippets/array.html"><strong aria-hidden="true">3.1.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../java/snippets/cls.html"><strong aria-hidden="true">3.1.3.</strong> CLS</a></li><li class="chapter-item expanded "><a href="../java/snippets/date.html"><strong aria-hidden="true">3.1.4.</strong> Date</a></li><li class="chapter-item expanded "><a href="../java/snippets/encoding.html"><strong aria-hidden="true">3.1.5.</strong> Encoding & Decoding</a></li><li class="chapter-item expanded "><a href="../java/snippets/file.html"><strong aria-hidden="true">3.1.6.</strong> File</a></li><li class="chapter-item expanded "><a href="../java/snippets/io.html"><strong aria-hidden="true">3.1.7.</strong> IO</a></li><li class="chapter-item expanded "><a href="../java/snippets/math.html"><strong aria-hidden="true">3.1.8.</strong> Math</a></li><li class="chapter-item expanded "><a href="../java/snippets/media.html"><strong aria-hidden="true">3.1.9.</strong> Media</a></li><li class="chapter-item expanded "><a href="../java/snippets/network.html"><strong aria-hidden="true">3.1.10.</strong> Network</a></li><li class="chapter-item expanded "><a href="../java/snippets/string.html"><strong aria-hidden="true">3.1.11.</strong> String</a></li><li class="chapter-item expanded "><a href="../java/snippets/thread.html"><strong aria-hidden="true">3.1.12.</strong> Thread</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../spring-boot/index.html"><strong aria-hidden="true">4.</strong> Spring Boot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../spring-boot/core.html"><strong aria-hidden="true">4.1.</strong> Core</a></li><li class="chapter-item expanded "><a href="../spring-boot/spring-boot.html"><strong aria-hidden="true">4.2.</strong> Spring Boot</a></li><li class="chapter-item expanded "><a href="../spring-boot/jpa.html"><strong aria-hidden="true">4.3.</strong> Jpa</a></li><li class="chapter-item expanded "><a href="../spring-boot/ss.html"><strong aria-hidden="true">4.4.</strong> Spring Security</a></li><li class="chapter-item expanded "><a href="../spring-boot/redis.html"><strong aria-hidden="true">4.5.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/thuat-toan.html"><strong aria-hidden="true">5.1.</strong> Thuật toán</a></li><li class="chapter-item expanded "><a href="../rust/command-line.html"><strong aria-hidden="true">5.2.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../rust/he-thong.html"><strong aria-hidden="true">5.3.</strong> System</a></li><li class="chapter-item expanded "><a href="../rust/internet.html"><strong aria-hidden="true">5.4.</strong> Internet</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Tệp</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/tep/epub.html"><strong aria-hidden="true">5.5.1.</strong> EPUB</a></li><li class="chapter-item expanded "><a href="../rust/tep/git.html"><strong aria-hidden="true">5.5.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../rust/tep/html.html"><strong aria-hidden="true">5.5.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../rust/tep/rss.html"><strong aria-hidden="true">5.5.4.</strong> RSS</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../react/index.html"><strong aria-hidden="true">6.</strong> React</a></li><li class="chapter-item expanded "><a href="../react-native/index.html"><strong aria-hidden="true">7.</strong> React Native</a></li><li class="chapter-item expanded "><a href="../bash/tong-hop.html"><strong aria-hidden="true">8.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../regex/tong-hop.html"><strong aria-hidden="true">9.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../khac/yt-dlp.html"><strong aria-hidden="true">10.</strong> yt-dlp</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kho code của duykhanh471</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="bài-1-gioi-thieu-java-jvm-va-hellooo-world"><a class="header" href="#bài-1-gioi-thieu-java-jvm-va-hellooo-world">Bài 1: Giới thiệu Java, JVM và Hellooo world</a></h1>
+<p>Đọc bài gốc của Loda đi nhá, cái này chỉ ghi lại một số ý để cho mình quay lại tham khảo thôi.</p>
+<h3 id="cài-đặt-môi-trường"><a class="header" href="#cài-đặt-môi-trường">Cài đặt môi trường</a></h3>
+<p><code>Java</code> hoạt động như vậy, nó chỉ nói 1 ngôn ngữ duy nhất thôi, tuy nhiên nó có một thằng anh bá đạo, tên ông ý nôm na là môi trường ảo hay tên chuẩn là <code>Java virtual machine (JVM)</code>. Nhiệm vụ của <code>JVM</code> là nó phụ đề (thuyết minh) cho từng loại OS khác nhau rằng thằng <code>Java</code> đang làm gì, nói gì, làm gì.</p>
+<p>Vì chúng ta là Developer nên sẽ cài gói <code>JDK</code> (<code>Java Development Kit</code>), nó chứa các công cụ giúp lập trình <code>Java</code>. Ngoài ra trong quá trình cài, nó sẽ cài môi trường <code>JRE</code> (<code>Java Runtime Enviroment</code>, bao gồm cả thằng <code>JVM</code> ở trên) luôn.</p>
+<h3 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h3>
+<p>Tạo Project trong Intellij chẳng hạn, xong rồi thì cùng nhìn vào cấu trúc của project thì sẽ thấy có 3 thư mục:</p>
+<ul>
+<li><code>.idea</code>: Thằng này là thư mục do <code>Intellij</code> tự tạo ra để chứa các file config của phần mềm này, bạn sẽ k cần quan tâm đến.</li>
+<li><code>src</code>: Đây là thư mục chính bạn sẽ làm việc, tất cả <code>code</code> bạn để trong này</li>
+<li><code>{project-name}.iml</code>: File này cũng do <code>Intellj</code> tạo ra và quản lý module, bạn không cần quan tâm nó.</li>
+</ul>
+<h3 id="một-số-thông-tin-khác"><a class="header" href="#một-số-thông-tin-khác">Một số thông tin khác</a></h3>
+<ul>
+<li><code>public static void main(String[] args)</code>: (Gọi tắt là <code>psvm</code> nhé) Cái thằng này sẽ là nơi <code>Java</code> tìm tới đầu tiên, và đọc toàn bộ các đoạn code trong cái thằng tên là <code>psvm</code> này. Dù nó ở bất cứ đâu, nó sẽ được tìm tới.</li>
+<li>2 cái dấu <code>{``}</code>: Đánh dấu đoạn bắt đầu và kết thúc của cái <code>public static void main(String[] args)</code> kia.</li>
+</ul>
+<p>Vậy là thằng <code>Java</code> sẽ đi lùng tìm, xem cái thằng <code>psvm</code> xem nó ở đâu. Rồi đọc hết tất cả những thứ nằm trong cái 2 dấu <code>{``}</code> của thằng này.</p>
+<h1 id="bien-phạm-vi-kiểu-dữ-liệu-toán-tử-trong-java"><a class="header" href="#bien-phạm-vi-kiểu-dữ-liệu-toán-tử-trong-java">Biến, phạm vi, kiểu dữ liệu, toán tử trong Java</a></h1>
+<h3 id="biến--kiểu-dữ-liệu"><a class="header" href="#biến--kiểu-dữ-liệu">Biến &amp; Kiểu dữ liệu</a></h3>
+<pre><code class="language-java">public class Calculation{
+    public static void main(String[] args){
+        // khai bao so nguyen
+        int a = 5;
+        int b = 10;
+        int x = 10 + 5;
+        System.out.println(x);
+
+    }
+}
+</code></pre>
+<p>Thứ nhất là cái <code>// khai bao so nguyen</code>, cái này gọi là <code>Comment</code>, tức các bạn viết gì sau 2 cái dấu <code>//</code> thì nó sẽ không ảnh hưởng tới <code>code</code> của chương trình, nó chỉ mang ý nghĩa chú thích thôi.</p>
+<p>Thứ hai là cái này:</p>
+<pre><code class="language-java">int a = 5;
+</code></pre>
+<p>Nói về <code>Biến</code> (<code>Variable</code>) các bạn có liên tưởng tới liên tưởng tới biến <code>x</code> trong đồ thị hàm số <code>ax + b = 0</code> không. Thì chính là nó đấy.</p>
+<blockquote>
+<p>Biến sẽ giúp chúng ta lưu trữ và quản lý các giá trị trong chương trình.</p>
+</blockquote>
+<p>Trong <code>Java</code>, <code>Biến</code> cũng là đại diện cho một đối tượng và đối tượng này phải được xác định là thuộc <code>Kiểu dữ liệu</code> nào. Có các kiểu dữ liệu <code>nguyên thuỷ</code> (<code>primitive</code>) như sau:</p>
+<ul>
+<li><code>boolean</code>: là kiểu logic, chỉ có 2 giá trị <code>true</code> hoặc <code>false</code></li>
+<li><code>char</code>: kiểu ký tự, chỉ chứa đc được một ký tự, được định nghĩa trong dấu ngoặc đơn <code>'</code></li>
+<li><code>int</code> : số nguyên (<code>1,2,3, ..</code>)</li>
+<li><code>long</code>: số nguyên, lớn hơn <code>int</code>. (sẽ giải thích ở dưới)</li>
+<li><code>float</code>: số thực (<code>1.5, 2.5, ..</code>).</li>
+<li><code>double</code>: số thực, lớn hơn <code>float</code>.</li>
+</ul>
+<p>Ngoài ra còn 2 kiểu dữ liệu nhỏ hơn <code>int</code> là <code>byte</code> và <code>short</code>.</p>
+<p>Kiểu dữ liệu cao cấp hơn gọi là <code>Object</code> mà đặc trưng nhất là <code>String</code>.</p>
+<ul>
+<li><code>String</code>: Một chuỗi các ký tự, được định nghĩa trong dấu ngoặc kép <code>&quot;&quot;</code>. vd <code>String a = &quot;Hellooo world~~~&quot;</code></li>
+</ul>
+<h3 id="cách-khai-báo"><a class="header" href="#cách-khai-báo">Cách khai báo</a></h3>
+<p>Để khai báo biến, bắt buộc trước đó bạn phải chỉ cho nó <code>kiểu dữ liệu</code> mà nó sẽ nhận, ngoài ra có thể có giá trị hoặc không.</p>
+<ul>
+<li>Cách 1: <code>[kiểu_dữ_liệu][tên_biến];</code></li>
+<li>Cách 2: <code>[kiểu_dữ_liệu][tên_biến] = [giá_trị];</code></li>
+</ul>
+<pre><code class="language-java">int a, b, c; // Khai báo 3 biến có kiểu dữ liệu int
+float b = 4.5f, c = 4f; // Khai báo 2 biến có kiểu dữ liệu float với giá trị ban đầu. ở đây biến `c` sẽ được hiểu là c = 4.0
+double c = 4444.3;
+char t = 'c';
+String e = &quot;Hello&quot;;
+</code></pre>
+<h3 id="cách-đặt-tên"><a class="header" href="#cách-đặt-tên">Cách đặt tên</a></h3>
+<p>Tên biến phải tuân theo <code>quy tắc lạc đà (Camel Case)</code>: đó là chữ cái đầu tiên của từ đầu tiên phải viết thường và chữ cái đầu tiên của các từ tiếp theo phải viết hoa, ví dụ: <code>listStudent</code>, <code>minScore</code>.</p>
+<h3 id="phạm-vi-sử-dụng"><a class="header" href="#phạm-vi-sử-dụng">Phạm vi sử dụng</a></h3>
+<p>Một khi bạn đã khai báo biến, thì bạn có thể sử dụng nó trong những <code>Phạm vi</code> mà nó khả dụng. ?? 😀?? Cùng nhìn ví dụ ở dưới nhé.</p>
+<p>Ví dụ:</p>
+<pre><code class="language-java">public static void main(String[] args){
+    // khai bao so nguyen `a`
+    int a;
+    // Gán giá trị cho a, bạn sử dụng toán tử `=`
+    // Sử dụng biến a bình thường
+    a = 124214;
+
+    // lấy a và cộng thêm 1,, rồi gán ngược lại giá trị đó vào a :D
+    // Sử dụng biến a bình thường
+    a = a + 1;
+
+}
+// Gán lại giá trị cho a = 100 - 10;
+// Chương trình lỗi
+a = 100 - 10;
+</code></pre>
+<p><code>Phạm vi</code> (<code>Scope</code>) là đây các bạn ạ, chính là 2 cái dấu <code>{}</code>, khi bạn khai báo một biến <code>a</code> trong 2 cái dấu <code>{``}</code> thì bạn chỉ có thể sử dụng ở trong nó thôi, ra ngoài nó sẽ không hiểu <code>a</code> là thằng nào và từ đâu chui ra.</p>
+<blockquote>
+<p>Biến không thể sử dụng ngoài, nhưng nó có thể được sử dụng ở bên trong những scope mà nó chứa hoặc cùng cấp với nó.</p>
+</blockquote>
+<pre><code class="language-java">public class Calculation{
+    // Khai báo a ở ngoài main, cái `public static` là cần thiết nhé, còn chi tiết thì chúng ta sẽ học ở các bài sau.
+    public static int a = 5;
+    public static void main(String[] args){
+        // thay đổi a, ở trong, vẫn okie.
+        a = 10;
+
+        // Biến a có thể sử dụng trong các `scope` con của nó
+        // Làm gì biến a ở đây cũng được, biến đổi nó.
+
+        // gán giá trị biến a vào b;
+        int b = a;
+
+        System.out.println(b);
+    }
+}
+</code></pre>
+<h3 id="toán-tử"><a class="header" href="#toán-tử">Toán tử</a></h3>
+<p>Khi đã xác định các <code>Biến</code> trong chương trình, bạn có thể sử dụng <code>toán tử</code> để thay đổi các giá trị. Các <code>toán tử</code> thì khá đơn giản, giống môn toán bình thường thôi. Với các kiểu <code>nguyên thuỷ (primitive)</code> ta có:</p>
+<pre><code class="language-java">public class Calculation{
+    public static void main(String[] args){
+      int a;
+      int b = 5;
+      int c = a + b; // c = 0 + 5 cộng
+      int d = a - b; // d = 0 - 5 trừ
+      int f = a * 5; // f = 0 x 5 nhân
+      int g = a / 5; // g = 0 : 5; chia
+    }
+}
+</code></pre>
+<p>Còn với <code>String</code> thì bạn có thể sử dụng <code>+</code> để ghép 2 chuỗi mà thôi. Còn các toàn tử còn lại không được sử dụng với <code>String</code></p>
+<pre><code class="language-java">public class Calculation{
+    public static void main(String[] args){
+      String a = &quot;Hello&quot;
+      String b = &quot;World&quot;
+      // Mình đã nối 3 xâu là &quot;Hello&quot; + &quot; &quot; (Khoảng trắng) + &quot;World&quot; lại với nhau
+      System.out.println(a + &quot; &quot; + b);
+
+      String c = a + 5; // String cộng với một số nguyên?
+      System.out.println(c); // Kết quả sẽ là: &quot;Hello 5&quot; :V
+      // Bạn sẽ hiểu là khi cộng String với một số, số đó sẽ bị chuyển thành String và nối vào sau.
+
+    }
+}
+</code></pre>
+<h3 id="Ép-kiểu-dữ-liệu"><a class="header" href="#Ép-kiểu-dữ-liệu">Ép kiểu dữ liệu</a></h3>
+<p>Nhìn vào ví dụ sau, bạn sẽ rõ.</p>
+<pre><code class="language-java">public class Calculation{
+    public static void main(String[] args){
+      int a = 2;
+      float b = 3.5f; // dùng chữ f để nó hiểu đây là 3,5 float chứ k phải 3,5 double
+
+      float c = a + b; // c = 5.5
+
+      int d = a + b; // báo lỗi. Vì sao?
+      // vì java đang hiểu 2 + 3.5 nó sẽ ép thành 5.5 là float. Bây giờ gán nó vào số nguyên thì sẽ như này int = float?
+
+      // Để gán được bạn cần sử dụng ép kiểu
+      int d = (int) a + b; // d = 5
+      // a + b = 5.5 =&gt; ép thành (int) =&gt; 5 (lấy phần nguyên thôi)
+
+      char character = '5';
+      int number = (int) character; // number = 53. Why?
+
+      // Vì ép `char` thành `int` thì nó sẽ không chuyển chữ thành số, mà nó sẽ kiếm tra '5' là ký tự ASCII thứ bao nhiêu trong máy tính, và trả lại số thứ tự đó.
+
+      float = (float) 5; // =&gt; 5.0
+    }
+}
+</code></pre>
+<h3 id="bản-chất-của-biến-nói-thêm"><a class="header" href="#bản-chất-của-biến-nói-thêm">Bản chất của biến (Nói thêm)</a></h3>
+<p>Khi các bạn khai báo một biến <code>int</code> trong chương trình của mình và sử dụng lung tung khắp mọi nơi, thì bạn có biết cái biến <code>int</code> ý ở đâu lòi ra không :))</p>
+<p>Về bản chất, <code>Biến</code> sẽ là một vùng nhớ trong thiết bị vật lý mà dễ nhất là để trong <code>ram</code>. và khi bạn cho nó một giá trị, nó sẽ lưu trữ số đó vào <code>ram</code>, và cần thì lấy lên.</p>
+<p>Vậy để <code>ram</code> biết bạn muốn lưu cái gì thì bạn phải khai báo cho nó. Ví dụ bạn bảo tôi cần một số nguyên <code>int</code>. Thì máy tính hiểu là mình cần lưu trữ một số nguyên bình thường, không quá lớn, nó sẽ cho bạn <code>4 byte</code> trong <code>Ram</code> thích lưu gì thì lưu. nhưng <code>không được vượt quá 4 byte</code>.</p>
+<blockquote>
+<p>4 byte = 32 bit, bỏ đi 1 bit đầu tiên để đánh dấu là số âm hay dương, thì còn 31 bit =&gt; số lớn nhất mà biến int lưu trữ được là 2^31 - 1 = 2147483647</p>
+</blockquote>
+<p>Từ đây, bạn sẽ hiểu vì sao có số <code>long</code>, vì nhu cầu lưu số lớn hơn thì <code>long</code> được cấp tận <code>8 byte</code>.</p>
+<p>Còn trường hợp đặc biệt như <code>String</code> thì tuỳ giá trị của nó có bao nhiêu ký tự, mà <code>Ram</code> sẽ cấp tương ứng bấy nhiêu <code>byte</code></p>
+<h1 id="bài-3-ham-va-cau-lenh-đieu-kien"><a class="header" href="#bài-3-ham-va-cau-lenh-đieu-kien">Bài 3: Hàm và câu lệnh điều kiện</a></h1>
+<h2 id="1-câu-lệnh-rẽ-nhánh"><a class="header" href="#1-câu-lệnh-rẽ-nhánh">#1 Câu lệnh rẽ nhánh</a></h2>
+<h3 id="if"><a class="header" href="#if">if</a></h3>
+<p>Các bạn nhìn qua ví dụ này:</p>
+<pre><code class="language-java">public static void main(String[] args){
+    // khai bao so nguyen
+    int a = 9;
+
+    // Kiểm tra xem a có bằng 9 không
+    if (a == 9) {
+        // nếu bằng 9, in ra màn hình &quot;Hello&quot;
+        System.out.println(&quot;Hello&quot;);
+    }
+
+// Kết quả trên màn hình:
+// Hello
+}
+</code></pre>
+<p>Thì các cần biết như sau, câu lệnh <code>if</code> là một câu lệnh điều kiện, và nhận vào là một điều kiện <code>true</code> hoặc <code>false</code>. Có cú pháp như sau:</p>
+<pre><code class="language-java">if ([điều kiện]){
+    // Thực hiện đoạn code nếu [điều kiện] là `true`. Nếu `false` bỏ qa đi xuống dưới.
+}
+// Tiếp tục thực hiện đoạn code phía dưới
+</code></pre>
+<p>Vậy đấy, nên để so sánh bạn cần dùng <code>toán tử quan hệ</code> mình liệt kê dưới đây:</p>
+<ul>
+<li><code>==</code>: Kiểm tra 2 toán hạng có <code>bằng nhau</code> không? (<code>if(a==b)</code>)</li>
+<li><code>!=</code>: Kiểm tra 2 toán hạng có <code>khác nhau</code> không? (<code>if(a!=b)</code>)</li>
+<li><code>&gt;</code>: Kiểm tra toàn hạng A có <code>lớn hơn</code> B không? (<code>if(a&gt;b)</code>)</li>
+<li><code>&lt;</code>: Kiểm tra toàn hạng A có <code>nhỏ hơn</code> B không? (<code>if(a&lt;b)</code>)</li>
+<li><code>&gt;=</code>: Kiểm tra toàn hạng A có <code>lớn hơn hoặc bằng</code> B không? (<code>if(a&gt;=b)</code>)</li>
+<li><code>&lt;=</code>: Kiểm tra toàn hạng A có <code>nhỏ hơn hoặc bằng</code> B không? (<code>if(a&lt;=b)</code>)</li>
+</ul>
+<p>Tất cả <code>toán tử quan hệ</code> ở trên, khi thực hiện xong nó sẽ trả về là kiểu <code>boolean</code>, nên bạn có thể gán nó vào một biến bất kỳ, như lày:</p>
+<pre><code class="language-java">int a = 5;
+int b = 6;
+
+boolean result = a == b; // false
+
+System.out.println(&quot;Result: &quot; + result);
+
+// Kết quả in ra trên màn hình:
+// &quot;Result: false&quot;
+
+if(result){ // viết tắt của if(result == true)
+    System.out.println(&quot;Result is true&quot;);
+}
+</code></pre>
+<p>Đến đây, có thể nói câu lệnh <code>if</code> thực chất nhận vào một giá trị <code>boolean</code>.</p>
+<h3 id="else"><a class="header" href="#else">else</a></h3>
+<p>Tiếp theo, chúng ta tới với dạng đầy đủ của <code>if</code> chính là cấu trúc <code>if else</code>.</p>
+<pre><code class="language-java">if ([điều kiện]){
+    // Thực hiện đoạn code nếu [điều kiện] là `true`.
+} else {
+    // Thực hiện đoạn code trong này nếu [điều kiện] là `false`
+}
+//Các đoạn code ở dưới thực hiện bình thường sau khi if hoặc else diễn ra
+</code></pre>
+<p>Ví dụ:</p>
+<pre><code class="language-java">int a = 5;
+if ( (a + 2) == 7 ){
+    System.out.println(&quot;Bằng 7&quot;);
+    // Sử dụng biến `a` ở ngay trong scope {} của `if`,, như bài #2 mình có nói, biến được sử dụng trong các scope con hoặc bằng cấp
+    System.out.println(&quot;Giá trị lúc này của a = &quot; + a);
+}else{
+    System.out.println(&quot;Khác 7&quot;);
+    System.out.println(&quot;Giá trị lúc này của a = &quot; + a);
+    int b = 7; // Tạo ra 1 biến b trong else
+}
+
+b = 50; // Lỗi, không biết b là gì, vì b ở scope nhỏ hơn, bên ngoài không hiểu.
+</code></pre>
+<h3 id="toán-tử-logic"><a class="header" href="#toán-tử-logic">Toán tử logic</a></h3>
+<p>Toán tử logic là những toán tử giúp chúng ta kết hợp nhiều [điều kiện] lại với nhau.</p>
+<p>Ví dụ mình nói: <code>&quot;Nếu ab = 3 VÀ ac = 4 VÀ bc = 5 thì abc là tam giác vuông&quot;</code></p>
+<p>Thì trong code cần viết chương trình như thế nào?</p>
+<p>Cách 1: Sử dụng <code>if</code> thông thường.</p>
+<pre><code class="language-java">int ab = 3;
+int ac = 4;
+int bc = 5;
+
+if(ab == 3){
+    if(ac == 4){
+        if(bc == 5){
+            System.out.println(&quot;abc là tam giác cực vuông&quot;);
+        }
+    }
+}
+</code></pre>
+<p>Cách 2: Sử dụng <code>if</code> và <code>toán tử logic</code></p>
+<pre><code class="language-java">int ab = 3;
+int ac = 4;
+int bc = 5;
+
+// Nếu ab = 3 VÀ ac = 4 VÀ bc = 5
+if(ab == 3 &amp;&amp; ac == 4 &amp;&amp; bc==5){
+    // thì abc là tam giác vuông
+    System.out.println(&quot;abc là tam giác cực vuông&quot;);
+}
+</code></pre>
+<p>Các bạn nhìn ví dụ cũng đoán ra <code>&amp;&amp;</code> chính là <code>toán tử logic</code> đại diện cho khái niệm <code>AND</code>. Chúng ta có tất cả các loại <code>toán tử logic</code> như sau:</p>
+<ul>
+<li><code>&amp;&amp;</code>: AND</li>
+<li><code>||</code>: OR</li>
+<li><code>!</code>: NOT</li>
+</ul>
+<p>Mục tiêu của các <code>toán tử logic</code> là tác động lên các biểu thức <code>boolean</code> để cho ra mộ biến <code>boolean</code> mới.</p>
+<h3 id="phép-and-"><a class="header" href="#phép-and-">Phép AND (&amp;&amp;)</a></h3>
+<p>Phép <code>&amp;&amp;</code> hoạt động theo nguyên tắc, <code>chỉ cần có 1 cái sai, thì tất cả đều sai</code> hay <code>Tất cả đều phải đúng, mới là đúng</code></p>
+<p>Nếu <code>&quot;A đúng và B đúng và C sai thì kết quả vẫn là sai&quot;</code></p>
+<pre><code class="language-java">// Bạn chạy thử xem nó đi vào phần nào nhé
+if(true &amp;&amp; true &amp;&amp; true &amp;&amp; false){
+    System.out.println(&quot;true&quot;);
+}else{
+    System.out.println(&quot;false&quot;);
+}
+</code></pre>
+<h3 id="phép-or-"><a class="header" href="#phép-or-">Phép OR (||)</a></h3>
+<p>Phép <code>||</code> thì rất dễ dãi, <code>Chỉ 1 cái đúng là đủ</code></p>
+<pre><code class="language-java">// Bạn chạy thử xem nó đi vào phần nào nhé
+if(false || false || true || false){
+    System.out.println(&quot;true&quot;);
+}else{
+    System.out.println(&quot;false&quot;);
+}
+</code></pre>
+<h3 id="phép-not-"><a class="header" href="#phép-not-">Phép NOT (!)</a></h3>
+<p>Phép <code>!</code> làm phủ định giá trị của biểu thức, nếu nó đang <code>true</code> thì biến nó thành <code>false</code> và ngược lại.</p>
+<pre><code class="language-java">int a = 7;
+if(!(a == 7)){ // (a==7) =&gt; true gặp thằng ! lại bị chuyển thành false. =&gt; vào vế else
+    System.out.println(&quot;Đáng nhẽ ra nên vào đây&quot;);
+}else{
+    System.out.println(&quot;But nope, nó lại vào đây&quot;);
+}
+</code></pre>
+<h2 id="hàm-function"><a class="header" href="#hàm-function">Hàm (Function)</a></h2>
+<pre><code class="language-java">public class Calculation {
+    public static void main(String[] args){
+        f(5,6);
+        f(2,3);
+        f(1,10);
+    }
+
+    public static void f(int x, int y){
+        int a = x + y;
+        System.out.println(&quot;In a ra màn hình: &quot; + a);
+    }
+}
+// Kết quả khi chạy:
+
+// In a ra màn hình: 11
+// In a ra màn hình: 5
+// In a ra màn hình: 11
+</code></pre>
+<h3 id="cách-khai-báo-1"><a class="header" href="#cách-khai-báo-1">Cách khai báo</a></h3>
+<p>Cách khai báo một phương thức như sau:</p>
+<p><code>[kiểu_truy_cập] [kiểu_trả_về] [tên_phương_thức] ([danh_sách_tham_số]){}</code></p>
+<p>ví dụ:</p>
+<pre><code class="language-java">public static void f(int x, int y){
+    // Code của bạn
+}
+
+public static void main(String[] args){
+
+}
+</code></pre>
+<p>Và khai báo ở ngoài hàm <code>main()</code>. Tới đây, bạn hiểu <code>main()</code> cũng là một <code>hàm (function)</code>. Tuy nhiên nó đặc biệt vì cú pháp của nó là cố định và được <code>Java</code> tìm tới để đọc đầu tiên.</p>
+<p>1 - <code>[kiểu_truy_cập]</code>:</p>
+<p>Trong ví dụ trên <code>[kiểu_truy_cập]</code> chính là vế <code>public static</code>. Nó định nghĩa phạm vi <code>hàm</code> được sử dụng. chúng ta sẽ tìm hiểu ở các bài sau nhé các bạn, bây giờ bạn hãy mặc định sử dụng <code>public static</code> ở trước mỗi hàm khai báo để có thể sử dụng được nhé. Ở bài này, chúng ta tạm hiểu với nhau: <code>public static</code> là <code>&quot;truy cập ở bất cứ đâu&quot;</code> tức có thể gọi hàm này ở bất kì chỗ nào.</p>
+<p>2 - <code>[kiểu_trả_về]</code>:</p>
+<p>Tương đương với phần <code>void</code> ở ví dụ trên, kiểu trả về là giá trị chúng ta nhận được sau khi gọi hàm.</p>
+<p>Bạn hãy nhớ lại, khi truyền <code>x</code> vào <code>f(x)</code> chúng ta sẽ nhận lại là <code>y</code>. Thì hàm cũng vậy, chúng ta có thể trả lại một giá trị gì đó. ví dụ:</p>
+<pre><code class="language-java">// [kiểu trả về]: int
+public static int tong(int x, int y){
+    int t = x + y; // Tính tổng 2 só x, y
+    return t; // trả số đó ra sử dụng câu lệnh `return {biến}`
+}
+
+public static void main(String[] args){
+    int t = tong(5,6); // Lấy giá trị trả ra, gán nó vào t;
+}
+</code></pre>
+<p>Tôi định nghĩa một hàm tính tổng <code>tong(x,y)</code> nhận vào 2 số nguyên, và yêu cầu nó trả ra một số <code>int</code>.</p>
+<p>Các kiểu trả về:</p>
+<ul>
+<li><code>primitive</code>: <code>int</code>, <code>boolean</code>, <code>char</code>, ...</li>
+<li><code>Object</code>: <code>String</code>, (còn rất nhiều, sẽ học ở bài tiếp theo)</li>
+<li><code>void</code>: Không trả về gì cả</li>
+</ul>
+<p>Ở ví dụ đầu tiên mình đã sử dụng <code>void</code> để định nghĩa hàm.</p>
+<pre><code class="language-java">public static void f(int x, int y){
+    int a = x + y;
+    System.out.println(&quot;In a ra màn hình: &quot; + a);
+}
+</code></pre>
+<p>Điều này nói là hàm của chúng ta thực hiện một hoạt động khép kín, và không có nhu cầu trả ra ngoài cái gì cả. Mình chỉ tính tổng rồi in luôn ra màn hình thôi, không cần đưa gì ra ngoài cả.</p>
+<p>3 - <code>[danh_sách_tham_số]</code></p>
+<p>Tham số đầu vào, là những thứ chúng ta đưa vào hàm, định nghĩa tham số đầu vào bao gồm <code>[kiểu_dữ_liệu] [tên_biến]</code>. Chúng ta có truyền nhiều tham số vào <code>hàm</code> bằng cách đặt dầu phẩy <code>,</code> giữa mỗi tham số.</p>
+<pre><code class="language-java">public static int f(int x, int y, int z, ... ){
+    // code
+}
+</code></pre>
+<p>Ở đây lưu ý phần <code>[tên_biến]</code> bạn có thể đặt tên bất kỳ. chẳng hạn:</p>
+<pre><code class="language-java">// Hàm nhận vào 2 biến `x`, `y` và trả ra kết quả `boolean` xem nó có bằng nhau hay không
+public static boolean bangnhau(int x, int y){
+    return x == y;
+}
+
+public static void main(String[] args){
+    int a = 5; // tên biến là `a`
+    int b = 6; // tên biến là `b`
+
+    boolean ketqua = bangnhau(a,b); // đưa `a` , `b` vào hàm.
+    // bản chất khi gọi hàm `bangnhau`:
+    // int x = a;
+    // int y = b;
+    // return x == y;
+    //
+    System.out.println(&quot;Kết quả: &quot; + ketqua);
+}
+</code></pre>
+<p>Bạn định nghĩa <code>tham số đầu vào</code> là <code>x</code> và <code>y</code> thì nó chỉ hiểu trong ở hàm đó thôi, và những giá trị truyền vào sẽ gán vào các biến <code>x</code> và <code>y</code>.</p>
+<h1 id="nhap-xuat-du-lieu-trong-java"><a class="header" href="#nhap-xuat-du-lieu-trong-java">Nhập xuất dữ liệu trong Java</a></h1>
+<h3 id="nhập-xuất-từ-bàn-phím"><a class="header" href="#nhập-xuất-từ-bàn-phím">Nhập xuất từ bàn phím</a></h3>
+<pre><code class="language-java">public class Calculation {
+    public static void main(String[] args) {
+        // Chúng ta khai báo 3 biến a,b,c không có giá trị.
+        int a, b, c;
+
+        //Khai báo đối tượng Scanner, giúp chúng ta nhận thông tin từ keyboard
+        Scanner sc = new Scanner(System.in);
+        System.out.print(&quot;Nhập a: &quot;); //print thay vì println, nó sẽ in ra, nhưng không xuống dòng
+
+        a = sc.nextInt(); // sc.nextInt() là cách để lấy giá trị từ bàn phím, nó sẽ chờ tới khi chúng ta nhập một số.
+        System.out.print(&quot;Nhập b: &quot;);
+        b = sc.nextInt();
+         System.out.print(&quot;Nhập c: &quot;);
+        c = sc.nextInt();
+        // In các giá trị ra màn hình
+        System.out.println(&quot;a = &quot; + a + &quot;, b = &quot; + b + &quot;, c = &quot; + c);
+        //  Đây là phép cộng String mình đã nói trong Bài #1.
+}
+</code></pre>
+<p>Cái dòng lệnh này <code>a = sc.nextInt()</code>. Nó sẽ chờ cho tới khi bạn nhập 1 số nguyên và gõ <code>Enter</code> thì thôi. Giả sử mình nhập <code>5</code></p>
+<p>Chương trình lại tiếp tục chạy cho tới khi gặp câu lệnh <code>sc.nextInt()</code> tiếp theo. Và cứ tiếp tục như vậy cho tới dòng lệnh cuối cùng.</p>
+<p>Từ đây, các bạn có thể hiểu là đối tượng <code>Scanner</code> đã làm nhiệm vụ là nhận dữ liệu người dùng nhập từ bàn phím, và gán nó vào biến, bằng câu lệnh <code>nextInt</code>.</p>
+<p>Bây giờ quay trở ngược lên trên 1 chút, ở câu lệnh:</p>
+<pre><code class="language-java">Scanner sc = new Scanner(System.in);
+</code></pre>
+<p>các bạn sẽ thấy một khái niệm là <code>new</code>. cái này thì [Bài #5][link-bai5] mình sẽ nói chi tiết, còn ở đây thì bạn hiểu nó được sử dụng để tạo ra 1 đối tượng <code>Scanner</code>. </p>
+<h3 id="các-phương-thức-nhập-xuất"><a class="header" href="#các-phương-thức-nhập-xuất">Các phương thức nhập xuất</a></h3>
+<p><code>Scanner</code> có một loạt các hàm hỗ trợ như sau:</p>
+<ul>
+<li><code>next()</code>: Nhận vào một <code>String token</code> (nhận vào 1 từ đầu tiên thay cả câu)</li>
+<li><code>nextInt()</code>: Nhận vào một số <code>int</code></li>
+<li><code>nextLong()</code>: Nhận vào một số <code>long</code></li>
+<li><code>nextFloat()</code>: Nhận vào một số <code>float</code></li>
+<li><code>nextDouble()</code>: Nhận vào một số <code>double</code></li>
+<li><code>sc.nextLine()</code>: Nhận vào một <code>chuỗi String</code> (Cả 1 câu)</li>
+<li><code>nextByte()</code>: Nhận vào một <code>byte</code></li>
+<li><code>nextBoolean()</code>: Nhận vào một <code>boolean</code></li>
+</ul>
+<p>Các hàm trên bạn hiểu nguyên lý là nó đều sẽ <code>chờ</code> cho tới khi bạn nhập kiểu dữ liệu nó muốn vào.</p>
+<p>Có <code>next()</code> và <code>nextLine()</code> khá đặc biệt, mình sẽ ví dụ:</p>
+<pre><code class="language-java">Scanner sc = new Scanner(System.in); //Tạo đối tượng Scanner
+System.out.print(&quot;Nhập gì đó: &quot;);
+String a = sc.nextLine(); // nhận vào 1 string
+System.out.println(&quot;Bạn vừa nhập: &quot;+a);
+
+System.out.print(&quot;Nhập thêm gì đi: &quot;);
+String b = sc.next(); // cũng nhận vào 1 String
+System.out.println(&quot;Bạn vừa nhập: &quot;+b);
+</code></pre>
+<p><code>nextLine</code> thì nhận vào cả 1 chuỗi dài <code>String</code>, cho tới khi bạn nhấn <code>Enter</code>. Còn <code>next</code> dù bạn có nhập dài như nào, nó cũng nhận 1 từ đầu tiên thôi.</p>
+<h3 id="bản-chất-củanext"><a class="header" href="#bản-chất-củanext">Bản chất của<code>next</code></a></h3>
+<p>Bạn để ý là các hàm lấy giá trị từ bàn phím đều có chữ <code>next</code>. Bây giờ bạn chạy cho mình ví dụ này, bạn sẽ hiểu:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    int a,b,c;
+    Scanner sc = new Scanner(System.in); // Tạo đối tượng Scanner
+    System.out.print(&quot;Nhập a: &quot;);
+    a = sc.nextInt();
+    b = sc.nextInt();
+    c = sc.nextInt();
+    System.out.println(&quot;a = &quot;+a);
+    System.out.println(&quot;b = &quot;+b);
+    System.out.println(&quot;c = &quot;+c);
+}
+</code></pre>
+<p>Bạn sẽ thấy là, nó đưa tuần tự các giá trị hiện có trên bàn phím vào các biến. bản chất của chữ <code>next</code> chính là tuần tự. Nó sẽ chờ bạn nhập nếu không có giá trị gì trên màn hình, nhưng nếu đã có sẵn giá trị rồi, nó sẽ ghi nhớ trong <code>bộ đệm</code> và khi gặp hàm <code>nextInt()</code> nó không chờ nữa, mà nó lấy luôn cái giá trị còn thừa ra, chưa sử dụng đến để gắn luôn vào biến 😂</p>
+<p>Nhìn như như này cho dễ hiểu:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    int a,b,c;
+    Scanner sc = new Scanner(System.in); // Tạo đối tượng Scanner
+    System.out.print(&quot;Nhập a: &quot;);
+    a = sc.nextInt(); // Chờ bạn nhập.
+    // bạn nhập: 5 6 7 8 9 10
+    // bộ đệm = 5 6 7 8 9 10
+    // lấy 5 ra, gắn vào a
+    // bộ đệm còn: 6 7 8 9 10
+    b = sc.nextInt(); // gặp lệnh nextInt()
+    // thấy bộ đệm còn, lấy 6 ra, gắn vào b
+    // bộ đệm còn: 7 8 9 10
+    c = sc.nextInt(); // gặp lệnh nextInt()
+    // thấy bộ đệm còn thừa, lấy 7 ra, gắn vào b
+    // bộ đệm còn: 8 9 10
+    System.out.println(&quot;a = &quot;+a); // in a
+    System.out.println(&quot;b = &quot;+b); // in b
+    System.out.println(&quot;c = &quot;+c); // in c
+}
+</code></pre>
+<h3 id="inpụt-outpụt-từ-file"><a class="header" href="#inpụt-outpụt-từ-file">Inpụt/ outpụt từ File</a></h3>
+<p>Để cho thuận tiện trong việc đọc ghi, thì ngoài bàn phím, một trong những yêu cầu quan trọng khi lập trình đó là nhập xuất dữ liệu từ File, phần này sẽ không khác nhiều với từ bàn phím đâu các bạn, mình sẽ hướng dẫn.</p>
+<p>Tại thư mục gốc của project, bạn click <code>New</code> &gt; <code>File</code>. Tạo 1 tệp tên là <code>input.txt</code>. Như hình:</p>
+<pre><code class="language-java">public static void main(String[] args) throws FileNotFoundException { // Thêm cái này vào đây
+    int a,b,c;
+    Scanner sc = new Scanner(new File(&quot;input.txt&quot;)); // Tạo đối tượng Scanner đọc tới cái file vừa tạo
+    System.out.print(&quot;Nhập a: &quot;);
+    a = sc.nextInt();
+    b = sc.nextInt();
+    c = sc.nextInt();
+    System.out.println(&quot;a = &quot;+a); // in a
+    System.out.println(&quot;b = &quot;+b); // in b
+    System.out.println(&quot;c = &quot;+c); // in c
+}
+// Kết quả chạy:
+// Nhập a: a = 5
+// b = 7
+// c = 8
+</code></pre>
+<p>Đoạn <code>throws FileNotFoundException</code>. Ở đây thì bạn hiểu nó là lỗi có thể xảy ra, nếu nó không tìm thấy file <code>input.txt</code> thì nó sẽ xảy ra cái lỗi kia. Chúng ta sẽ xử lý lỗi đó sau, hiện tại thì nếu bạn nhập đúng tên File thì không thể lỗi được.# Vì sao nên sử dụng StringBuffer</p>
+<p>Cùng xem ví dụ này nhé:</p>
+<pre><code class="language-java">long start = System.nanoTime();
+
+String s = &quot;Hello&quot;;
+for (int i = 0; i &lt; 1000; i++) {
+    s += &quot; world&quot;;
+}
+long end = System.nanoTime();
+System.out.println(&quot;Total time: &quot;+(end-start));
+
+// Kết quả:
+// Total time: 17495917 ns
+// = 17.4 ms (Milliseconds)
+</code></pre>
+<p>Bây giờ, vẫn là chương trình tương tự, mình sử sụng <code>String Buffer</code></p>
+<pre><code class="language-java">long start = System.nanoTime();
+
+StringBuffer sb = new StringBuffer(&quot;Hello&quot;);
+for (int i = 0; i &lt; 1000; i++) {
+    sb.append(&quot; world&quot;);
+}
+String s = sb.toString();
+long end = System.nanoTime();
+System.out.println(&quot;Total time: &quot;+(end-start));
+
+// Kết quả:
+// Total time: 461198 ns
+// = 0.46 ms
+</code></pre>
+<p><code>String Buffer</code> nhanh hơn gấp 38 lần.</p>
+<p>Hiệu năng được chạy trên Mac Pro 2017, tại máy bạn có thể sẽ khác, nhưng chắc chắn rằng <code>StringBuffer</code> luôn nhanh hơn!</p>
+<h3 id="góc-giải-thích"><a class="header" href="#góc-giải-thích">Góc giải thích</a></h3>
+<p>Có một điều ít bạn học lập trình <code>Java</code> để ý, đó là <code>String</code> là <code>immutable</code>. Tức nội dung trong <code>String</code> là không được quyền thay đổi.</p>
+<p>Nhiều bạn lầm tưởng rằng việc nối xâu là bạn thay đổi nội dung của <code>String</code>, nhưng thực chất bạn đang tạo ra một đối tượng hoàn toàn mới:</p>
+<pre><code class="language-java">String s = &quot;A&quot;;
+s += &quot;B&quot;;
+// Complier sẽ tạo ra một đối tượng mới là &quot;AB&quot;
+// Và gán vào `s`
+// Bản chất `s` bây giờ là một đối tượng mới chứ bạn không hề thay đổi nội dung ban đầu của `s`.
+// Đây là những gì ở dưới Compiler sẽ làm:
+StringBuffer sb = new StringBuffer(&quot;A&quot;); // Compiler Vẫn phải xài tới StringBuffer
+sb.append(&quot;B&quot;);
+s = sb.toString();
+</code></pre>
+<p>Vì vậy khi nối xâu trong <code>Java</code>, việc bạn thực hiện nó liên tục, sẽ tương đương với việc khởi tạo liên tục và nối 2 xâu lại rồi trả về đối tượng <code>String</code> mới dẫn tới chi phí lớn.</p>
+<p><code>StringBuffer</code> cho phép chúng ta thao tác trên một đối tượng duy nhất và thay đổi được nội dung trong nó. Nếu ban đầu nội dung là <code>&quot;A&quot;</code>, bạn muốn nối thêm <code>&quot;B&quot;</code> vào. Thì nó chỉ cần gắn chuỗi <code>bytes</code> của <code>&quot;B&quot;</code> vào liền kề ngay sau <code>&quot;A&quot;</code> là xong. (Vì nó có thể thay đổi, khác với <code>String</code> là <code>immutable</code>).</p>
+<h1 id="huong-dan-java-reflection"><a class="header" href="#huong-dan-java-reflection">Hướng dẫn Java Reflection</a></h1>
+<h3 id="giới-thiệu"><a class="header" href="#giới-thiệu">Giới thiệu</a></h3>
+<p><code>Java Relection</code> là một core package trong thư viện chuẩn của <code>Java</code>. Mục đích của nó là cho phép chúng ta truy cập vào gần như mọi thứ bên trong đối tượng. &quot;Dưới một góc độ khác&quot;!</p>
+<p>Chúng ta thường biết tới <code>Java</code> thông qua khái niệm hướng đối tượng như sau:</p>
+<pre><code class="language-java">String str = &quot;Hello Loda&quot;;
+str.toUpperCase(); // Chúng ta gọi hàm toUpperCase() thông qua toán tử &quot;.&quot;
+// Mọi thứ trong đối tượng là khép kín, chúng ta phải gọi thông qua hàm public
+</code></pre>
+<p>Hoặc</p>
+<pre><code class="language-java">public class Girl {
+    String name;
+    int age;
+    int atk;
+    int agi;
+    int def;
+    // ... Và 1000 thuộc tính khác
+
+    public static void main(String[] args) {
+        Girl girl = new Girl();
+        // Chúng ta thường phải nhớ tên thuộc tính để gọi nó ra
+        girl.name = &quot;Ngoc Trinh&quot;;
+
+        // Giá sử class này có 100 thuộc tính là String.
+        // Bạn muốn set giá trị của tất cả trường String là &quot;Ngoc Trinh&quot;
+        // Bạn sẽ rất bối rối vs việc gọi từng thuộc tính bằng việc &quot;.{tên thuộc tính}&quot; như này.
+
+        // Có cách nào cho code duyệt tìm toàn bộ thuộc tính, cái nào là String thì đổi nó thành &quot;Ngoc Trinh&quot;?
+    }
+}
+</code></pre>
+<p>Đúng vậy, khi chúng ta muốn gọi tên thuộc tính, mà lại không muốn gõ <code>.</code> và nhớ ra tên thuộc tính, thì làm như nào?</p>
+<p>Bây giờ, chúng ta phải tiếp cận từ góc nhìn khác. Chúng ta sẽ ước mình có thể duyệt hết tất cả các thuộc tính của 1 class bằng vòng lặp. Rồi check xem thuộc tính có là <code>String</code> không? nếu có thì gán giá trị mới là &quot;Ngoc Trinh&quot;!</p>
+<p>Để làm được điều này, chúng ta cần đào sâu vào <code>Class</code> và phá vỡ giới hạn của java truyền thống. Đây là lúc <code>Java Reflection</code> (Sự phản chiếu) vào trận.</p>
+<h3 id="java-reflection"><a class="header" href="#java-reflection">Java Reflection</a></h3>
+<p><code>Java Reflecion</code> cho phép bạn đánh giá, sửa đổi cấu trúc và hành vi của một đối tượng tại thời gian chạy (runtime) của chương trình. Đồng thời nó cho phép bạn truy cập vào các thành viên private (private member) tại mọi nơi trong ứng dụng, điều này không được phép với cách tiếp cận truyền thống.</p>
+<h3 id="lấy-ra-thuộc-tính-field"><a class="header" href="#lấy-ra-thuộc-tính-field">Lấy ra Thuộc tính (Field)</a></h3>
+<p>Quay trở lại ví dụ trên, Chúng ta sẽ lấy ra toàn bộ thuộc tính của <code>Girl</code>. Tìm xem cái nào tên <code>name</code> và bổ sung giá trị mới cho nó.</p>
+<pre><code class="language-java">public class Girl {
+    private String name;
+
+    public Girl() {
+
+    }
+
+    public Girl(String name) {
+        this.name = name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Girl{&quot; +
+               &quot;name='&quot; + name + '\'' +
+               '}';
+    }
+
+    public static void main(String[] args) throws Exception {
+        Girl girl = new Girl(); // KHởi tạo đối tượng Girl
+        girl.setName(&quot;Ngoc trinh&quot;);
+
+        // Lay ra tat ca field cua object
+        // Chỉ để bạn xem ví dụ thôi, bỏ qua phần này nhé!
+        for(Field field : girl.getClass().getDeclaredFields()){
+            System.out.println();
+            System.out.println(&quot;Field: &quot; +field.getName());
+            System.out.println(&quot;Type: &quot; +field.getType());
+        }
+
+        // PHẦN CHÍNH
+        Field nameField = girl.getClass().getDeclaredField(&quot;name&quot;); // Lấy ra field có tên &quot;name&quot; (nếu không tìm thấy, nó sẽ bắn NoSuchFieldException)
+        nameField.setAccessible(true); // Cho phép truy cập tạm thời. (Vì nó đang là Private mà)
+
+        // Bây giờ cái &quot;nameField&quot; đại diện cho thuộc tính &quot;name&quot; của mọi object có class Girl.
+        nameField.set(girl, &quot;Bella&quot;); // thay giá trị mới của `girl` bằng nameField.
+
+        System.out.println(girl);
+    }
+}
+// Output:
+// Field: name
+// Type: class java.lang.String
+// Girl{name='Bella'}
+</code></pre>
+<h3 id="lấy-ra-hàm-method"><a class="header" href="#lấy-ra-hàm-method">Lấy ra Hàm (Method)</a></h3>
+<p>Vấn đề đặt ra, giống với <code>field</code>. Chúng ta cũng sẽ có nhu cầu duyệt tìm một <code>method</code> nào đó và sử dụng nó:</p>
+<pre><code class="language-java">public static void main(String[] args) throws Exception {
+    Class&lt;Girl&gt; girlClass = Girl.class;
+
+    // Su dung getDeclaredMethods de lay ra nhung method cua class va cha no.
+    Method[] methods = girlClass.getDeclaredMethods();
+    for(Method method : methods){
+        System.out.println();
+        System.out.println(&quot;Method: &quot; + method.getName());
+        System.out.println(&quot;Parameters: &quot; + Arrays.toString(method.getParameters()));
+    }
+
+    // Lay ra method ten la setName va co 1 tham so truyen vao -&gt;
+    // =&gt; chính là: setName(String name)
+    Method methodSetName = girlClass.getMethod(&quot;setName&quot;, String.class);
+    // Bây giờ methodSetName sẽ đại diện cho method setName(String name) của mọi object có class là Girl
+
+    Girl girl = new Girl(); // Tạo ra đối tượng Girl
+
+    // Thực hiện hàm setName() trên đối tượng girl, giá trị truyền vào là &quot;Ngoc Trinh&quot;
+    methodSetName.invoke(girl, &quot;Ngoc Trinh&quot;);
+    System.out.println(girl);
+}
+</code></pre>
+<h3 id="lấy-ra-constructor"><a class="header" href="#lấy-ra-constructor">Lấy ra Constructor</a></h3>
+<p>Lấy ra hàm khởi tạo của một class. Từ đó cho phép chúng ta cách tạo ra đối tượng từ theo một cách khác, thay vì <code>new Class()</code> như bình thường</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Class&lt;Girl&gt; girlClass = Girl.class;
+    System.out.println(&quot;Class: &quot; + girlClass.getSimpleName());
+    System.out.println(&quot;Constructors: &quot; + Arrays.toString(girlClass.getConstructors())); // Lấy ra toàn bộ Constructor của class này
+    try {
+        // Tạo ra một object Girl từ class. (Khởi tạo không tham số)
+        Girl girl1 = girlClass.newInstance();
+        System.out.println(&quot;Girl1: &quot; + girl1);
+
+        // Lấy ra hàm constructor với tham số là 1 string
+        // Chính là -&gt; public Girl(String name) {}
+        Constructor&lt;Girl&gt; girlConstructor = girlClass.getConstructor(String.class);
+        Girl girl2 = girlConstructor.newInstance(&quot;Hello&quot;);
+
+        System.out.println(&quot;Girl2: &quot; + girl2);
+    } catch (Exception e) {
+        // Exception xay ra khi constructor khong ton tai hoac tham so truyen vao khong dung
+        e.printStackTrace();
+    }
+}
+</code></pre>
+<h3 id="lấy-ra-annotation-trên-field-method-class"><a class="header" href="#lấy-ra-annotation-trên-field-method-class">Lấy ra Annotation trên Field, Method, Class</a></h3>
+<p>Đúng vậy, đây cũng chính là một trong những phần quan trọng bậc nhất của <code>Java Reflection</code>. Cho phép chúng ta kiểm tra <code>Class</code> hiện tại đang được chú thích bởi những <code>Annotation</code> nào.</p>
+<pre><code class="language-java">@SuppressWarnings(&quot;deprecation&quot;)
+@Deprecated
+public class Girl {
+    private String name;
+
+    public Girl() {
+
+    }
+
+    public Girl(String name) {
+        this.name = name;
+    }
+
+    @Nullable
+    public void setName(String name){
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Girl{&quot; +
+               &quot;name='&quot; + name + '\'' +
+               '}';
+    }
+
+    public static void main(String[] args) {
+        Class&lt;Girl&gt; girlClass = Girl.class;
+        System.out.println(&quot;Class: &quot;+girlClass.getSimpleName()); // Lấy ra tên Class
+        for(Annotation annotation : girlClass.getDeclaredAnnotations()){
+            System.out.println(&quot;Annotation: &quot; + annotation.annotationType()); // Lấy ra tên các Annatation trên class này
+        }
+
+        for(Method method: girlClass.getDeclaredMethods()){ // Lấy ra các method của class
+            System.out.println(&quot;\nMethod: &quot; + method.getName()); //Tên method
+            for(Annotation annotation : method.getAnnotations()){
+                System.out.println(&quot;Annotation: &quot; + annotation.annotationType()); // Lấy ra tên các Annatation trên method này
+            }
+        }
+    }
+}
+</code></pre>
+<h1 id="huong-dan-tu-tao-mot-annotations"><a class="header" href="#huong-dan-tu-tao-mot-annotations">Hướng dẫn tự tạo một Annotations</a></h1>
+<h3 id="khái-niệm"><a class="header" href="#khái-niệm">Khái niệm</a></h3>
+<p><code>Annotation</code> (Chú thích) được sử dụng để chú thích trên một <code>class</code>, một trường (<code>field</code>) hoặc một <code>method</code> để cung cấp hoặc bổ sung các thông tin. Nó hoàn toàn không ảnh hưởng tới code của bạn.</p>
+<p>Trong bài có sử dụng các kiến thức:</p>
+<ol>
+<li>Optional</li>
+<li>Functional Interface &amp; Lambda</li>
+<li>Java Reflection</li>
+</ol>
+<p><code>Annotation</code> được sử dụng ở 3 dạng:</p>
+<ul>
+<li>Chú thích cho trình biên dịch (Compiler)</li>
+<li>Chú thích cho quá trình build</li>
+<li>Chú thích trong quá trình chạy chương trình (Runtime)</li>
+</ul>
+<p>Hẳn bạn đã 1 lần từng thấy cái <code>@Override</code> phải không? nó là một <em>Annotation chú thích cho trình biên dịch</em>, để cho trình biên dịch biết hàm đó đã bị ghi đè.</p>
+<p>Còn <em>chú thích cho quá trình build</em> thì không hẳn có ví dụ cụ thể, nhưng bạn hãy nghĩ tới <code>Maven</code>, <code>Gradle</code> những công cụ build này sẽ có thêm thông tin khi build ứng dụng của bạn khi gặp một số <code>Annotation</code> đặc biệt, và sẽ bổ sung thêm code vào đó.</p>
+<p><em>Chú thích trong quá trình chạy chương trình</em> sẽ là nội dung chính của chúng ta hôm nay. Đây là những <code>Annotation</code> mà chỉ khi bạn chạy chương trình rồi thì nó mới tác động tới code. Cùng vào ví dụ để dễ hiểu nhé!</p>
+<h3 id="khai-báo-annotation"><a class="header" href="#khai-báo-annotation">Khai báo Annotation</a></h3>
+<p>Cách khai báo <code>Annotation</code> là sử dụng <code>@interface</code></p>
+<p>vậy là bạn đã có 1 <code>Annotation</code>. Giờ gọi nó ra và sử dụng:</p>
+<h3 id="khai-báo-phạm-vi-cho-annotation"><a class="header" href="#khai-báo-phạm-vi-cho-annotation">Khai báo phạm vi cho Annotation</a></h3>
+<p>Chúng ta có thể quy định phạm vi sử dụng của <code>Annotation</code> bằng cách:</p>
+<p><code>@Retention</code>: Dùng để chú thích mức độ tồn tại của một annotation nào đó. Cụ thể có 3 mức nhận thức tồn tại của vật được chú thích:</p>
+<ol>
+<li><code>RetentionPolicy.SOURCE</code>: Tồn tại trên code nguồn, và không được bộ dịch (compiler) nhận ra.</li>
+<li><code>RetentionPolicy.CLASS</code>: Mức tồn tại được bộ dịch nhận ra, nhưng không được nhận biết bởi máy ảo tại thời điểm chạy (Runtime).</li>
+<li><code>RetentionPolicy.RUNTIME</code>: Mức tồn tại lớn nhất, được bộ dịch (compiler) nhận biết, và máy ảo (jvm) cũng nhận ra khi chạy chương trình.</li>
+</ol>
+<p><code>@Target</code>: Dùng để chú thích phạm vi sử dụng của một <code>Annotation</code></p>
+<ol>
+<li><code>ElementType.TYPE</code> - Cho phép chú thích trên Class, interface, enum, annotation.</li>
+<li><code>ElementType.FIELD</code> - Cho phép chú thích trường (field), bao gồm cả các hằng số enum.</li>
+<li><code>ElementType.METHOD</code> - Cho phép chú thích trên method.</li>
+<li><code>ElementType.PARAMETER</code> - Cho phép chú thích trên parameter</li>
+<li><code>ElementType.CONSTRUCTOR</code> - Cho phép chú thích trên constructor</li>
+<li><code>ElementType.LOCAL_VARIABLE</code> - Cho phép chú thích trên biến địa phương.</li>
+<li><code>ElementType.ANNOTATION_TYPE</code> - Cho phép chú thích trên Annotation khác</li>
+<li><code>ElementType.PACKAGE</code> - Cho phép chú thích trên package.</li>
+</ol>
+<h3 id="xử-lý-annotation"><a class="header" href="#xử-lý-annotation">Xử lý Annotation</a></h3>
+<p>Bước 1: Chú thích bất kì chỗ nào bạn muốn.</p>
+<p>Bước 2: Viết class xử lý <code>@JsonName</code></p>
+<p>Bước 3: Chạy thử:</p>
+<pre><code class="language-java">public @interface JsonName {
+    String value(); // các giá trị trong @interface đều dạng hàm abstract, không tham số
+}
+</code></pre>
+<pre><code class="language-java">@JsonName(value = &quot;super_man&quot;)
+public class SuperMan extends Person {
+    private String name;
+}
+</code></pre>
+<pre><code class="language-java">@Retention(RetentionPolicy.RUNTIME) // Tồn tại trong lúc chạy chương trình
+@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) // Được sử dụng trên class, interface, method, biến
+public @interface JsonName {
+    String value();
+}
+</code></pre>
+<pre><code class="language-java">@JsonName(value = &quot;super_man&quot;)
+public class SuperMan {
+    // Không chú thích, thì chúng ta sẽ coi như lấy tên field là `name` luôn
+    private String name;
+
+    @JsonName(&quot;date_of_birth&quot;)
+    private LocalDateTime dateOfBirth;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDateTime getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDateTime dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+}
+</code></pre>
+<pre><code class="language-java">public class JsonNameProcessor {
+    public static String toJson(Object object) throws IllegalAccessException {
+        StringBuilder sb = new StringBuilder(); // Dùng StringBuilder de tao json tu class
+
+        Class&lt;?&gt; clazz = object.getClass();
+        JsonName jsonClassName = clazz.getDeclaredAnnotation(JsonName.class); // Lay ra annotation @JsonName tren Class
+
+        sb.append(&quot;{\n&quot;)
+          .append(&quot;\t\&quot;&quot;)
+          // Lay gia tri cua Annotation, neu annotation la null thi lay ten Class de thay the
+          .append(Optional.ofNullable(jsonClassName).map(JsonName::value).orElse(clazz.getSimpleName()))
+          .append(&quot;\&quot;: {\n&quot;); //
+
+        Field fields[] = clazz.getDeclaredFields();
+        for (int i = 0; i &lt; fields.length; i++) {
+            fields[i].setAccessible(true); // Set setAccessible = true. De co the truy cap vao private field
+            JsonName jsonFieldName = fields[i].getDeclaredAnnotation(JsonName.class); // get annotation tren field
+            sb.append(&quot;\t\t\&quot;&quot;)
+              // Lay gia tri cua Annotation, neu annotation la null thi lay ten field thay the
+              .append(Optional.ofNullable(jsonFieldName).map(JsonName::value).orElse(fields[i].getName())) // L
+              .append(&quot;\&quot;: &quot;)
+              // Neu field la String hoac Object. thi append dau ngoac kep vao
+              .append(fields[i].getType() == String.class || !fields[i].getType().isPrimitive() ? &quot;\&quot;&quot; : &quot;&quot;)
+              // Lay gia tri cua field
+              .append(fields[i].get(object))
+              // Neu field la String hoac Object. thi append dau ngoac kep vao
+              .append(fields[i].getType() == String.class || !fields[i].getType().isPrimitive()? &quot;\&quot;&quot; : &quot;&quot;)
+              // Nếu là field cuối cùng, thì không append dấu &quot;,&quot;
+              .append(i != fields.length -1 ? &quot;,\n&quot; : &quot;\n&quot;);
+        }
+        sb.append(&quot;\t}\n&quot;);
+        sb.append(&quot;}&quot;);
+
+        return sb.toString();
+    }
+}
+</code></pre>
+<pre><code class="language-java">public static void main(String[] args) throws IllegalAccessException {
+    SuperMan superMan = new SuperMan(); // Tao doi tuong super man
+    superMan.setDateOfBirth(LocalDateTime.now());
+    superMan.setName(&quot;loda&quot;);
+
+    String json =JsonNameProcessor.toJson(superMan);
+    System.out.println(json);
+}
+// OUTPUT:
+/*
+{
+	&quot;super_man&quot;: {
+		&quot;name&quot;: &quot;loda&quot;,
+		&quot;date_of_birth&quot;: &quot;2019-04-03T21:07:23.983&quot;
+	}
+}
+*/
+</code></pre>
+<h1 id="java-8functional-interfaces--lambda-expressions-cuc-de-hieu"><a class="header" href="#java-8functional-interfaces--lambda-expressions-cuc-de-hieu">「Java 8」Functional Interfaces &amp; Lambda Expressions cực dễ hiểu</a></h1>
+<h3 id="giới-thiệu-1"><a class="header" href="#giới-thiệu-1">Giới thiệu</a></h3>
+<p>Khái niệm <code>Functional Interfaces</code> được <code>Java</code> đưa ra cùng với phiên bản <code>Java 8</code>. về cơ bản, có thể hiểu:</p>
+<blockquote>
+<p>Functional Interfaces là interface nhưng chỉ có một 1 abstract function duy nhất.</p>
+</blockquote>
+<p>Ví dụ:</p>
+<pre><code class="language-java">interface Runable {
+    public void run(); // Chỉ có duy nhất một abstract function.
+}
+</code></pre>
+<h3 id="functional-programming"><a class="header" href="#functional-programming">Functional Programming</a></h3>
+<p>Trước khi đi vào chi tiết, chúng ta cùng tìm hiểu khái niệm <code>Lập trình hướng hàm</code>.</p>
+<p>Cùng xem ví dụ dưới đây:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    // Mình muốn xử lý dữ liệu trước khi ỉn ra màn hình.
+    System.out.println(process(&quot;Hey Loda!!!&quot;));
+}
+
+public static String process(String input){
+    // Cho tất cả viết hoa lên.
+    return input.toUpperCase();
+}
+
+// Output:
+HEY LODA!!!
+</code></pre>
+<p>Tuy nhiên bạn sẽ thấy cách làm này không <code>flexible</code>, vì các bạn chỉ có thể xử lý cho chữ thành <code>UPPER CASE</code>. Muốn làm gì đó khác, như <code>toLowerCase</code> chẳng hạn, mình sẽ phải viết một <code>function</code> mới.</p>
+<p>Chúng ta giải quyết cách cách này bằng <code>Anonymous function (Hàm ẩn danh)</code></p>
+<p>Sửa code chút:</p>
+<pre><code class="language-java">public interface StringProcessor{
+    public String process(String input);
+}
+
+// StringProcessor ở đây là một Interface, hay Functional Interface
+public static String getStr(String input, StringProcessor processor){
+    return processor.process(input);
+}
+
+public static void main(String[] args) {
+    // In ra chữ hoa
+    System.out.println(getStr(&quot;Hello Loda!&quot;, new StringProcessor() {
+        @Override
+        public String process(String input) {
+            return input.toUpperCase();
+        }
+    }));
+
+    // In ra chữ thường
+    System.out.println(getStr(&quot;Hey Loda!&quot;, new StringProcessor() {
+        @Override
+        public String process(String input) {
+            return input.toLowerCase();
+        }
+    }));
+}
+// Output:
+// HELLO LODA!
+// hey loda!
+</code></pre>
+<h3 id="lambda-expressions"><a class="header" href="#lambda-expressions">Lambda Expressions</a></h3>
+<p>Quay lại ví dụ ở trên, chúng ta thấy là <code>StringProcessor</code> chỉ có duy nhất một <code>function process(x)</code>. Nên mọi đoạn code đều sẽ giống hệt nhau ở việc <code>implement function</code> này.</p>
+<pre><code class="language-java">new StringProcessor() {
+    @Override
+    public String process(String input) {
+        // Do something here
+        // Chỉ khác nhau đoạn code ở giữa
+        return x;
+    }
+}
+</code></pre>
+<p>Thực ra cái chúng ta quan tâm là: <code>Input -&gt; Process -&gt; Output</code>. Hãy thử nhìn ở ví dụ dưới cho Lambda Expressions:</p>
+<pre><code class="language-java">// (input) -&gt; input.toUpperCase()
+// đầu vào -&gt; đầu ra
+System.out.println(getStr(&quot;Hello Loda!&quot;, input -&gt; input.toUpperCase()));
+
+// Cấu trúc của một lambda như sau:
+// parameter -&gt; expression body
+</code></pre>
+<p>Trong đó:</p>
+<ul>
+<li><code>parameter</code> là những tham số đầu vào của hàm (một hoặc nhiều)</li>
+<li><code>expression body</code> là phần xử lý <code>parameter</code>, bạn cần trả ra đúng kiểu dữ liệu đã khai báo trong <code>Functional Interface</code></li>
+</ul>
+<p>Nếu <code>code</code> bạn chỉ cần 1 thao tác, thì không cần <code>return</code> giống ví dụ ở trên. Còn nếu <code>code</code> yêu cầu xử lý nhiều, thì dạng đầy đủ của nó như sau:</p>
+<pre><code>parameter -&gt; {
+    expression body
+    [return] // (không trả về nếu là void)
+}
+</code></pre>
+<p>ví dụ:</p>
+<pre><code class="language-java">System.out.println(getStr(&quot;Hello Loda!&quot;, input -&gt; {
+    String temp =  input + &quot; Oke!!!&quot;;
+    return temp.toLowerCase();
+}));
+</code></pre>
+<h3 id="functional-interface"><a class="header" href="#functional-interface">Functional Interface</a></h3>
+<p>Tới đây, bạn đã hiểu ý nghĩa của việc cho ra đời khái niệm <code>Functional Interface</code>, nó là một quy định chung phải có để có thể viết code dưới dạng biểu thức <code>Lambda</code>. Một số điều cần lưu ý với <code>Functional Interface</code> như sau:</p>
+<h4 id="functionalinterface"><a class="header" href="#functionalinterface">@FunctionalInterface</a></h4>
+<p><code>Annotation</code> này chỉ để bổ sung, nó đánh dấu một <code>interface</code> là <code>Functional Interface</code>. Lúc này bạn khai báo 2 <code>abtract function</code> bên trong <code>interface</code> thì sẽ báo lỗi.</p>
+<pre><code class="language-java">@FunctionalInterface // Gắn cái này lên interface, nó đánh dấu interface chỉ được phép có 1 funtion thôi
+public interface StringProcessor{
+    public String process(String input);
+    public String preProcess(String input); // lỗi
+}
+</code></pre>
+<h4 id="default-function--static-funtion"><a class="header" href="#default-function--static-funtion">default function &amp; static funtion</a></h4>
+<p><code>Java 8</code> cải tiến cho phép <code>interface</code> được khai báo <code>code</code> bên trong nó, với điều kiện <code>code</code> phải nằm trong <code>default</code> hoặc <code>static</code>. <code>default</code> và <code>static</code> không phá vỡ quy luật của <code>@FunctionInterfaces</code></p>
+<pre><code class="language-java">@FunctionalInterface // Gắn cái này lên interface, nó đánh dấu interface chỉ được phép có 1 funtion thôi
+public interface StringProcessor{
+    public String process(String input);
+
+    // Mọi class implement StringProcessor đều có thể gọi hàm này để sử dụng luôn
+    public default void printf(Object t){
+        System.out.println(t);
+    }
+
+    // Là hàm static, gọi từ class cũng được.         
+    // StringProcessor.concat(a,b)
+    public static String concat(String a, String b){
+        return a + b;
+    }
+}
+</code></pre>
+<h3 id="method-reference"><a class="header" href="#method-reference">Method reference</a></h3>
+<p>Phần này chỉ để bổ sung, không có nó, bạn vẫn có thể sử dụng <code>Lambda Expressions</code> bình thường. Nhưng với <code>Method reference</code>, code của bạn sẽ còn sạch sẽ hơn nữa.</p>
+<p>Ví dụ:</p>
+<pre><code class="language-java">System.out.println(getStr(&quot;Hello Loda!&quot;, input -&gt; input.toUpperCase()));
+// Tương đương với việc viết như này:
+System.out.println(getStr(&quot;Hello Loda!&quot;, String::toUpperCase));
+</code></pre>
+<p>hoặc</p>
+<pre><code class="language-java">System.out.println(getStr(&quot;Hello Loda!&quot;, input -&gt; new String(input));
+// Tương đương với việc viết như này:
+System.out.println(getStr(&quot;Hello Loda!&quot;, String::new));
+</code></pre>
+<p><code>Method reference</code> là cách viết ngắn gọn, sẽ bỏ qua luôn cả phần <code>parameter</code> vì bản thân tên hàm đã biết nó sẽ nhận vào gì và trả ra cái gì rồi. Việc còn lại để <code>Compiler</code> lo thôi kakaka. Có các cách để gọi <code>Method reference</code> như sau:</p>
+<ul>
+<li><code>[Tên Class]::[Tên method]</code>: Giống với ví dụ ở trên <code>String::toUpperCase</code>.</li>
+<li><code>[Tên Class]::new</code>: Tạo ra một đối tượng mới, từ tham số được truyền vào</li>
+</ul>
+<h1 id="huong-dan-stream-api"><a class="header" href="#huong-dan-stream-api">Hướng dẫn Stream API</a></h1>
+<h3 id="khái-quát"><a class="header" href="#khái-quát">Khái quát</a></h3>
+<p><code>Stream</code> là một abtract layer cho phép bạn xử lý một dòng dữ liệu dựa trên các thao tác đã định nghĩa trước. Bạn có thể tạo <code>Stream</code> từ các nguồn dữ liệu như <code>Collections</code>, <code>Arrays</code> hoặc <code>I/O resources</code>. Mặc định các lớp kế thừa của <code>Collection</code> đều có hàm <code>.stream()</code>:</p>
+<pre><code class="language-java">Collection&lt;String&gt; collection = Arrays.asList(&quot;hello&quot;, &quot;loda&quot;, &quot;kaka&quot;);
+Stream&lt;String&gt; streamOfCollection = collection.stream(); // Tạo ra một stream từ collection
+List&lt;String&gt; list = new ArrayList&lt;&gt;();
+Stream&lt;String&gt; stream = list.stream(); // tạo ra 1 luồng
+Stream&lt;String&gt; parallelStream = list.parallelStream(); // luồng dữ liệu song song (xử lý trên nhiều thread cùng lúc)
+</code></pre>
+<h3 id="cách-sử-dụng"><a class="header" href="#cách-sử-dụng">Cách sử dụng</a></h3>
+<p>Chức năng của <code>Stream</code> là cực kì đa dạng giúp bạn thao tác dữ liệu dễ dàng hơn.</p>
+<h4 id="foreach-duyệt-qua-toàn-bộ-dữ-liệu-của-bạn"><a class="header" href="#foreach-duyệt-qua-toàn-bộ-dữ-liệu-của-bạn"><code>forEach()</code>: Duyệt qua toàn bộ dữ liệu của bạn</a></h4>
+<pre><code class="language-java">list.stream().forEach(s -&gt; System.out.println(s));
+</code></pre>
+<h4 id="map-tạo-ra-các-giá-trị-mới-từ-dữ-liệu-hiện-có"><a class="header" href="#map-tạo-ra-các-giá-trị-mới-từ-dữ-liệu-hiện-có"><code>map()</code>: Tạo ra các giá trị mới từ dữ liệu hiện có</a></h4>
+<pre><code class="language-java">Arrays.asList(3, 5, 7)
+    .stream() // tạo ra Stream từ List&lt;Integer&gt;
+    .map(i -&gt; &quot;loda-&quot;+i) // biến đổi từng phần tử thành String
+    .map(String::toUpperCase) // biến đổi từng phần tử thành Upper case
+    .forEach(System.out::println); // in ra xem thử
+</code></pre>
+<h4 id="filter-gíup-chúng-ta-thao-tác-với-những-dữ-liệu-mong-muốn"><a class="header" href="#filter-gíup-chúng-ta-thao-tác-với-những-dữ-liệu-mong-muốn"><code>filter()</code> gíup chúng ta thao tác với những dữ liệu mong muốn.</a></h4>
+<pre><code class="language-java">Arrays.asList(2, 3, 5, 7)
+    .stream()
+    .filter(i -&gt; i % 2 != 0) //từ đây trở đi, chúng ta chỉ muốn làm việc với số lẻ
+    .map(i -&gt; &quot;loda-&quot; + i)
+    .map(String::toUpperCase)
+    .forEach(System.out::println);
+</code></pre>
+<h4 id="limit-giới-hạn-số-lượng-dữ-liệu-cần-xử-lý"><a class="header" href="#limit-giới-hạn-số-lượng-dữ-liệu-cần-xử-lý"><code>limit()</code>: Giới hạn số lượng dữ liệu cần xử lý</a></h4>
+<pre><code class="language-java">IntStream.range(1, 1000).boxed() // Tạo ra Stream có dữ liệu từ 1-&gt;999
+            .filter(i -&gt; i % 2 != 0)
+            .map(i -&gt; &quot;loda-&quot; + i)
+            .map(String::toUpperCase)
+            .limit(10) // Chúng ta giới hạn lấy 10 cái rồi in ra
+            .forEach(System.out::println);
+</code></pre>
+<h4 id="sorted-sắp-xếp-stream-bạn-có-thể-tự-định-nghĩa-cách-sort-bằng-cách-thêm-comparator-vào"><a class="header" href="#sorted-sắp-xếp-stream-bạn-có-thể-tự-định-nghĩa-cách-sort-bằng-cách-thêm-comparator-vào"><code>sorted()</code>: sắp xếp <code>Stream</code>. Bạn có thể tự định nghĩa cách sort bằng cách thêm Comparator vào</a></h4>
+<pre><code class="language-java">sorted((o1, o2) -&gt; o1.compareTo(o2))
+</code></pre>
+<pre><code class="language-java">List&lt;String&gt; result = IntStream.range(1, 1000).boxed()
+                                .filter(i -&gt; i % 2 != 0)
+                                .map(i -&gt; &quot;loda-&quot; + i)
+                                .map(String::toUpperCase)
+                                .limit(10)
+                                .sorted(Comparator.naturalOrder()) // một cách khác để sort
+                                .collect(Collectors.toList());
+</code></pre>
+<h4 id="collect-giúp-chúng-ta-lấy-toàn-bộ-dữ-liệu-đã-biến-đổi-trong-stream-thành-đối-tượng-mình-mong-muốn"><a class="header" href="#collect-giúp-chúng-ta-lấy-toàn-bộ-dữ-liệu-đã-biến-đổi-trong-stream-thành-đối-tượng-mình-mong-muốn"><code>collect()</code> giúp chúng ta lấy toàn bộ dữ liệu đã biến đổi trong <code>Stream</code> thành đối tượng mình mong muốn.</a></h4>
+<pre><code class="language-java">List&lt;String&gt; result = Stream.of(&quot;bạn&quot;, &quot;hãy&quot;, &quot;like&quot;, &quot;Fanpage&quot;, &quot;loda&quot;,&quot;dể&quot;,&quot;cập&quot;,&quot;nhật&quot;,&quot;nhiều&quot;,&quot;hơn&quot;)
+                            .filter(s -&gt; {
+                                System.out.println(&quot;[filtering] &quot; + s);
+                                return s.length()&gt;=4;
+                            })
+                            .map(s -&gt; {
+                                System.out.println(&quot;[mapping] &quot; + s);
+                                return s.toUpperCase();
+                            })
+                            .limit(3)
+                            .collect(Collectors.toList());
+System.out.println(&quot;----------------------&quot;);
+System.out.println(&quot;Result:&quot;);
+result.forEach(System.out::println);
+</code></pre>
+<pre><code class="language-makefile">[filtering] bạn // không thoả mãn
+[filtering] hãy // tiếp tục tìm, cũng k thoả mãn
+[filtering] like // thoả mãn
+[mapping] like // mapping nó luôn
+[filtering] Fanpage // lại quay lại filter tìm tiếp, thoả mãn
+[mapping] Fanpage // mapping
+[filtering] loda // thoả mãn
+[mapping] loda // mapping
+// Đủ 3 trường hợp thoả mãn, dừng.
+----------------------
+Result:
+LIKE
+FANPAGE
+LODA
+</code></pre>
+<h3 id="bản-chất-của-stream"><a class="header" href="#bản-chất-của-stream">Bản chất của Stream</a></h3>
+<p>(Có ví dụ trong bài gốc nữa)</p>
+<p><code>Stream</code> là <code>Lazy evaluation</code>. Hiểu đơn giản là nó sẽ không xử lý dữ liệu trực tiếp qua từng bước, mà chờ bạn khai báo xong tất cả các thao tác <code>operation</code> như <code>map</code>, <code>filter</code>,v.v.. cho tới khi gặp lệnh <code>.collect()</code> thì nó thực hiện toàn bộ trong một vòng lặp duy nhất.</p>
+<p>Hàm <code>.collect()</code> và một số hàm như <code>min()</code>, <code>max()</code>, <code>count()</code> được gọi là <code>terminal operation</code>. Khi gọi những function có dạng <code>terminal</code> thì <code>Stream</code> mới chính thức hoạt động. </p>
+<p>Một lưu ý khi sử dụng là Stream không được tái sử dụng. Vì <code>Stream</code> được tạo ra để xử lý dữ liệu chứ không phải để lưu trữ! Nên muốn sử dụng, mỗi lần bạn sẽ cần tạo ra 1 <code>Stream</code> mới.</p>
+<pre><code class="language-java">Stream&lt;String&gt; stream =
+  Stream.of(&quot;loda&quot;, &quot;.&quot;, &quot;me&quot;,&quot;like&quot;).filter(element -&gt; element.contains(&quot;e&quot;));
+Optional&lt;String&gt; anyElement = stream.findAny(); //Lấy ra một phần tử bất kỳ trong Stream, nó sẽ trả ra Optional
+
+// Thực hiện dòng lệnh tiếp theo sẽ bắn ra IllegalStateException
+Optional&lt;String&gt; firstElement = stream.findFirst();
+</code></pre>
+<h1 id="khai-niem-threadpool-va-executor-trong-java"><a class="header" href="#khai-niem-threadpool-va-executor-trong-java">Khái niệm ThreadPool và Executor trong Java</a></h1>
+<p>Một ví dụ đơn giản nhé (Trong thực tế sẽ khác, hãy coi đây là ví dụ nha):</p>
+<p>Bây giờ, giả sử bạn có một Server Web. Nếu chúng ta nhận 1 request từ client, chúng ta sẽ xử lý mất 0.5s và trả về kết quả cho người dùng.</p>
+<p>Thế nếu có 2 người request cùng lúc? =&gt; giải quyết bằng cách mỗi một request sẽ xử lý ở 1 thread, đơn giản.</p>
+<p>Thế nếu có 100 người request cùng lúc? =&gt; mỗi người tạo một thre... wait a minute.... (nếu 1 tháng có 10M lượt request =&gt; tạo ra 10M thread)</p>
+<p>Nếu bạn tạo 1-2 thread mới, chả ai trách gì bạn cả. Nhưng nếu bạn tạo liên tục và tới hàng trăm cái mới mỗi lần nhưng lại giải quyết cùng 1 vấn đề thì có lỗ hổng đấy. Vì chi phí của việc tạo 1 thread là tương đối lớn, thường dẫn tới các vấn đề về hiệu năng và cấp phát dữ liệu.</p>
+<p>Với việc xử lý các tác vụ liên tục như vậy, có một giải pháp là sử dụng <code>Thread Pool</code>.</p>
+<p>Ở ví dụ trên, Bây giờ tôi sẽ chỉ sử dụng 30 thread thôi! Và đặt 30 thread này ở trạng thái không làm gì và vứt vào 1 cái <code>Pool</code> (1 cái bể chứa, kiểu vậy). Với mỗi request đến, tôi sẽ lấy trong <code>Pool</code> ra 1 thread và xử lý công việc, xử lý xong, thì cất thread vào ngược trở lại pool. Đơn giản vậy thôi, như thế chúng ta sẽ không phải tạo mới Thread nữa. Tránh tình tốn chi phí và hiệu năng.</p>
+<p>Vấn đề là giả sử có hơn 31 request tới cùng lúc thì sao? rất đúng, trường hợp này là chắc chắn có. Lúc này <code>Pool</code> sẽ không còn thread nào sẵn có nữa. Nên 1 request còn lại sẽ bị đẩy vào 1 hàng đợi <code>BlockingQueue</code>. Nó sẽ đợi ở đó, bao giờ <code>Pool</code> có 1 thread rảnh rỗi thì sẽ quay lại xử lý nốt.</p>
+<h3 id="cách-tạo-threadpool-trong-java"><a class="header" href="#cách-tạo-threadpool-trong-java">Cách tạo ThreadPool trong Java</a></h3>
+<p>Java Concurrency API hỗ trợ một vài loại <code>ThreadPool</code> sau:</p>
+<ul>
+<li><strong>Cached thread pool</strong>: Mỗi nhiệm vụ sẽ tạo ra thread mới nếu cần, nhưng sẽ tái sử dụng lại các thread cũ. (Cái này vẫn nguy hiểm nhé, nên áp dụng với các task nhỏ, tốn ít tính toán)</li>
+<li><strong>Fixed thread pool</strong>: giới hạn số lượng tối đa của các Thread được tạo ra. Các task khác đến sau phải chờ trong hàng đợi (BlockingQueue). (Ví dụ đầu bài)</li>
+<li><strong>Single-threaded pool</strong>: chỉ giữ một Thread thực thi một nhiệm vụ một lúc.</li>
+<li><strong>Fork/Join pool</strong>: một Thread đặc biệt sử dụng Fork/ Join Framework bằng cách tự động chia nhỏ công việc tính toán cho các core xử lý. (Tính toán song song)</li>
+</ul>
+<h3 id="executor"><a class="header" href="#executor"><strong>Executor</strong></a></h3>
+<p><code>Executor</code> là một class đi kèm trong gói <code>java.util.concurrent</code>, là một đối tượng chịu trách nhiệm quản lý các luồng và thực hiện các tác vụ Runnable được yêu cầu xử lý. Nó tách riêng các chi tiết của việc tạo Thread, lập kế hoạch (scheduling), … để chúng ta có thể tập trung phát triển logic của tác vụ mà không quan tâm đến các chi tiết quản lý Thread.</p>
+<p>Nói chung nó là thằng wrapper các các bước mình nói ở trên, và quản lý hộ chúng ta.</p>
+<p>Chúng có thể tạo một Executor bằng cách sử dụng một trong các phương thức được cung cấp bởi lớp tiện ích <code>Executors</code> như sau:</p>
+<ul>
+<li><strong>newSingleThreadExecutor()</strong>: trong ThreadPool chỉ có 1 Thread và các task (nhiệm vụ) sẽ được xử lý một cách tuần tự.</li>
+<li><strong>newCachedThreadPool()</strong>: như giải thích ở trên, nó sẽ có 1 số lượng nhất định thread để sử dụng lại, nhưng vẫn sẽ tạo mới thread nếu cần. Mặc định nếu một Thread không được sử dụng trong vòng 60 giây thì Thread đó sẽ bị tắt.</li>
+<li><strong>newFixedThreadPool(int n)</strong>: trong Pool chỉ có n Thread để xử lý nhiệm vụ, các yêu cầu tới sau bị đẩy vào hàng đợi</li>
+<li><strong>newScheduledThreadPool(int corePoolSize)</strong>: tương tự như <code>newCachedThreadPool()</code> nhưng sẽ có thời gian delay giữa các Thread.</li>
+<li><strong>newSingleThreadScheduledExecutor()</strong>: tương tự như <code>newSingleThreadExecutor()</code> nhưng sẽ có khoảng thời gian delay giữa các Thread.</li>
+</ul>
+<h3 id="code-chạy-thử"><a class="header" href="#code-chạy-thử"><strong>Code chạy thử</strong></a></h3>
+<p>Chúng ta sẽ lấy ví dụ đầu bài để code luôn nhé.</p>
+<p>Tạo một class implement <code>Runnable</code> để xử lý request đến. (phân biệt <code>Runnable</code> và <code>Thread</code> nhé các bạn)</p>
+<pre><code class="language-java">public class RequestHandler implements Runnable {
+    String name;
+    public RequestHandler(String name){
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        try {
+            // Bắt đầu xử lý request đến
+            System.out.println(Thread.currentThread().getName() + &quot; Starting process &quot; + name);
+            // cho ngủ 500 milis để ví dụ là quá trình xử lý mất 0,5 s
+            Thread.sleep(500);
+            // Kết thúc xử lý request
+            System.out.println(Thread.currentThread().getName() + &quot; Finished process &quot; + name);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<h3 id="newsinglethreadexecutor"><a class="header" href="#newsinglethreadexecutor"><strong>newSingleThreadExecutor</strong></a></h3>
+<pre><code class="language-java">import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class SingleThreadPoolExample {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        // Có 100 request tới cùng lúc
+        for (int i = 0; i &lt; 100; i++) {
+            executor.execute(new RequestHandler(&quot;request-&quot; + i));
+        }
+        executor.shutdown(); // Không cho threadpool nhận thêm nhiệm vụ nào nữa
+
+        while (!executor.isTerminated()) {
+            // Chờ xử lý hết các request còn chờ trong Queue ...
+        }
+    }
+}
+// OUTPUT:
+/*
+..
+..
+pool-1-thread-1 Starting process request-98
+pool-1-thread-1 Finished process request-98
+pool-1-thread-1 Starting process request-99
+pool-1-thread-1 Finished process request-99
+*/
+</code></pre>
+<p>Cả chương trình chỉ có 1 pool, 1 thread duy nhất, xử lý toàn bộ request đến. Cái nào đến sau thì đợi thôi.</p>
+<h3 id="newfixedthreadpool"><a class="header" href="#newfixedthreadpool"><strong>newFixedThreadPool()</strong></a></h3>
+<pre><code class="language-java">public class FixedThreadPoolExample {
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+
+        // Có 100 request tới cùng lúc
+
+        for (int i = 0; i &lt; 100; i++) {
+            executor.execute(new RequestHandler(&quot;request-&quot; + i));
+        }
+        executor.shutdown(); // Không cho threadpool nhận thêm nhiệm vụ nào nữa
+
+        while (!executor.isTerminated()) {
+            // Chờ xử lý hết các request còn chờ trong Queue ...
+        }
+    }
+}
+// OUTPUT:
+/*
+..
+..
+pool-1-thread-2 Finished process request-96
+pool-1-thread-5 Starting process request-99
+pool-1-thread-3 Finished process request-97
+pool-1-thread-4 Finished process request-98
+pool-1-thread-5 Finished process request-99
+*/
+</code></pre>
+<p>Loại này thì chúng ta cố định 5 thread, và nó cử mặc định như vậy mà xài thôi, thiếu thread thì phải chờ tới khi có</p>
+<h3 id="newcachedthreadpool"><a class="header" href="#newcachedthreadpool"><strong>newCachedThreadPool()</strong></a></h3>
+<pre><code class="language-java">public class CachedThreadPoolExample {
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService executor = Executors.newCachedThreadPool();
+
+        // Có 100 request tới cùng lúc
+
+        for (int i = 0; i &lt; 100; i++) {
+            executor.execute(new RequestHandler(&quot;request-&quot; + i));
+            Thread.sleep(200);
+        }
+        executor.shutdown(); // Không cho threadpool nhận thêm nhiệm vụ nào nữa
+
+        while (!executor.isTerminated()) {
+            // Chờ xử lý hết các request còn chờ trong Queue ...
+        }
+    }
+}
+
+//OUTPUT:
+/*
+..
+..
+pool-1-thread-3 Starting process request-98
+pool-1-thread-1 Finished process request-96
+pool-1-thread-1 Starting process request-99
+pool-1-thread-2 Finished process request-97
+pool-1-thread-3 Finished process request-98
+pool-1-thread-1 Finished process request-99
+*/
+</code></pre>
+<p>Có chút khởi sắc, chương trình chạy nhanh hơn hẳn. Vì nó được tạo số thread thoải mái nếu cần :)))) Rất nguy hiểm. Nhưng bạn sẽ thấy là có chỗ nó sử dụng lại các thread đã xong trước đó.# ThreadPoolExecutor và nguyên tắc quản lý pool size</p>
+<ul>
+<li>Khái niệm</li>
+<li>Nguyên tắc vận hành</li>
+<li>Code ví dụ</li>
+</ul>
+<h3 id="giới-thiệu-2"><a class="header" href="#giới-thiệu-2"><strong>Giới thiệu</strong></a></h3>
+<p><code>ThreadPoolExecutor</code> là một class nâng cao hơn của các <code>ThreadPool</code> cơ bản trong gói java concurrent. Cụ thể các thể loại ThreadPool khác bạn xem ở đây:</p>
+<ol>
+<li>Khái niệm ThreadPool và Executor trong Java</li>
+</ol>
+<p>Đặc điểm của các loại <code>ThreadPool</code> thông thường được cung cấp trong <code>ExecutorService</code> là không đủ linh động theo tình huống. điển hình là bị fix số lượng thread, hoặc cho phép tạo quá nhiều thread. Nó thực sự chưa phải phương án tối ưu.</p>
+<p><code>ThreadPoolExecutor</code> thì khác, một phiên bản nâng cấp hơn, cho phép chúng ta tùy biến số lượng Thread theo kịch bản. Giúp nó thông minh hơn mấy cái kia một chút.</p>
+<p>Ngoài ra còn có <code>ThreadPoolTaskExecutor</code> do <code>Spring Framework</code> cung cấp cũng hoạt động tương tự</p>
+<h3 id="khái-niệm-1"><a class="header" href="#khái-niệm-1"><strong>Khái niệm</strong></a></h3>
+<p><code>ThreadPoolExecutor</code> và <code>ThreadPoolTaskExecutor</code> cũng là <code>Executor</code> nhưng nó có thêm các tham số như sau:</p>
+<ul>
+<li><code>corePoolSize</code>: Số lượng Thread mặc định trong <code>Pool</code></li>
+<li><code>maxPoolSize</code>: Số lượng tối đa Thread trong <code>Pool</code></li>
+<li><code>queueCapacity</code>: Số lượng tối da của <code>BlockingQueue</code></li>
+</ul>
+<h3 id="nguyên-tắc-vận-hành"><a class="header" href="#nguyên-tắc-vận-hành"><strong>Nguyên tắc vận hành</strong></a></h3>
+<p>Ví dụ với <code>ThreadPoolExecutor</code> có:</p>
+<ul>
+<li><code>corePoolSize</code>: 5</li>
+<li><code>maxPoolSize</code>: 15</li>
+<li><code>queueCapacity</code>: 100</li>
+</ul>
+<ol>
+<li>Khi có request, nó sẽ tạo trong Pool tối đa 5 thread (<code>corePoolSize</code>).</li>
+<li>Khi số lượng thread vượt quá 5 thread. Nó sẽ cho vào hàng đợi.</li>
+<li>Khi số lượng hàng đợi full 100 (<code>queueCapacity</code>). Lúc này mới bắt đầu tạo thêm Thread mới.</li>
+<li>Số thread mới được tạo tối đa là 15 (<code>maxPoolSize</code>).</li>
+<li>Khi Request vượt quá số lượng 15 thread. Request sẽ bị từ chối!</li>
+</ol>
+<p>Với kịch bản như thế này, bạn sẽ luôn tiết kiệm được số lượng thread sử dụng là 5 trong trường hợp bình thường. Nhưng vẫn có thể handle lên tới 15 thread nếu server quá tải.</p>
+<p>Điểm chúng ta hay nhầm lẫn là điều kiện để tạo thêm thread đó là khi <strong>hàng đợi phải full</strong>. Đúng vậy, nếu hàng đợi chưa full, thì có nghĩa chúng ta chưa quá tải.</p>
+<h3 id="code-ví-dụ"><a class="header" href="#code-ví-dụ"><strong>Code ví dụ</strong></a></h3>
+<p>Tạo ra một Runnable để xử lý các nhiệm vụ.</p>
+<pre><code class="language-java">public class RequestHandler implements Runnable {
+    String name;
+    public RequestHandler(String name){
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        try {
+            System.out.println(Thread.currentThread().getName() + &quot; Starting process &quot; + name);
+            // Giả sử nhiệm vụ xử lý hết 0.5s
+            Thread.sleep(500);
+            System.out.println(Thread.currentThread().getName() + &quot; Finished process &quot; + name);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<p>Tạo ra <code>ThreadPoolExecutor</code> để xử lý 1000 request tới dồn dập.</p>
+<pre><code class="language-java">public class ThreadPoolExecutorExample {
+    public static void main(String[] args) {
+        int corePoolSize = 5;
+        int maximumPoolSize = 10;
+        int queueCapacity = 100;
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(corePoolSize, // Số corePoolSize
+                                                             maximumPoolSize, // số maximumPoolSize
+                                                             10, // thời gian một thread được sống nếu không làm gì
+                                                             TimeUnit.SECONDS,
+                                                             new ArrayBlockingQueue&lt;&gt;(queueCapacity)); // Blocking queue để cho request đợi
+        // 1000 request đến dồn dập, liền 1 phát, không nghỉ
+        for (int i = 0; i &lt; 1000; i++) {
+            executor.execute(new RequestHandler(&quot;request-&quot; + i));
+        }
+        executor.shutdown(); // Không cho threadpool nhận thêm nhiệm vụ nào nữa
+
+        while (!executor.isTerminated()) {
+            // Chờ xử lý hết các request còn chờ trong Queue ...
+        }
+    }
+}
+
+// OUTPUT
+/*
+..
+..
+pool-1-thread-3 Finished process request-96
+pool-1-thread-5 Finished process request-97
+pool-1-thread-4 Finished process request-98
+pool-1-thread-8 Finished process request-100
+pool-1-thread-2 Finished process request-99
+pool-1-thread-6 Finished process request-102
+pool-1-thread-7 Finished process request-101
+pool-1-thread-9 Finished process request-104
+pool-1-thread-10 Finished process request-103
+*/
+</code></pre>
+<p>Bạn sẽ thấy là chương trình đã phải sử dụng tới 10 thread để xử lý hết 1000 request cùng 1 lúc. Nhớ là cùng 1 lúc nhé các bạn, thế là nhiều rồi đó. Và theo nguyên tắc. Nó đã tận dụng hết <code>maxPoolSize</code> rồi. Mà <code>queue</code> vẫn full. Nên các request không ở trong <code>queue</code> sẽ bị reject. Dẫn tới chỉ sử lý được <code>104 request</code> mà thôi.</p>
+<p>Bây giờ, vẫn là ví dụ này, nhưng mỗi request cách nhau <code>50 milliseconds</code> thì sẽ như nào, dễ thở hơn k? chỉ 0.05s thôi.</p>
+<pre><code class="language-java">for (int i = 0; i &lt; 1000; i++) {
+    executor.execute(new RequestHandler(&quot;request-&quot; + i));
+    Thread.sleep(50);
+}
+// OUTPUT:
+/*
+..
+..
+pool-1-thread-2 Finished process request-993
+pool-1-thread-1 Finished process request-994
+pool-1-thread-3 Finished process request-995
+pool-1-thread-4 Finished process request-996
+pool-1-thread-5 Finished process request-997
+pool-1-thread-9 Finished process request-998
+pool-1-thread-10 Finished process request-999
+*/
+</code></pre>
+<p>Xử lý gọn gàng, sạch sẽ các bạn ạ. Sức mạnh của <code>ThreadPoolExecutor</code> phát huy rõ rệt hơn. Tận dụng được 10 thread và queue vẫn còn chỗ nên rất nhanh, khác biệt trong một hệ thống có thể đc tính bằng <code>milliseconds</code> như vậy đó. nếu mỗi request cách nhau <code>100 milliseconds</code> thì nó chỉ cần sử dụng 5 thread thôi.</p>
+<p>toàn bộ code mình để tại Github: CODE</p>
+<p>Chúc các bạn học tập tốt! ohoho</p>
+<h1 id="gioi-thieu-reactive-programming-voi-reactor"><a class="header" href="#gioi-thieu-reactive-programming-voi-reactor">Giới thiệu Reactive Programming với Reactor</a></h1>
+<h3 id="giới-thiệu-3"><a class="header" href="#giới-thiệu-3"><strong>Giới thiệu</strong></a></h3>
+<p>Các ứng dụng hiện nay yêu cầu một tốc độ phản hồi cao để nâng cao trải nghiệm người dùng, giúp hệ thống mượt mà, linh hoạt, không bị đóng băng luồng. Các yêu cầu này cũng là kết quả hướng tới khi chúng ta sử dụng mô hình lập trình theo <strong>Reactive Programming</strong>.</p>
+<p>Trong bài viết này, chúng ta sẽ cố gắng làm sáng tỏ mô hình lập trình này thông qua một số khái niệm <code>Synchronous</code> và <code>Asynchronous</code> , <code>Blocking</code> và <code>Non-Blocking</code> trước.</p>
+<h3 id="synchronous-và-asynchronous"><a class="header" href="#synchronous-và-asynchronous"><strong>Synchronous và Asynchronous</strong></a></h3>
+<p><code>Synchronous</code> (Xử lý đồng bộ): là xử lý mà chương trình sẽ chạy theo từng bước, nghĩa là thực hiện xong đoạn code trên mới tới đoạn code kế tiếp và sẽ theo thứ tự từ trên xuống dưới, từ trái qua phải. Đây cũng là nguyên tắc cơ bản mà các bạn đã được học.</p>
+<p><code>Asynchronous</code> (Xử lý bất đồng bộ): Ngược lại với xử lý đồng bộ, nghĩa là chương trình có thể hoạt động nhảy cóc, function phía dưới có thể hoạt động mà không cần phải chờ function hay một đoạn code nào đó phía trên thực hiện xong. Dưới đây là minh họa cho việc làm việc với dữ liệu đồng bộ và bất đồng bộ :</p>
+<p>!image</p>
+<p>Như ta thấy nếu các công việc không liên quan đến nhau thì bất đồng bộ giúp ta tiết kiệm thời gian xử lý hơn và mang lại cho người dùng trải nghiệm tốt hơn.</p>
+<h3 id="blocking-và-non-blocking"><a class="header" href="#blocking-và-non-blocking"><strong>Blocking và Non-Blocking</strong></a></h3>
+<p>Chúng ta có thể hiểu một cách đơn giản khi chúng ta muốn dấy một danh sách <code>Student</code>.</p>
+<p>Lập trình theo mô hình <code>Blocking</code> thì phải chờ đợi chương trình thực hiện lấy tất cả <code>Student</code> rồi mới thực hiện các thao tác tiếp theo, hay được gọi là bị đóng băng luồng chờ quá trình đóng gói tất cả <code>Student</code> hoàn tất. Do đó sẽ dẫn tốn thời gian chờ đợi nếu số lượng danh sách rất lớn.</p>
+<p>Lập trình theo mô hình <code>Non-Blocking</code> thì hoạt động ngược lại, không cần phải chờ đợi hoàn thiện cả danh sách <code>Student</code> mà với mỗi <code>Student</code> nào được đưa ra thì thực hiện thao tác luôn với nó. Điều này dẫn tới không bị đóng băng luồng, kể cả số lượng danh sách lớn.</p>
+<h3 id="reactive-programming"><a class="header" href="#reactive-programming"><strong>Reactive Programming</strong></a></h3>
+<p>Nói một cách ngắn gọn, <strong>Reactive Programming</strong> là mô hình lập trình mà ở đó dữ liệu được truyền tải dưới dạng luồng ( stream). Mô hình này dưa trên nguyên tắc <code>Asynchronous</code> và <code>Non-Blocking</code> để làm việc với dữ liệu.</p>
+<p>Dưới đây là một số khái niệm mà bạn cần phải biết khi làm việc với mô hình này:</p>
+<p><strong>Publisher:</strong> Là nhà cung cấp dữ liệu, hoặc là nơi phát ra nguồn dữ liệu.</p>
+<p><strong>Subscriber:</strong> Lắng nghe <strong>Publisher</strong>, yêu cầu dữ liệu mới. Hay được gọi Là người tiêu thụ dữ liệu.</p>
+<p><strong>Backpressure:</strong> Là khả năng mà <strong>Subscriber</strong> cho phép <strong>Publisher</strong> có thể xử lý bao nhiêu yêu cầu tại thời điểm đó. Bởi vì <strong>Subscriber</strong> chịu trách nhiệm về luồng dữ liệu, không phải <strong>Publisher</strong> vì nó chỉ cung cấp dữ liệu.</p>
+<p><strong>Stream:</strong> Luồng dữ liệu bao gồm các dữ liệu trả về , các lỗi xảy ra và luồng này phải là luồng bất đồng bộ.</p>
+<p>Như vậy dữ liệu của chúng ra sẽ được chuyển thành một dòng (data stream) do đó tránh được việc bị blocking và các dữ liệu phát ra thì đều được subcriber lắng nghe dẫn đến quá trình xử lý và báo lỗi diễn ra một cách đơn giản hơn.</p>
+<h3 id="reactor"><a class="header" href="#reactor"><strong>Reactor</strong></a></h3>
+<p><strong>Reactor</strong> là một nền tảng để ta triển khai việc lập trình theo phong cách <strong>reactive programming</strong>. Nó được tích hợp trực tiếp với Java 8 funcion APIs như <code>CompletableFuture</code>, <code>Stream</code>, <code>Duration</code>.</p>
+<p><strong>Reactor</strong> cung cấp 2 loại về <strong>Publisher</strong> :</p>
+<p><code>Flux</code>: là một steam phát ra từ 0...n phần tử.</p>
+<p>!image</p>
+<p><code>Mono</code>: là một steam phát ra từ 0...1 phần tử.</p>
+<p>!image</p>
+<p>Vậy là các bạn có thể hiểu được <strong>Reactive Programming</strong> phải không nào :D. Các bài viết tới chúng ta sẽ đi sâu hơn về các thực thi cũng như các <code>function</code> mà <strong>Reactor</strong> hỗ trợ. Hãy chú ý theo dõi và đừng quên nhận xét để chúng tôi có thể cải thiện các bài viết tốt hơn.</p>
+<h1 id="gioi-thieu-reactor-core"><a class="header" href="#gioi-thieu-reactor-core">Giới thiệu Reactor Core</a></h1>
+<ul>
+<li>Maven Dependencies</li>
+<li>Tạo ra một luồng dữ liệu</li>
+<li>Subscribe()</li>
+<li>So sánh với Streams Java 8</li>
+<li>Backpressure</li>
+<li>Concurrency</li>
+<li>Kết luận</li>
+</ul>
+<h3 id="tổng-quan"><a class="header" href="#tổng-quan"><strong>Tổng Quan</strong></a></h3>
+<p><strong>Reactor Core</strong> là một thự viện Java 8 implement mô hình <strong>Reactive Programming</strong>. Nó được xây dựng dựa trên <strong>Reactive Streams Specification</strong> - một tiêu chuẩn để xây dựng ứng dụng <code>Reactive</code>.</p>
+<p>Trong bài viết này, chúng ta sẽ đi từng bước nhỏ thông qua <code>Reactor</code> cho đến khi có cái nhìn toàn cảnh cũng như cách thực thi của <strong>Reactor core</strong>.</p>
+<h3 id="maven-dependencies"><a class="header" href="#maven-dependencies"><strong>Maven Dependencies</strong></a></h3>
+<p>Đây là thư viện của <code>Reactor</code>, chúng ta có thể lấy thư viện mới nhất tại đây</p>
+<pre><code>&lt;dependency&gt;&lt;groupId&gt;io.projectreactor&lt;/groupId&gt;
+    &lt;artifactId&gt;reactor-core&lt;/artifactId&gt;
+    &lt;version&gt;3.2.8.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3 id="tạo-ra-một-luồng-dữ-liệu"><a class="header" href="#tạo-ra-một-luồng-dữ-liệu"><strong>Tạo ra một luồng dữ liệu</strong></a></h3>
+<p>Để có một ứng dựng phản ứng (reactive), điều đầu tiên chúng ta cần phải làm là tạo ra một luồng dữ liệu. Không có dữ liệu này chúng ta sẽ không có bất cứ điều gì để phản ứng, đó là lý do tại sao đây là bước đầu tiên.</p>
+<p><code>Reactor core</code> cung cấp 2 loại dữ liệu cho phép chúng ta thực hiện điều này.</p>
+<p><strong>Flux</strong></p>
+<p>Cách đầu tiên đó là dùng <code>Flux</code>. <code>Flux</code> là một luồng có thể phát ra <strong>0..n</strong> phần tử. Ví dụ tạo đơn giản:</p>
+<pre><code class="language-java">Flux&lt;Integer&gt; just = Flux.just(1,2,3,4);
+</code></pre>
+<p><strong>Mono</strong></p>
+<p>Cách thứ hai đó là <code>Mono</code>. <code>Mono</code> là một luồng có thể phát ra <strong>0..1</strong> phần tử. Nó hoạt động gần giống hệ như <code>Flux</code>, chỉ là bị giới hạn không quá một phần tử. Ví dụ:</p>
+<pre><code class="language-java">Mono&lt;String&gt; just = Mono.just(&quot;atomPtit&quot;);
+</code></pre>
+<p>Điều lưu ý rằng cả <code>Flux</code> và <code>Mono</code> đề được triển khai từ interface <code>Publisher</code>. Cả hai đều tuần thủ tiêu chuẩn <code>Reactive</code>, chúng ta có thể sử dụng interface như sau:</p>
+<pre><code class="language-java">Publisher&lt;String&gt; just = Mono.just(&quot;foo&quot;);
+</code></pre>
+<h3 id="subscribe"><a class="header" href="#subscribe"><strong>Subscribe()</strong></a></h3>
+<p>Hãy luôn ghi nhớ rằng: <strong>Không có gì xảy ra cho đến khi subscribe()</strong> .</p>
+<p>Trong <code>reactor</code>, khi bạn viết một <code>Publisher</code>, dữ liệu không bắt đầu được bơm vào theo mặc định. Thay vào đó, bạn tạo một mô tả trừu tượng về quy định không đồng bộ của bạn(hỗ trợ tái sử dụng).</p>
+<p>Để hiểu rõ luồng hoạt động hãy theo dõi qua ví dụ đơn giản sau.</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;io.projectreactor&lt;/groupId&gt;
+    &lt;artifactId&gt;reactor-core&lt;/artifactId&gt;
+    &lt;version&gt;3.2.8.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;
+    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;
+    &lt;version&gt;1.1.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>Chúng ta thêm thư viện <code>logback</code>. Điều này sẽ giúp chúng ta ghi nhật ký đầu ra của quá trình hoạt động <code>reactor</code> từ đó hiểu rõ hơn về luồng dữ liệu.</p>
+<pre><code class="language-java">public class ReactorCode {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; elements = new ArrayList&lt;&gt;();
+        Flux.just(1, 2, 3, 4)
+                .log()
+                .subscribe(elements::add);
+    }
+}
+
+// OUTPUT:
+/*
+23:02:16.996 [main] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+23:02:17.014 [main] INFO  reactor.Flux.Array.1 - | onSubscribe([Synchronous Fuseable] FluxArray.ArraySubscription)
+23:02:17.017 [main] INFO  reactor.Flux.Array.1 - | request(unbounded)
+23:02:17.018 [main] INFO  reactor.Flux.Array.1 - | onNext(1)
+23:02:17.018 [main] INFO  reactor.Flux.Array.1 - | onNext(2)
+23:02:17.018 [main] INFO  reactor.Flux.Array.1 - | onNext(3)
+23:02:17.018 [main] INFO  reactor.Flux.Array.1 - | onNext(4)
+23:02:17.019 [main] INFO  reactor.Flux.Array.1 - | onComplete()
+*/
+</code></pre>
+<p>Hãy nhìn vào phần output, mọi thứ đều chạy trên main thread. Bây giờ chugn ta đi xem rõ từng dòng thực thi: 1. <code>onSubscribe()</code> - Điều này được gọi thi chúng ra đăng ký (subscriber()) luồng</p>
+<ol>
+<li><code>request(unbounded)</code> - Khi chúng ta gọi đăng ký, thì hàm này được chạy ngầm nhằm ý nghĩa tạo đăng ký. Trong trường hợp này chạy mặc định là unbounded (không giới hạn), nghĩa là nó yêu cầu mọi phần tử có sẵn.</li>
+<li><code>onNext()</code> - Hàm này được gọi cho mọi phần tử đơn.</li>
+<li><code>onComplete()</code> - Hàm này được gọi sau cùng sau khi nhận được phần tử cuối cùng. Trong thực có thể xảy ra các hàm khác như <code>onError()</code>, cái mà có thể được gọi khi xảy ra một exception.</li>
+</ol>
+<h3 id="so-sánh-với-streams-java-8"><a class="header" href="#so-sánh-với-streams-java-8"><strong>So sánh với Streams Java 8</strong></a></h3>
+<p>Có vẻ nhiều người vẫn đang nghĩ sự tương đồng với Stream trong Java 8:</p>
+<pre><code class="language-java">List&lt;Integer&gt; collected = Stream.of(1, 2, 3, 4)
+  .collect(toList());
+</code></pre>
+<p>Sự khác biết cốt lõi là <code>Reactive</code> là một hình <strong>push</strong> (đẩy) , trong khi Stream Java 8 là mô hình <strong>pull</strong> (kéo)</p>
+<p>Streams Java 8 là <code>terminal</code> - kéo tất cả dữ liệu và trả về một kết quả. Với <code>Reactive</code>, chúng ta có một luồng vô hạn đến từ một nguồi tài nguyên bên ngoài, với nhiều người subscribe(). Chúng ta cũng có thể làm những việc như kết hợp các luồng, tiều tiết luồng và <code>backpressure</code>.</p>
+<h3 id="backpressure"><a class="header" href="#backpressure"><strong>Backpressure</strong></a></h3>
+<p>Trong ví dụ trên, người đăng ký nói với <code>Publisher</code> đẩy từng phần tử một. Điều này có thể trở nên quá tải cho người đăng ký phải tiêu thụ hết tất cả tài nguyên của nó.</p>
+<p><strong>Backpressure</strong> đơn giản chỉ là bảo với <code>Publisher</code> gửi cho nó ít dữ liệu hơn để ngăn chặn nó bị quá tải.</p>
+<p>Ví dụ dưới đây, chúng ta sẽ yêu cầu chỉ gửi 2 phần từ cùng một lúc bằng cách sử dụng <code>request ()</code>:</p>
+<pre><code class="language-java">Flux.just(1, 2, 3, 4)
+  .log()
+  .subscribe(new Subscriber&lt;Integer&gt;() {
+    private Subscription s;
+    int onNextAmount;
+
+    @Override
+    public void onSubscribe(Subscription s) {
+        this.s = s;
+        s.request(2);
+    }
+
+    @Override
+    public void onNext(Integer integer) {
+        elements.add(integer);
+        onNextAmount++;
+        if (onNextAmount % 2 == 0) {
+            s.request(2);
+        }
+    }
+
+    @Override
+    public void onError(Throwable t) {}
+
+    @Override
+    public void onComplete() {}
+});
+
+//OUTPUT
+/*
+23:31:15.395 [main] INFO  reactor.Flux.Array.1 - | onSubscribe([Synchronous Fuseable] FluxArray.ArraySubscription)
+23:31:15.397 [main] INFO  reactor.Flux.Array.1 - | request(2)
+23:31:15.397 [main] INFO  reactor.Flux.Array.1 - | onNext(1)
+23:31:15.398 [main] INFO  reactor.Flux.Array.1 - | onNext(2)
+23:31:15.398 [main] INFO  reactor.Flux.Array.1 - | request(2)
+23:31:15.398 [main] INFO  reactor.Flux.Array.1 - | onNext(3)
+23:31:15.398 [main] INFO  reactor.Flux.Array.1 - | onNext(4)
+23:31:15.398 [main] INFO  reactor.Flux.Array.1 - | request(2)
+23:31:15.398 [main] INFO  reactor.Flux.Array.1 - | onComplete()
+*/
+</code></pre>
+<p>Bây giờ chúng ta nhìn thấy hàm <code>request()</code> được gọi trước, tiếp theo đó là 2 hàm <code>onNext()</code> thực hiện, sau đó lại là <code>request()</code>.</p>
+<h3 id="concurrency"><a class="header" href="#concurrency"><strong>Concurrency</strong></a></h3>
+<p>Tất cả các ví dụ trên chúng ta đều đang chạy trên một luồng chính. Tuy nhiên, chúng ta có thể kiểm soát luồng nào mà code của chúng ta chạy nếu chúng ta muốn. Các inteface <code>Scheduler</code> cung cấp một sự trừu tượng với <code>asynchronous</code>.</p>
+<pre><code class="language-java">public class ReactorCode {
+    public static void main(String[] args) {
+        ExecutorService service = Executors.newFixedThreadPool(10);
+        Flux.just(1, 2, 3, 4)
+                .log()
+                .subscribeOn(Schedulers.fromExecutorService(service))
+                .subscribe();
+
+        Flux.just(5, 6, 7, 8)
+                .log()
+                .subscribeOn(Schedulers.fromExecutorService(service))
+                .subscribe();
+    }
+}
+
+//OUTPUT
+/*
+23:48:02.972 [main] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+23:48:02.996 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | onSubscribe([Synchronous Fuseable] FluxArray.ArraySubscription)
+23:48:02.996 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | onSubscribe([Synchronous Fuseable] FluxArray.ArraySubscription)
+23:48:03.000 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | request(unbounded)
+23:48:03.000 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | request(unbounded)
+23:48:03.001 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | onNext(1)
+23:48:03.001 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | onNext(5)
+23:48:03.001 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | onNext(2)
+23:48:03.001 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | onNext(6)
+23:48:03.001 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | onNext(3)
+23:48:03.001 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | onNext(7)
+23:48:03.001 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | onNext(4)
+23:48:03.001 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | onNext(8)
+23:48:03.002 [pool-1-thread-1] INFO  reactor.Flux.Array.1 - | onComplete()
+23:48:03.002 [pool-1-thread-2] INFO  reactor.Flux.Array.2 - | onComplete()
+*/
+</code></pre>
+<p>Ở đây chúng ta dùng ExecutorService, 2 luồng code thực hiện song song trên 2 thread khác nhau, điều mà đã chứng minh bằng output.</p>
+<h3 id="kết-luận"><a class="header" href="#kết-luận"><strong>Kết luận</strong></a></h3>
+<p>Sau bài viết này, chúng tôi đã có cái nhìn tổng quan về <code>Reactor Core</code>. Từ các tạo một <code>Publisher</code> , các đăng ký, backpressure cũng như xử lý không đồng bộ. Đây cũng là nền tảng để cho chúng tôi viết cái bài viết khác liên quan về <code>Reactor Core</code>.</p>
+<h1 id="bạn-thực-sự-đã-biết-khi-nào-dùng-interface-khi-nào-dùng-abstract"><a class="header" href="#bạn-thực-sự-đã-biết-khi-nào-dùng-interface-khi-nào-dùng-abstract">Bạn thực sự đã biết khi nào dùng Interface khi nào dùng Abstract?</a></h1>
+<h3 id="tổng-quan-1"><a class="header" href="#tổng-quan-1">Tổng quan</a></h3>
+<p>Trong java, chúng ta có <code>class</code> <code>abstract</code> và một <code>Interface</code>, ai cũng biết một class có thể <code>impements</code> nhiều <code>Interface</code> và chỉ kế thừa được một <code>class</code> <code>abstract</code>. Nhưng bạn thực sự đã biết khi nào thì ta dùng <code>Interface</code>, khi nào dùng <code>Abstract</code>. Chưa kể bắt đầu từ Java 8 có sự thay đổi về <code>Interface</code> càng làm khó phân biệt giữa hai loại này.</p>
+<p>Trong bài viết này chúng tôi sẽ đi so sánh một số tính chất của 2 loại này, sau đó là đưa ra ví dụ đơn giải để các bạn hình dung rõ nhất. Cuối cùng là hiểu khi nào thì dùng chúng.</p>
+<h3 id="sự-khác-nhau-giữa-interface-và-abstract"><a class="header" href="#sự-khác-nhau-giữa-interface-và-abstract">Sự khác nhau giữa Interface và Abstract</a></h3>
+<ol>
+<li>Methods: Class <code>abstract</code> có các phương thức abstract và non-abstract. Trong khi <code>Interface</code> chỉ có phương thức abstract, từ Java 8, thì Interface có thêm 2 loại phương thức là <code>default</code> và <code>static</code>.</li>
+<li>Variables: Class <code>abstract</code> có thể có các biến final, non-final, static và non-static. Trong khi <code>Interface</code> chỉ có các biến static và final.</li>
+<li>Implementation: Class <code>abstract</code> có thể implement các Interface. Trong khi <code>Interface</code> thì không thể implement class abstract.</li>
+<li>Inheritance: Class <code>abstract</code> có thể kế thừa được một class khác. Trong khi <code>Interface</code> có thể kế thừa được nhiều Interface khác.</li>
+<li>Accessibility: các thành viên trong <code>Interface</code> kiếu mặc định là <code>public</code>. Trong khi class <code>abstract</code> thì lại có thể là private, protected,..</li>
+</ol>
+<p><strong><em>Nguồn: <a href="https://loda.me">https://loda.me</a> - còn nhiều cái hay ho lắm!</em></strong></p>
+<h3 id="abstract-là-gì"><a class="header" href="#abstract-là-gì">Abstract là gì?</a></h3>
+<p>Abstract(trừu tượng) nghĩa là một cái gì đó không hoàn toàn cụ thể, nó chỉ là một ý tưởng hoặc ý chính của một cái gì đó mà không có bản triển khai cụ thể. Vì vậy Class abstract chỉ là một cấu trúc hoặc hướng dẫn được tạo cho các class cụ thể khác.</p>
+<p>Chúng ta có thể nói rằng một class abstract là linh hồn của một class cụ thể, và rõ ràng một cơ thể (class) không thể có hai linh hồn. Đây cũng là lý do Java không hỗ trợ nhiều kế thừa cho các class abstract.</p>
+<p>Hãy nhìn vào class abstract sau:
+<em>Xe.class</em></p>
+<pre><code>public abstract class Xe {
+    private String dongCo;
+     abstract void khoiDongDongCo();
+     abstract void dungDongco();
+}
+
+</code></pre>
+<p>Chúng tôi tạo một class abstract <code>Xe</code> có thuộc tính là <code>động cơ</code>, và các phương thức khởi động/ dừng động cơ. <code>Xe</code> là một cái gì đó không cụ thể, nó có thể là ô tô, xe máy, ... và rõ ràng không có <code>Xe</code> nào mà không tồn tại động cơ và cơ chế khởi động/dừng động cơ cả.</p>
+<p><em>Oto.class</em></p>
+<pre><code>public class Oto extends Xe {
+    @Override
+    void khoiDongDongCo() {
+        System.out.println(&quot;Khởi động động cơ của ôtô&quot;);
+    }
+
+    @Override
+    void dungDongco() {
+        System.out.println(&quot;Dừng động cơ của ôtô&quot;);
+    }
+}
+
+</code></pre>
+<h3 id="interface-là-gì"><a class="header" href="#interface-là-gì">Interface là gì?</a></h3>
+<p>Interface (Giao diện) là một hình thức, giống như một hợp đồng, nó không thể tự làm bất cứ điều gì. Nhưng khi có một class ký kết hợp đồng (implement Interface) này, thì class đó phải tuân theo hợp đồng này.</p>
+<p>Trong Interface, chúng tôi định nghĩa các hành vi của một class sẽ thực hiện. Một class có thể có một số cách hành vi khác nhau, cũng giống như nó có thể ký kết được với nhiều hợp đồng khác nhau. Đó cũng là lý do tại sao Java cho phép implement nhiều Interface.</p>
+<p>Tiếp nối ví dụ trên, <code>Xe</code> có thể di chuyển, vì vậy chúng tôi tạo một Interface Hành động di chuyển và class <code>Oto</code> implement nó.</p>
+<p><em>HanhDongDiChuyen.class</em></p>
+<pre><code>public interface HanhDongDiChuyen {
+    void diChuyen();
+}
+
+</code></pre>
+<p>Đây là những hành vi của <code>Oto</code>, chứ không thuộc tính sẵn có của nó: <strong>Ôtô là xe hơi, ngay cả khi nó không thể di chuyển được!</strong></p>
+<p><em>Oto.class</em></p>
+<pre><code>public class Oto extends Xe implements HanhDongDiChuyen{
+    @Override
+    void khoiDongDongCo() {
+        System.out.println(&quot;Khởi động động cơ của ôtô&quot;);
+    }
+
+    @Override
+    void dungDongco() {
+        System.out.println(&quot;Dừng động cơ của ôtô&quot;);
+    }
+
+    @Override
+    public void diChuyen() {
+        System.out.println(&quot;Ôtô đang di chuyển&quot;);
+    }
+}
+
+</code></pre>
+<h3 id="khi-nào-nên-dùng"><a class="header" href="#khi-nào-nên-dùng">Khi nào nên dùng?</a></h3>
+<ol>
+<li>Class abstract đại diện cho mối quan hệ &quot;IS - A&quot; (Ôtô là Xe)</li>
+<li>Interface đại diện cho mối quan hệ &quot;like - A&quot; (Ô tô có thể chuyển động).</li>
+<li>Tạo một class abstract khi bạn đang cung cấp các hướng dẫn cho một class cụ thể.</li>
+<li>Tạo Interface khi chúng ta cung cấp các hành vi bổ sung cho class cụ thể và những hành vì này không bắt buộc đối với clas đó.</li>
+</ol>
+<h3 id="kết-luận-1"><a class="header" href="#kết-luận-1">Kết luận</a></h3>
+<p>Mục đích của bài viết này là để giúp bạn hiểu và nắm vững class abstract, Interface và kịch bản sử dụng. Thông qua nổ lực toàn bộ bài viết của chúng tôi, chúng tôi tin chắc rằng bạn đã hiểu được điều gì đó. Cuối cùng, cảm ơn bạn đã đọc bài viết.</p>
+<h1 id="java-concurrency-phần-1-thread"><a class="header" href="#java-concurrency-phần-1-thread">Java Concurrency (Phần 1): Thread</a></h1>
+<p>Source: <a href="https://viblo.asia/p/java-concurrency-phan-1-thread-GAWVpevY405">Java Concurrency (Phần 1): Thread</a></p>
+<h2 id="1-giới-thiệu"><a class="header" href="#1-giới-thiệu">1. Giới thiệu</a></h2>
+<p>Lập trình đồng thời (concurrency) trong Java đề cập đến khả năng của một chương trình Java thực thi nhiều tác vụ đồng thời hoặc song song, tận dụng tối đa các bộ xử lý (CPU) đa lõi (core) hiện đại. Khi các ứng dụng ngày càng trở nên phức tạp và đòi hỏi hiệu suất cao hơn, lập trình đồng thời trở thành yếu tố thiết yếu để cải thiện hiệu năng, khả năng phản hồi và khả năng mở rộng.
+Java cung cấp một bộ công cụ và các thư viện phong phú giúp các nhà phát triển tạo ra các ứng dụng đồng thời, quản lý nhiều luồng (threads) và điều phối các tác vụ một cách hiệu quả. Trong bài viết này, chúng sẽ khám phá các khái niệm cơ bản về lập trình đồng thời trong Java.</p>
+<p><img src="https://images.viblo.asia/full/dab66ffc-6006-45b9-a745-5e5a9f09d9da.png" alt="image.png" /></p>
+<h2 id="2-Định-nghĩa-thread"><a class="header" href="#2-Định-nghĩa-thread">2. Định nghĩa Thread</a></h2>
+<p>Một thread là một đơn vị thực thi nhỏ hơn một process. <strong>Một process có thể tạo ra nhiều thread trong quá trình thực thi</strong>. Tất cả các thread trong cùng một process sẽ chia sẻ, <strong>dùng chung một số vùng nhớ với nhau</strong> (heap memory, static variables, metaspace, … phần này mình sẽ chia sẻ cụ thể hơn ở một bài viết khác). Vì vậy, việc giao tiếp giữa các thread khá đơn giản và dễ dàng hơn so với giao tiếp giữa các process. Ngoài ra, việc tạo mới/hủy thread đơn giản và tốn ít công hơn so với việc tạo mới/hủy một process. Vì các lý do này, thread còn được gọi là lightweight process.</p>
+<p><img src="https://images.viblo.asia/full/cb4fb02e-990b-4290-bdb3-c7b3e9d030a1.png" alt="image.png" /></p>
+<h2 id="3-cách-khởi-tạo-thread"><a class="header" href="#3-cách-khởi-tạo-thread">3. Cách khởi tạo thread</a></h2>
+<p>Đây là một câu hỏi thường hay gặp trong phỏng vấn. Bạn có thể tham khảo hoặc trả lời như sau:
+Ta có thể phân loại các cách khởi tạo thread như sau:</p>
+<h3 id="31-tạo-trực-tiếp-thread"><a class="header" href="#31-tạo-trực-tiếp-thread">3.1. Tạo trực tiếp thread</a></h3>
+<p>sử dụng <code>new Thread().start()</code>.</p>
+<pre><code>new Thread(() -&gt; resource.counter++).start();
+
+</code></pre>
+<h3 id="32-khai-báo-thread-execution-method"><a class="header" href="#32-khai-báo-thread-execution-method">3.2. Khai báo Thread execution method</a></h3>
+<h4 id="321-kế-thừa-class-thread"><a class="header" href="#321-kế-thừa-class-thread">3.2.1. Kế thừa class Thread</a></h4>
+<p>Đây là một cách phổ biến. Chúng ta tạo ra một class mới kế thừa class Thread và ghi đè method run như sau:</p>
+<pre><code>public class ExtendsThread extends Thread {
+    @Override
+    public void run() {
+        System.out.println(&quot;Do something&quot;);
+    }
+
+    public static void main(String[] args) {
+        new ExtendsThread().start();
+    }
+}
+
+</code></pre>
+<h4 id="322-triển-khai-interface-runnable"><a class="header" href="#322-triển-khai-interface-runnable">3.2.2. Triển khai interface Runnable</a></h4>
+<p>Đây cũng là một cách phổ biến, implement Runnable interface và override method run, như sau:</p>
+<pre><code>public class ImplementsRunnable implements Runnable {
+    @Override
+    public void run() {
+        System.out.println(&quot;Do something&quot;);
+    }
+
+    public static void main(String[] args) {
+        ImplementsRunnable runnable = new ImplementsRunnable();
+        new Thread(runnable).start();
+    }
+}
+
+</code></pre>
+<h4 id="323-triển-khai-interface-callable"><a class="header" href="#323-triển-khai-interface-callable">3.2.3. Triển khai interface Callable</a></h4>
+<p>Tương tự như method trước, ngoại trừ method này có thể nhận giá trị trả về sau khi Thread được thực thi, như sau:</p>
+<pre><code>public class ImplementsCallable implements Callable&lt;String&gt; {
+    @Override
+    public String call() throws Exception {
+        System.out.println(&quot;Do something&quot;);
+        return &quot;test&quot;;
+    }
+
+    public static void main(String[] args) throws Exception {
+        ImplementsCallable callable = new ImplementsCallable();
+        FutureTask&lt;String&gt; futureTask = new FutureTask&lt;&gt;(callable);
+        new Thread(futureTask).start();
+        System.out.println(futureTask.get());
+    }
+}
+
+</code></pre>
+<h4 id="324-sử-dụng-class-ẩn-danh-hoặc-biểu-thức-lambda"><a class="header" href="#324-sử-dụng-class-ẩn-danh-hoặc-biểu-thức-lambda">3.2.4. Sử dụng class ẩn danh hoặc biểu thức Lambda</a></h4>
+<pre><code>public class UseAnonymousClass {
+    public static void main(String[] args) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(&quot;AnonymousClass&quot;);
+            }
+        }).start();
+
+        new Thread(() -&gt;
+                System.out.println(&quot;Lambda&quot;)
+        ).start();
+    }
+}
+
+</code></pre>
+<h3 id="33-tạo-gián-tiếp-thread"><a class="header" href="#33-tạo-gián-tiếp-thread">3.3. Tạo gián tiếp thread</a></h3>
+<h4 id="331-sử-dụng-thread-pool-của-executorservice"><a class="header" href="#331-sử-dụng-thread-pool-của-executorservice">3.3.1. Sử dụng thread pool của ExecutorService</a></h4>
+<pre><code>public class UseExecutorService {
+    public static void main(String[] args) {
+        ExecutorService poolA = Executors.newFixedThreadPool(2);
+        poolA.execute(() -&gt; {
+            System.out.println(&quot;do something&quot;);
+        });
+}
+
+</code></pre>
+<h4 id="332-sử-dụng-thread-pool-hoặc-stream-song-song-parallel-stream"><a class="header" href="#332-sử-dụng-thread-pool-hoặc-stream-song-song-parallel-stream">3.3.2. Sử dụng thread pool hoặc Stream song song (parallel stream)</a></h4>
+<pre><code>public class UseForkJoinPool {
+    public static void main(String[] args) {
+        ForkJoinPool forkJoinPool = new ForkJoinPool();
+        forkJoinPool.execute( () -&gt; {
+            System.out.println(&quot;Do something&quot;);
+        });
+
+        List&lt;String&gt; list = Arrays.asList(&quot;e1&quot;);
+        list.parallelStream().forEach(System.out::println);
+    }
+}
+
+</code></pre>
+<h4 id="333-sử-dụng-completablefuture"><a class="header" href="#333-sử-dụng-completablefuture">3.3.3. Sử dụng CompletableFuture</a></h4>
+<pre><code>public class UseCompletableFuture {
+    public static void main(String[] args) throws InterruptedException {
+        CompletableFuture&lt;String&gt; cf = CompletableFuture.supplyAsync(() -&gt; {
+            System.out.println(&quot;5......&quot;);
+            return &quot;test&quot;;
+        });
+        Thread.sleep(1000);
+    }
+}
+
+</code></pre>
+<h4 id="334-sử-dụng-class-timer"><a class="header" href="#334-sử-dụng-class-timer">3.3.4. Sử dụng class Timer</a></h4>
+<pre><code>public class UseTimer {
+    public static void main(String[] args) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println(&quot;9......&quot;);
+            }
+        }, 0, 1000);
+    }
+}
+
+</code></pre>
+<p>Java chỉ có một cách để tạo thread một cách trực tiếp, đó là thông qua việc tạo new Thread().start(). Do đó, cho dù sử dụng phương thức nào thì cuối cùng nó cũng phụ thuộc vào new Thread().start(). Các đối tượng Runnable, Callable, … chỉ là phần thân của Thread, tức là tác vụ được cung cấp cho Thread để thực thi.</p>
+<h2 id="4-trạng-thái-của-thread"><a class="header" href="#4-trạng-thái-của-thread">4. Trạng thái của thread</a></h2>
+<p><img src="https://images.viblo.asia/full/9e0a1831-55d3-48d9-8f04-21ab8bb96b91.png" alt="thread-status.png" /></p>
+<p>Tại một thời điểm, một thread trong Java chỉ có thể ở một trong sáu trạng thái trong vòng đời của nó:</p>
+<ul>
+<li><code>NEW</code>: Khi đối tượng thread được tạo, nó sẽ chuyển sang trạng thái NEW, chẳng hạn như: Thread t = new MyThread();</li>
+<li><code>RUNNABLE</code>: Trạng thái sẵn sàng để chạy. Ta có thể hiểu, nó sẽ được chia thành 2 trường hợp nhỏ hơn: <strong>đang chạy hoặc đang chờ để chạy</strong>. Ví dụ, khi sau, ta gọi method start(), thread đó có thể chưa chạy được ngay mà phải đợi CPU schedule để chạy.</li>
+<li><code>BLOCKED</code>: Trạng thái bị chặn, thread A đang cố giành khóa (lock) nhưng khoá đang giữa bởi thread B, thread A phải đợi, bị blocked cho đến khi khoá được giải phóng.</li>
+<li><code>TIME_WAITING</code>: Trạng thái chờ có thời gian chờ, có thể tự động quay trở lại trạng thái RUNNABLE sau khoảng thời gian xác định.</li>
+<li><code>WAITING</code>: Trạng thái chờ, biểu thị rằng thread A đang chờ các thread khác thực hiện một số hành động cụ thể, như (notification) thông báo cho thread A hoặc (interruption) ngắt thread A. Khác với TIME_WAITING, trạng thái WAITING không có thời gian timeout, chỉ được wakeup khi có thông báo từ thread khác.</li>
+<li><code>TERMINATED</code>: Trạng thái kết thúc, biểu thị rằng thread đã hoàn thành công việc hoặc dừng lai do gặp exception.</li>
+</ul>
+<h2 id="5-các-method-cơ-bản-của-thread"><a class="header" href="#5-các-method-cơ-bản-của-thread">5. Các method cơ bản của thread</a></h2>
+<h3 id="51-start"><a class="header" href="#51-start">5.1. start()</a></h3>
+<p>Method start() khởi tạo việc thực thi một thread. Nó gọi phương thức run() được xác định trong class thread hoặc runnable object. Thread sẽ chuyển từ trạng thái NEW sang trạng thái RUNNABLE sau khi method này được gọi.</p>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        Thread myThread = new Thread(new MyRunnable());
+        myThread.start();
+    }
+}
+
+</code></pre>
+<h3 id="52-run"><a class="header" href="#52-run">5.2. run()</a></h3>
+<p>Method run() chứa mã sẽ được thực thi trong luồng.</p>
+<pre><code>class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println(&quot;This is a runnable.&quot;);
+    }
+}
+
+</code></pre>
+<h3 id="53-sleep-và-wait"><a class="header" href="#53-sleep-và-wait">5.3. sleep() và wait()</a></h3>
+<p>Method <code>sleep()</code> làm cho thread hiện đang thực thi ở chế độ ngủ (TIMED_WAITING) trong 1 khoảng thời gian được chỉ định (tính bằng milliseconds).</p>
+<p>Method wait() khiến thread hiện tại đợi cho đến khi một thread khác gọi notify() hoặc notifyAll() trên cùng một object. Thread sẽ chuyển từ trạng thái RUNNABLE sang trạng thái WAITING nếu dùng wait() không truyền thêm thời gian timeout, còn nếu truyền thêm thời gian timeout - wait(timeout) thì thread sẽ ở trạng thái <code>TIMED_WAITING</code>.</p>
+<p>Sự khác biệt giữa 2 method:</p>
+<ul>
+<li><strong>Method wait() cần được đặt trong synchronized code, còn sleep() thì không.</strong></li>
+<li>Method sleep() không giải phóng khóa, trong khi method wait() sẽ giải phóng khóa.</li>
+<li>Method wait() thường được sử dụng cho tương tác/giao tiếp giữa các thread, còn sleep() thường được sử dụng để tạm dừng thực thi.</li>
+<li>Sau khi method wait() được gọi, thread sẽ không tự động thức dậy; cần một luồng khác gọi method notify() hoặc notifyAll() trên cùng một đối tượng để đánh thức luồng đó. Sau khi method sleep() được thực thi, thread sẽ tự động thức dậy (RUNNABLE).</li>
+<li>sleep() là một method static của class Thread, còn wait() là một method của class Object.</li>
+</ul>
+<h3 id="54-notify-và-notifyall"><a class="header" href="#54-notify-và-notifyall">5.4. notify() và notifyAll()</a></h3>
+<p>notify(): đối với tất cả các thread đang chờ object monitor bằng cách sử dụng bất kỳ method wait() nào, method notify() thông báo cho một trong số các thread đó thức dậy. <strong>Việc lựa chọn chính xác thread nào được đánh thức là mẫu nhiên và chúng ta không thể kiểm soát được</strong> thread được đánh thức.
+notifyAll(): Phương pháp này chỉ đơn giản đánh thức tất cả các thread đang chờ trên object monitor.
+Mình sẽ nói chi tiết hơn về các method này trong bài giao tiếp giữa các threads.</p>
+<h3 id="55-yield"><a class="header" href="#55-yield">5.5. yield()</a></h3>
+<p>Method yield() làm cho thread hiện đang thực thi tạm dừng và cho phép các thread khác thực thi.
+Mọi người lưu ý, đây chỉ là hint cho scheduler tạm dừng thread, scheduler có thể bỏ qua cái hint này.
+Method này có thể dùng để tái hiện bug do race condition. Tuy nhiên, method này hiếm khi được sử dụng và <strong>mình recommend không dùng method này trong production code</strong>.</p>
+<h3 id="56-join"><a class="header" href="#56-join">5.6. join()</a></h3>
+<p>Method <code>join()</code> cho phép một thread chờ đợi một thread khác hoàn thành. Điều này có thể hữu ích khi bạn cần đảm bảo hoàn thành một số nhiệm vụ nhất định trước khi tiếp tục. Khi thread A gọi method <code>join()</code> của thread B, thread A sẽ chuyển sang trạng thái chờ ( <code>RUNNABLE → WAITING</code>). Nó vẫn ở trạng thái chờ cho đến khi thread B kết thúc.</p>
+<p>Giả sử bạn cần thực hiện một số lệnh gọi API đến các endpoints khác nhau lấy dữ liệu đồng thời. Mỗi lệnh gọi API được thực hiện trong một thread riêng biệt và bạn muốn đợi cho đến khi tất cả các thread hoàn thành yêu cầu API của chúng trước khi tổng hợp (aggregate) kết quả.</p>
+<pre><code>String[] apiEndpoints = {
+    &quot;https://api.example.com/data1&quot;,
+    &quot;https://api.example.com/data2&quot;,
+    &quot;https://api.example.com/data3&quot;
+};
+
+List&lt;Thread&gt; threads = new ArrayList&lt;&gt;();
+
+List&lt;String&gt; results = new ArrayList&lt;&gt;();
+
+for (String endpoint : apiEndpoints) {
+    Thread thread = new Thread(() -&gt; {
+        String response = makeApiCall(endpoint);
+        synchronized (results) {
+            results.add(response);
+        }
+    });
+    threads.add(thread);
+    thread.start();
+}
+
+// Wait for all threads to complete
+try {
+    for (Thread thread : threads) {
+        thread.join();
+    }
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
+
+// Process and aggregate results
+results.forEach(response -&gt; System.out.println(&quot;API response: &quot; + response));
+
+</code></pre>
+<p>Nếu mọi người thấy bài viết hữu ích thì nhờ mọi người share để nội dung của Ronin được nhiều người biết hơn.</p>
+<p>Cám ơn mọi người. 🙏</p>
+<hr />
+<p>🧑‍💻 150+ Ronin Engineers: <a href="https://roninhub.com/">https://roninhub.com/</a></p>
+<p>✏️ System Design VN: <a href="https://fb.com/groups/systemdesign.vn">https://fb.com/groups/systemdesign.vn</a></p>
+<p>📚 Tài liệu khác: <a href="https://roninhub.com/tai-lieu">https://roninhub.com/tai-lieu</a></p>
+<p>🎬 Youtube: <a href="https://youtube.com/@ronin-engineer">https://youtube.com/@ronin-engineer</a></p>
+<h1 id="java-8optional"><a class="header" href="#java-8optional">「Java 8」Optional</a></h1>
+<p><code>Java 8</code> ra đời cùng với một class mới tên là <code>Optional</code>. Nhiệm vụ của nó là kiểm soát <code>null</code> hộ chúng ta.</p>
+<h3 id="khái-niệm-optional"><a class="header" href="#khái-niệm-optional"><strong>Khái niệm Optional</strong></a></h3>
+<p><code>Optional&lt;T&gt;</code> là một đối tượng <code>Generic</code>, nhiệm vụ chính của nó là <strong>bọc</strong> hay <strong>wrapper</strong> lấy một object khác. Nó chỉ chứa được một object duy nhất bên trong.</p>
+<p>Việc bạn lấy giá trị của object bây giờ sẽ thông qua <code>Optional</code> và nếu object đó <code>null</code> cũng không sao, vì thằng <code>Optional</code> kiểm soát nó chặt chẽ hơn là <code>if else</code>.</p>
+<p>Ví dụ bạn có một đối tượng bất kỳ:</p>
+<p>Khi chúng ta thực hiện các thao tác, chúng ta có thể kiểm tra như thế này:</p>
+<p>Hmmm..... trông thế này thì khác đếch gì <code>if (str != null)</code> =))) Nhiều bạn sẽ tự nghĩ. Đúng là như vậy, nếu nó chỉ làm được đến đây, thì thôi.. nghỉ mịa đee huhu :((</p>
+<p>Bây giờ mình sẽ giới thiệu từng tính năng lần lượt của <code>Optional</code> để bạn thấy nó kì diệu như nào.</p>
+<h3 id="ifpresent"><a class="header" href="#ifpresent"><strong>ifPresent</strong></a></h3>
+<p><code>ifPresent</code> nhận vào một <code>Consumer</code>, nó cũng chỉ là <code>Functional Interface</code> thôi các bạn. Nhận vào một đối tượng và thao tác trên nó, không return gì cả.</p>
+<p>Nếu bạn chưa rõ <code>Functional Interface</code> và <code>Lambda Expression</code> thì bạn có thể xem ngay đây, dễ hiểu lém:</p>
+<p>Functional Interfaces &amp; Lambda Expressions cực dễ hiểu</p>
+<h3 id="orelse-và-orelseget"><a class="header" href="#orelse-và-orelseget"><strong>orElse() và orElseGet()</strong></a></h3>
+<p><code>orElse()</code> lấy ra object trong <code>Optional</code>. Nếu <code>null</code>, trả về giá trị mặc định do bạn quy định</p>
+<p><code>orElseGet()</code> Tương tự <code>orElse()</code> nhưng trả ra bằng <code>Supplier interface</code></p>
+<h3 id="map"><a class="header" href="#map"><strong>map()</strong></a></h3>
+<p><code>map()</code> giúp chúng ta biến đổi đối tượng bên trong <code>Optional</code>.</p>
+<p>mình sẽ ví dụ bằng code dễ hiểu hơn.</p>
+<p><code>code</code> trông sáng sủa hơn nhiều phải không bạn :3</p>
+<p>Trong code ở trên sử dụng <code>Method reference</code>, khái niệm này mình đã nói chi tiết tại đây:</p>
+<p>Hướng dẫn Method Reference và Lambda Expressions</p>
+<p>Khái niệm <code>map()</code> mình có nói chi tiết tại đây:</p>
+<p>Stream Trong Java 8 cực dễ hiểu!</p>
+<h3 id="filter"><a class="header" href="#filter"><strong>filter()</strong></a></h3>
+<p><code>filter()</code> giúp chúng ta kiểm tra giá trị trong <code>Optional</code> nếu không thỏa mãn điều kiện, trả về <code>empty()</code></p>
+<p>Tới đây mình đã giới thiệu xong với các bạn các tính năng khá hay ho của <code>Optional</code>. Ngoài việc giúp chúng ta kiểm soát <code>NullException</code> thì còn giúp <code>code</code> của chúng ta sáng sủa hơn rất nhiều và thuận tiện hơn trong nhiều trường hợp yêu cầu điều kiện phức tạp</p>
+<p>Chúc các bạn học tập thành công. Và chớ quên like và share ủng hộ nhá ahihi :3</p>
+<pre><code class="language-java">String str = null;
+// Tạo ra một đối tượng Optional
+Optional&lt;String&gt; optional = Optional.ofNullable(str);
+// Bây giờ Optional đã wrap lấy cái str.
+</code></pre>
+<pre><code class="language-java">if (optional.isPresent()) {
+    System.out.println(opt.get()); // lấy ra cái str mình đã wrapper
+}
+</code></pre>
+<pre><code class="language-java">optional.ifPresent(s -&gt; System.out.println(s));
+</code></pre>
+<pre><code class="language-java">String b = optional.orElse(&quot;Giá trị mặc định&quot;);
+</code></pre>
+<pre><code class="language-java">String b = optional.orElseGet(() -&gt; {
+    StringBuilder sb = new StringBuilder();
+    // Thao tác phức tạp
+    return sb.toString();
+});
+</code></pre>
+<pre><code class="language-java">class Outfit{
+    public String type;
+
+    public String getType() { return type; }
+}
+
+class Girl{
+    private Outfit outfit;
+
+    public Outfit getOutfit() { return outfit; }
+}
+
+public String getOutfitType(Girl girl){
+    return Optional.ofNullable(girl) // Tạo ra Optional wrap lấy girl
+        .map(Girl::getOutfit) // nếu girl != null thì lấy outfit ra xem kakaka :3 ngược lại trả ra Optional.empty()
+        .map(Outfit::getType) // nếu outfit != null thì lấy ra xem type của nó
+        .orElse(&quot;Không mặc gì&quot;); // Nếu cuối cùng là Optional.empty() thì trả ra ngoài Không mặc gì.
+}
+</code></pre>
+<pre><code class="language-java">public String getOutfitType(Girl girl){
+    return Optional.ofNullable(girl) // Tạo ra Optional wrap lấy girl
+        .map(Girl::getOutfit)
+        .map(Outfit::getType)
+        .filter(s -&gt; s.contains(&quot;bikini&quot;)) // Nó chỉ chấp nhận giá trị bikini, còn lại dù khác null thì vẫn trả ra ngoài là Optiional.empty()
+        .orElse(&quot;Không mặc gì&quot;); // Nếu cuối cùng là Optional.empty() thì trả ra ngoài &quot;Không mặc gì&quot;.
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../js/object.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../java/snippets/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../js/object.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../java/snippets/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

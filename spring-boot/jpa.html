@@ -1,0 +1,1683 @@
+<!DOCTYPE HTML>
+<html lang="vi" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Jpa - Kho code của duykhanh471</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Trang chủ dự án</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> HTML/CSS/JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../html-css/index.html"><strong aria-hidden="true">2.1.</strong> HTML/CSS</a></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.2.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/co-ban.html"><strong aria-hidden="true">2.2.1.</strong> Cơ bản</a></li><li class="chapter-item expanded "><a href="../js/array.html"><strong aria-hidden="true">2.2.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../js/ngay-gio.html"><strong aria-hidden="true">2.2.3.</strong> Ngày giờ</a></li><li class="chapter-item expanded "><a href="../js/string.html"><strong aria-hidden="true">2.2.4.</strong> String</a></li><li class="chapter-item expanded "><a href="../js/object.html"><strong aria-hidden="true">2.2.5.</strong> Object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../java/index.html"><strong aria-hidden="true">3.</strong> Java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/index.html"><strong aria-hidden="true">3.1.</strong> Kho snippets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/algorithms.html"><strong aria-hidden="true">3.1.1.</strong> Algorithms</a></li><li class="chapter-item expanded "><a href="../java/snippets/array.html"><strong aria-hidden="true">3.1.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../java/snippets/cls.html"><strong aria-hidden="true">3.1.3.</strong> CLS</a></li><li class="chapter-item expanded "><a href="../java/snippets/date.html"><strong aria-hidden="true">3.1.4.</strong> Date</a></li><li class="chapter-item expanded "><a href="../java/snippets/encoding.html"><strong aria-hidden="true">3.1.5.</strong> Encoding & Decoding</a></li><li class="chapter-item expanded "><a href="../java/snippets/file.html"><strong aria-hidden="true">3.1.6.</strong> File</a></li><li class="chapter-item expanded "><a href="../java/snippets/io.html"><strong aria-hidden="true">3.1.7.</strong> IO</a></li><li class="chapter-item expanded "><a href="../java/snippets/math.html"><strong aria-hidden="true">3.1.8.</strong> Math</a></li><li class="chapter-item expanded "><a href="../java/snippets/media.html"><strong aria-hidden="true">3.1.9.</strong> Media</a></li><li class="chapter-item expanded "><a href="../java/snippets/network.html"><strong aria-hidden="true">3.1.10.</strong> Network</a></li><li class="chapter-item expanded "><a href="../java/snippets/string.html"><strong aria-hidden="true">3.1.11.</strong> String</a></li><li class="chapter-item expanded "><a href="../java/snippets/thread.html"><strong aria-hidden="true">3.1.12.</strong> Thread</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../spring-boot/index.html"><strong aria-hidden="true">4.</strong> Spring Boot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../spring-boot/core.html"><strong aria-hidden="true">4.1.</strong> Core</a></li><li class="chapter-item expanded "><a href="../spring-boot/spring-boot.html"><strong aria-hidden="true">4.2.</strong> Spring Boot</a></li><li class="chapter-item expanded "><a href="../spring-boot/jpa.html" class="active"><strong aria-hidden="true">4.3.</strong> Jpa</a></li><li class="chapter-item expanded "><a href="../spring-boot/ss.html"><strong aria-hidden="true">4.4.</strong> Spring Security</a></li><li class="chapter-item expanded "><a href="../spring-boot/redis.html"><strong aria-hidden="true">4.5.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/thuat-toan.html"><strong aria-hidden="true">5.1.</strong> Thuật toán</a></li><li class="chapter-item expanded "><a href="../rust/command-line.html"><strong aria-hidden="true">5.2.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../rust/he-thong.html"><strong aria-hidden="true">5.3.</strong> System</a></li><li class="chapter-item expanded "><a href="../rust/internet.html"><strong aria-hidden="true">5.4.</strong> Internet</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Tệp</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/tep/epub.html"><strong aria-hidden="true">5.5.1.</strong> EPUB</a></li><li class="chapter-item expanded "><a href="../rust/tep/git.html"><strong aria-hidden="true">5.5.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../rust/tep/html.html"><strong aria-hidden="true">5.5.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../rust/tep/rss.html"><strong aria-hidden="true">5.5.4.</strong> RSS</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../react/index.html"><strong aria-hidden="true">6.</strong> React</a></li><li class="chapter-item expanded "><a href="../react-native/index.html"><strong aria-hidden="true">7.</strong> React Native</a></li><li class="chapter-item expanded "><a href="../bash/tong-hop.html"><strong aria-hidden="true">8.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../regex/tong-hop.html"><strong aria-hidden="true">9.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../khac/yt-dlp.html"><strong aria-hidden="true">10.</strong> yt-dlp</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kho code của duykhanh471</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="jpahibernate-là-gì"><a class="header" href="#jpahibernate-là-gì">「Jpa」Hibernate là gì?</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Định nghĩa</li>
+<li>POJO</li>
+<li>Mapping dữ liệu</li>
+<li>Session</li>
+<li>Hibernate Query Language (HQL)</li>
+</ul>
+<h3 id="giới-thiệu"><a class="header" href="#giới-thiệu"><strong>Giới thiệu</strong></a></h3>
+<p><code>Hibernate</code> là framework được sử dụng nhiều nhất hiện nay để giúp lập trình viên Java có thể map các class (Pojo) với một cơ sở dữ liệu bất kỳ.</p>
+<p>Trước khi <code>Hibernate</code> ra đời, chúng ta thường thao tác với cơ sở dữ liệu thông qua <code>JDBC</code>. Theo thời gian, <code>JDBC</code> bộc lộ nhiều điểm yếu như:</p>
+<ul>
+<li>Có nhiều code thừa mà chỉ phục vụ mục đích là lấy dữ liệu.</li>
+<li>Mất nhiều thời gian map dữ liệu vào object Java.</li>
+<li>Sẽ tốn nhiều công sức khi hệ thống thay đổi CSDL (yêu cầu <code>jdbc</code> mới, code mới)</li>
+<li>Giao tiếp giữa các bảng thường khó, thiếu tính OOP trong đó.</li>
+</ul>
+<p>Từ đây, để giảm tải gánh nặng cho dev khi thao tác với database. <code>Hibernate</code> ra đời!</p>
+<h3 id="Định-nghĩa"><a class="header" href="#Định-nghĩa"><strong>Định nghĩa</strong></a></h3>
+<p><code>Hibernate</code> là một thư viện <code>ORM (Object Relational Mapping)</code> mã nguồn mở giúp lập trình viên viết ứng dụng Java có thể map các objects (pojo) với hệ quản trị cơ sở dữ liệu quan hệ, và hỗ trợ thực hiện các khái niệm lập trình hướng đối tượng với cớ dữ liệu quan hệ.</p>
+<p>Hiểu ngắn gọn thì <code>Hibernate</code> sẽ là một layer đứng trung gian giữa ứng dụng và database, và chúng ta sẽ giao tiếp với <code>Hibernate</code> thay vì giao tiếp với database</p>
+<p>!image</p>
+<p>Để giao tiếp với <code>Hibernate</code>, chúng ta sẽ tạo ra một <code>Class</code> đại diện cho một <code>Table</code>. Và mọi dữ liệu từ <code>Table</code> trong database sẽ được <code>Hibernate</code> bind vào <code>Class</code> đó cho chúng ta.</p>
+<h3 id="pojo"><a class="header" href="#pojo"><strong>POJO</strong></a></h3>
+<p><code>Pojo (plain old Java object)</code> là class đại diện cho một <code>Table</code>, thuật ngữ này để định nghĩa chính xác thì mình không dám chắc, nhưng về ý nghĩa thì nó là một class java thuần túy, rất thuần túy:</p>
+<ol>
+<li>All properties must public setter and getter methods (mọi biến đều phải có get/set)</li>
+<li>All instance variables should be private (mọi biến là thuộc tính thì nên là private)</li>
+</ol>
+<pre><code>public class MyFirstPojo
+{
+    private String name;
+
+    public static void main(String [] args)
+    {
+       for (String arg : args)
+       {
+          MyFirstPojo pojo = new MyFirstPojo(arg);  // Here's how you create a POJO
+          System.out.println(pojo);
+       }
+    }
+
+    public MyFirstPojo(String name)
+    {
+        this.name = name;
+    }
+
+    public String getName() { return this.name; }
+
+    public String toString() { return this.name; }
+}
+</code></pre>
+<h3 id="mapping-dữ-liệu"><a class="header" href="#mapping-dữ-liệu"><strong>Mapping dữ liệu</strong></a></h3>
+<p>Khi đã có <code>Class</code> đại diện cho <code>Table</code> rồi, chúng ta sẽ định nghĩa các trường trong class đó tương ứng với column nào trong database bằng tập hợp các <code>Annotaion</code> mà <code>Hibernate</code> cung cấp.</p>
+<pre><code>@Entity // Đánh dấu đây là một Entity, chịu sự quản lý của Hibernate
+@Table(name = &quot;USER&quot;) //Entity này đại diện cho table USER trong db
+public class UserModel {
+    @Id // Đánh dấu biến ở dưới là primary key của table này
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Tự động tăng giá trị khi insert
+    private Long id;
+
+    @Column(name = &quot;email&quot;, unique = true) // trường email ở dưới đại diện cho cột email trong database
+    private String email;
+
+    @Column(name = &quot;name&quot;)
+    private String name;
+
+    public Long getId() {
+        return this.id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getName() {
+        return this.name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+</code></pre>
+<p>Bây giờ việc bạn lấy dữ liệu từ database sẽ đại loại như này:</p>
+<pre><code>public List&lt;User&gt; findAll() {
+    return session.createQuery(&quot;SELECT a FROM User a&quot;, User.class).getResultList();
+}
+</code></pre>
+<p>Chúng ta tiết kiệm được rất nhiều thời gian cho việc mapping dữ liệu từ database sang class java, và đặc biệt là khi thay đổi Database thì cũng sẽ không ảnh hưởng gì tới đoạn code ở trên cả, chúng ta gần như trong suốt với tầng database, mà chỉ cần nói chuyện với <code>Hibernate</code> là đủ!</p>
+<h3 id="session"><a class="header" href="#session"><strong>Session</strong></a></h3>
+<p>Đối tượng chính của việc truy xuất hay insert dữ liệu bằng <code>Hibernate</code> chính là <code>Session</code> và được tạo ra từ <code>Session Factory</code>.</p>
+<p><code>Session Factory</code> Là một interface giúp tạo ra session kết nối đến database bằng cách đọc các cấu hình trong một file xml và mỗi loại Database khác nhau sẽ có một cấu hình khác nhau.</p>
+<p>File cấu hình <code>hibernate.cfg.xml</code> có dạng như sau:</p>
+<pre><code>&lt;?xml version='1.0' encoding='utf-8'?&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+&quot;-//Hibernate/Hibernate Configuration DTD//EN&quot;
+&quot;http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;&gt;
+
+&lt;hibernate-configuration&gt;&lt;session-factory&gt;&lt;propertyname=&quot;hibernate.connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;&lt;propertyname=&quot;hibernate.connection.url&quot;&gt;jdbc:mysql://192.168.10.13:3306/loda
+&lt;/property&gt;&lt;propertyname=&quot;hibernate.connection.username&quot;&gt;root&lt;/property&gt;&lt;propertyname=&quot;hibernate.connection.password&quot;&gt;root&lt;/property&gt;&lt;propertyname=&quot;hibernate.connection.pool_size&quot;&gt;10&lt;/property&gt;&lt;propertyname=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;&lt;propertyname=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/property&gt;&lt;/session-factory&gt;&lt;/hibernate-configuration&gt;
+</code></pre>
+<p>Khi đã có file config này rồi, chúng ta sử dụng nó để tạo ra <code>Session Factory</code> như sau:</p>
+<pre><code>public class SessionFactoryProvider {
+
+    private static SessionFactory buildSessionFactory() {
+        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()//
+                .configure(&quot;hibernate.cfg.xml&quot;).build();
+
+        Metadata metadata = new MetadataSources(serviceRegistry).getMetadataBuilder().build();
+
+        return metadata.getSessionFactoryBuilder().build();
+    }
+}
+</code></pre>
+<p>Từ đó, mỗi lần cần query hay insert dữ liệu, chúng ta sẽ tạo ra <code>Session</code> và sử dụng.</p>
+<pre><code>SessionFactory factory = HibernateSessionUtils.getSessionFactory();
+
+Session session = factory.getCurrentSession();
+
+try {
+    session.getTransaction().begin();
+
+    List&lt;User&gt; users = session.createQuery(&quot;SELECT a FROM User a&quot;, User.class).getResultList();
+
+    session.getTransaction().commit();
+}catch (Exception e) {}
+</code></pre>
+<h3 id="hibernate-query-language-hql"><a class="header" href="#hibernate-query-language-hql"><strong>Hibernate Query Language (HQL)</strong></a></h3>
+<p><code>Hibernate</code> sử dụng ngôn ngữ <code>Hibernate Query Language (HQL)</code> để query dữ liệu. Nó chỉ khác <code>SQL</code> bình thường ở chỗ, đối tượng tác động lúc này là <code>Entity</code> chứ không còn là <code>Table</code> nữa:</p>
+<p>ví dụ:</p>
+<pre><code>-- SQL
+-- from table name
+Select u.id, u.email from USER u;
+
+-- HQL
+-- from class name
+Select u.id, u.email from User u;
+
+-- query toàn bộ object
+Select u from User u;
+</code></pre>
+<p>Đang viết dở Continue...</p>
+<ol>
+<li><a href="">🪂「Jpa」Hướng dẫn sử dụng @OneToOne</a></li>
+<li><a href="">🚅「Jpa」Hướng dẫn @OneToMany và @ManyToOne</a></li>
+<li><a href="">🛵「Jpa」Hướng dẫn @ManyToMany</a></li>
+</ol>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpa-hướng-dẫn-sử-dụng-specification-phần-1"><a class="header" href="#jpa-hướng-dẫn-sử-dụng-specification-phần-1">「Jpa」 Hướng dẫn sử dụng Specification (Phần 1)</a></h1>
+<h3 id="giới-thiệu-1"><a class="header" href="#giới-thiệu-1"><strong>Giới thiệu</strong></a></h3>
+<p>Trong một bài viết gần nhất về  tôi đã hướng dẫn các bạn cách xây dựng các câu query xuống Database bằng các API do Hibernate cung cấp.</p>
+<p>Và trong một bài viết khác về JPA Repository thì chúng ta cũng đã biết cách custom các query bằng cách đặt tên method:</p>
+<ol>
+<li>「Spring Boot #11」 Hướng dẫn Spring Boot JPA + MySQL</li>
+<li>「Spring Boot #12」 Spring JPA Method + @Query </li>
+</ol>
+<p>Tuy nhiên, trong các phương pháp trên, vẫn sẽ còn một số các điểm bất cập, ví dụ như <code>JpaRepository</code> thì bạn sẽ phải viết quá nhiều method và mỗi cái sẽ phục vụ cho một mục đích cố định (không thể tái sử dụng, reuseable).</p>
+<pre><code>public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  User findByEmailAddress(String emailAddress);
+
+  List&lt;User&gt; findByLastname(String lastname, Sort sort);
+
+  Page&lt;User&gt; findByFirstname(String firstname, Pageable pageable);
+}
+</code></pre>
+<p>Để có thể tối ưu việc viết query một cách linh động hơn và có thể tái sử dụng lại, Spring mang tới cho chúng ta interface <code>Specification</code>.</p>
+<p>Lúc này, cách tiếp cận của việc xây dựng query sẽ đại loại như sau:</p>
+<pre><code>userRepository.findAll(Specification.where(hasIdIn(Arrays.asList(1L, 2L, 3L, 4L, 5L)))
+                                                .and(hasType(UserType.NORMAL))
+                                                .or(hasId(10L)));
+</code></pre>
+<p>Với cách định nghĩa này, chúng ta có thể tái sử dụng query và tuỳ biến nó mọi lúc để phù hợp với yêu cầu.</p>
+<p>Khái niệm <code>Specification</code> được xây dựng tương đương với <code>Predicate</code> trong Hibernate. Bạn hãy đọc bài dưới trước khi đi tiếp vào bài này: <strong>Hướng dẫn sử dụng Criteria API trong Hibernate (Phần 2)</strong> </p>
+<p>Trong bài có sử dụng: Lombok</p>
+<h3 id="cài-đặt"><a class="header" href="#cài-đặt"><strong>Cài đặt</strong></a></h3>
+<p>Nhớ thêm <code>spring-boot-starter-data-jpa</code> vào dependencies của bạn.</p>
+<p>Trong phần này, tôi xài <em>H2 database</em> để demo. (H2 là dạng memory database, nó sẽ lưu trong ram và khi tắt chương trình nó sẽ mất sạch)</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;projectxmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&lt;parent&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&lt;version&gt;2.0.5.RELEASE&lt;/version&gt;&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+	&lt;/parent&gt;&lt;groupId&gt;me.loda.spring&lt;/groupId&gt;&lt;artifactId&gt;example-independent-maven-spring-project&lt;/artifactId&gt;&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;&lt;name&gt;example-independent-maven-spring-project&lt;/name&gt;&lt;description&gt;Demo project for Spring Boot&lt;/description&gt;&lt;properties&gt;&lt;java.version&gt;1.8&lt;/java.version&gt;&lt;/properties&gt;&lt;dependencies&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;optional&gt;true&lt;/optional&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&lt;artifactId&gt;lombok&lt;/artifactId&gt;&lt;optional&gt;true&lt;/optional&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&lt;scope&gt;test&lt;/scope&gt;&lt;!--			&lt;exclusions&gt;--&gt;
+			&lt;!--				&lt;exclusion&gt;--&gt;
+			&lt;!--					&lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;--&gt;
+			&lt;!--					&lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;--&gt;
+			&lt;!--				&lt;/exclusion&gt;--&gt;
+			&lt;!--			&lt;/exclusions&gt;--&gt;
+		&lt;/dependency&gt;&lt;!--spring jpa--&gt;
+		&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&lt;/dependency&gt;&lt;!--in memory database--&gt;
+		&lt;dependency&gt;&lt;groupId&gt;com.h2database&lt;/groupId&gt;&lt;artifactId&gt;h2&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;/dependency&gt;&lt;!--https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen --&gt;
+		&lt;dependency&gt;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;&lt;artifactId&gt;hibernate-jpamodelgen&lt;/artifactId&gt;&lt;version&gt;5.4.9.Final&lt;/version&gt;&lt;scope&gt;provided&lt;/scope&gt;&lt;/dependency&gt;&lt;/dependencies&gt;&lt;build&gt;&lt;plugins&gt;&lt;plugin&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&lt;/plugin&gt;&lt;/plugins&gt;&lt;/build&gt;&lt;/project&gt;
+</code></pre>
+<p>Chú ý, xem kĩ hơn <code>hibernate-jpamodelgen</code> trong bài viết </p>
+<h3 id="specification"><a class="header" href="#specification"><strong>Specification</strong></a></h3>
+<p><code>Specification</code> là một cách để định nghĩa các <code>Predicate</code> có thể tái sử dụng được.</p>
+<p>Bản chất <code>Specification</code> là một funtional interface với 1 hàm duy nhất như sau:</p>
+<pre><code>public interface Specification&lt;T&gt; {
+  Predicate toPredicate(Root&lt;T&gt; root, CriteriaQuery query, CriteriaBuilder cb);
+}
+</code></pre>
+<p>Tham số đầu vào là 3 khái niệm tôi đã giới thiệu ở bài , bao gồm:</p>
+<ol>
+<li><code>Root</code></li>
+<li><code>CriteriaQuery</code></li>
+<li><code>CriteriaBuilder</code></li>
+</ol>
+<p>tôi sẽ demo trước một số implementation của <code>Specification</code> và đề cập cách sử dụng nó ở phía dưới:</p>
+<p><em>User.java</em></p>
+<pre><code>@Entity
+@Data
+@Builder
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private UserType type;
+    private String name;
+
+    public enum UserType {
+        NORMAL, VIP;
+    }
+}
+</code></pre>
+<p><em>UserSpecification.java</em></p>
+<pre><code>public final class UserSpecification {
+    /**
+     * Lấy ra user có UserType chỉ định
+     * @param type
+     * @return
+     */
+    public static Specification&lt;User&gt; hasType(UserType type) {
+        return (root, query, cb) -&gt; cb.equal(root.get(User_.TYPE), type);
+    }
+
+    /**
+     * Lấy ra user có id chỉ định
+     * @param userId
+     * @return
+     */
+    public static Specification&lt;User&gt; hasId(long userId) {
+        return (root, query, cb) -&gt; cb.equal(root.get(User_.ID), userId);
+    }
+
+    /**
+     * Lấy ra user nằm trong tập ID chỉ định
+     * @param userIds
+     * @return
+     */
+    public static Specification&lt;User&gt; hasIdIn(Collection&lt;Long&gt; userIds) {
+        return (root, query, cb) -&gt; root.get(User_.ID).in(userIds);
+    }
+}
+</code></pre>
+<p>Tôi định nghĩa ra các <code>static method</code> trả ra ngoài là các implement của <code>Specification</code>. Nó không hẳn là đoạn code đẹp nhất ==! nhưng nó là một cách làm hay để có thể định nghĩa một tập các điều kiện có thể sử dụng lại được cho <code>User</code>.</p>
+<h3 id="jpaspecificationexecutor"><a class="header" href="#jpaspecificationexecutor"><strong>JpaSpecificationExecutor</strong></a></h3>
+<p>Để có thể sử dụng được <code>Specification</code>, bạn cần kế thừa <code>JpaSpecificationExecutor</code> từ Spring JPA</p>
+<pre><code>public interface UserRepository extends JpaRepository&lt;User, Long&gt;,
+                                        JpaSpecificationExecutor&lt;User&gt; {
+}
+</code></pre>
+<p>Lúc này, ngoài các method truyền thống như <code>findAll()</code>, <code>findOne()</code>, <code>findBy()</code> thì bạn sẽ thấy xuất hiện các method mới có tham số đầu vào là <code>Specification&lt;T&gt;</code>:</p>
+<pre><code>Optional&lt;T&gt; findOne(@Nullable Specification&lt;T&gt; var1);
+
+List&lt;T&gt; findAll(@Nullable Specification&lt;T&gt; var1);
+
+Page&lt;T&gt; findAll(@Nullable Specification&lt;T&gt; var1, Pageable var2);
+
+List&lt;T&gt; findAll(@Nullable Specification&lt;T&gt; var1, Sort var2);
+
+long count(@Nullable Specification&lt;T&gt; var1);
+</code></pre>
+<h3 id="usage"><a class="header" href="#usage"><strong>Usage</strong></a></h3>
+<p>Lúc này, để sử dụng, bạn gọi <code>Specification.where()</code> để xây dựng cho mình tập các điều kiện để query</p>
+<pre><code>// Lấy ra user nằm trong tập ID đã cho và có type là NORMAL
+// hoặc lấy ra user có ID = 10
+Specification conditions = Specification.where(UserSpecification.hasIdIn(Arrays.asList(1L, 2L, 3L, 4L, 5L)))
+                                        .and(UserSpecification.hasType(UserType.NORMAL))
+                                        .or(UserSpecification.hasId(10L));
+// Truyền Specification vào hàm findAll()
+userRepository.findAll(conditions).forEach(System.out::println);
+</code></pre>
+<p>OUTPUT:</p>
+<pre><code>User(id=1, type=NORMAL, name=name-0)
+User(id=2, type=NORMAL, name=name-1)
+User(id=5, type=NORMAL, name=name-4)
+User(id=10, type=VIP, name=name-9)
+</code></pre>
+<p>Ngoài ra, bạn có thể import trực tiếp các hàm static vào để code gọn hơn:</p>
+<pre><code>import static me.loda.spring.specification.User.UserType.NORMAL;
+import static me.loda.spring.specification.UserSpecification.*;
+
+...
+// Lấy ra user nằm trong tập ID đã cho và có type là NORMAL
+// hoặc lấy ra user có ID = 10
+Specification conditions = Specification.where(hasIdIn(Arrays.asList(1L, 2L, 3L, 4L, 5L)))
+                                        .and(hasType(NORMAL))
+                                        .or(hasId(10L));
+// Truyền Specification vào hàm findAll()
+userRepository.findAll(conditions).forEach(System.out::println);
+</code></pre>
+<p>Gọn hơn thì không nên tạo ra 1 biến tham chiếu thừa thãi:</p>
+<pre><code>userRepository.findAll(Specification.where(hasIdIn(Arrays.asList(1L, 2L, 3L, 4L, 5L)))
+                                    .and(hasType(NORMAL))
+                                    .or(hasId(10L)))
+              .forEach(System.out::println);
+</code></pre>
+<h3 id="kết"><a class="header" href="#kết"><strong>Kết</strong></a></h3>
+<p>Tới đây bạn đã có thể sử dụng <code>Specification</code> để thực hiện các truy vấn phức tạp và tái sử dụng được trong nhiều trường hợp. Đón đọc các bài sau về các phần nâng cao hơn.</p>
+<h1 id="jpahướng-dẫn-sử-dụng-onetoone"><a class="header" href="#jpahướng-dẫn-sử-dụng-onetoone">「Jpa」Hướng dẫn sử dụng @OneToOne</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Tạo project</li>
+<li>Tạo Table</li>
+<li>Chạy thử</li>
+<li>Thêm dữ liệu</li>
+</ul>
+<h3 id="giới-thiệu-2"><a class="header" href="#giới-thiệu-2"><strong>Giới thiệu</strong></a></h3>
+<p>Cách biểu thị quan hệ 1-1 trong cơ sở dữ liệu là rất phổ biến, ví dụ một người sẽ có một địa chỉ duy nhất (giả sử).</p>
+<p>Bình thường, khi các bạn tạo table trong csdl để biểu thị mối quan hệ này, thì sẽ có một bảng chứa khóa ngoại của bảng còn lại.</p>
+<p>!image</p>
+<p>Thể hiện mỗi quan hệ này trong <code>code</code> bằng <code>Hibernate</code> thì chúng ta sẽ dùng <code>@OneToOne</code>.</p>
+<p>Trong bài sử dụng các kiến thức:</p>
+<ol>
+<li>Hibernate là gì?</li>
+<li>Cách sử dụng Lombok để tiết kiệm thời gian code</li>
+</ol>
+<h3 id="tạo-project"><a class="header" href="#tạo-project"><strong>Tạo project</strong></a></h3>
+<p>Toàn bộ bài viết được up tại <code>Github</code>: github.com/loda-kun/java-all</p>
+<p>Chúng ta sẽ sử dụng <code>Gradle</code> để tạo một project có khai báo <code>Spring Boot</code> và <code>Jpa</code> để hỗ trợ cho việc demo <code>@OneToOne</code>.</p>
+<p>Các bạn có thể tự tạo 1 project Spring-boot với gradle đơn giản tại: https://start.spring.io</p>
+<pre><code>plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+apply plugin: 'io.spring.dependency-management'
+
+group 'me.loda.java'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'com.h2database:h2'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+</code></pre>
+<p>Trong ứng dụng trên bạn sẽ thấy có <code>com.h2database:h2</code>. Đây là một <strong>database</strong>, tuy nhiên nó chỉ tồn tại trong bộ nhớ. Tức làm mỗi khi chạy chương trình này, nó sẽ tạo database trong <code>RAM</code>, và tắt chương trình đi nó sẽ mất.</p>
+<p>Chúng ta sẽ sử dụng <code>H2</code> thay cho <code>MySql</code> để cho.. tiện!</p>
+<p>Khi tạo xong project, sẽ có thư mục như sau:</p>
+<p>!image</p>
+<h3 id="tạo-table"><a class="header" href="#tạo-table"><strong>Tạo Table</strong></a></h3>
+<p>Để tạo table, chúng ta tạo ra các <code>Class</code> tương ứng.</p>
+<pre><code>import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Entity // Hibernate entity
+@Data // Lombok
+@Builder // Lombok
+public class Person { //Table person
+
+    @Id // Đánh dấu trường này là primary key
+    @GeneratedValue // Tự động tăng giá trị id
+    private Long id;
+    private String name;
+}
+</code></pre>
+<pre><code>@Entity
+@Data
+@Builder
+public class Address { // Table address
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String city;
+    private String province;
+
+    @OneToOne // Đánh dấu có mỗi quan hệ 1-1 với Person ở phía dưới
+    @JoinColumn(name = &quot;person_id&quot;) // Liên kết với nhau qua khóa ngoại person_id
+    private Person person;
+}
+</code></pre>
+<p>Nếu chúng ta chưa tạo ra các table trong cơ sở dữ liệu, thì mặc định <code>Hibernate</code> sẽ bind dữ liệu từ class xuống và tạo table cho chúng ta.</p>
+<p>Bạn phải tạo file config <code>src\main\resources\application.properties</code> như sau để kết nối tới <code>H2</code> database nhé:</p>
+<pre><code>spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+// Không có password, vào thẳng luôn
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+# Cho phép vào xem db thông qua web
+spring.h2.console.enabled=true
+</code></pre>
+<h3 id="chạy-thử"><a class="header" href="#chạy-thử"><strong>Chạy thử</strong></a></h3>
+<p>Bạn tạo file <code>OneToOneExampleApplication</code> và cấu hình <code>Spring Boot</code> và khởi chạy chương trình.</p>
+<pre><code>@SpringBootApplication
+@RequiredArgsConstructor
+public class OneToOneExampleApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OneToOneExampleApplication.class, args);
+    }
+}
+</code></pre>
+<p>Sau khi chạy xong, hãy truy cập vào <code>http://localhost:8080/h2-console/</code> để vào xem database có gì nhé.</p>
+<p>!image</p>
+<p>Bạn sẽ thấy nó tạo table giống với mô tả ở đầu bài. Với khóa ngoại <code>person_id</code> ở bảng <code>address</code>.</p>
+<h3 id="thêm-dữ-liệu"><a class="header" href="#thêm-dữ-liệu"><strong>Thêm dữ liệu</strong></a></h3>
+<p>Để thêm dữ liệu vào database, chúng ta sẽ dùng tới <code>Jpa</code>.</p>
+<pre><code>import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AddressRepository extends JpaRepository&lt;Address,Long&gt; {
+}
+public interface PersonRepository extends JpaRepository&lt;Person, Long&gt; {
+}
+</code></pre>
+<p>Chúng ta sẽ tạo một chương trình <code>Spring Boot</code> đơn giản bằng cách sử dụng <code>CommandLineRunner</code> để chạy code ngay khi khởi động.</p>
+<pre><code>import javax.transaction.Transactional;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.google.common.collect.Lists;
+
+import lombok.RequiredArgsConstructor;
+
+@SpringBootApplication
+@RequiredArgsConstructor
+public class OneToOneExampleApplication implements CommandLineRunner {
+    public static void main(String[] args) {
+        SpringApplication.run(OneToOneExampleApplication.class, args);
+    }
+
+    // Sử dụng @RequiredArgsConstructor và final để thay cho @Autowired
+    private final PersonRepository personRepository;
+    private final AddressRepository addressRepository;
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Tạo ra đối tượng person
+        Person person = Person.builder()
+                              .name(&quot;loda&quot;)
+                              .build();
+        // Lưu vào db
+        personRepository.save(person);
+
+        // Tạo ra đối tượng Address có tham chiếu tới person
+        Address address = Address.builder()
+                .city(&quot;Hanoi&quot;)
+                .person(person)
+                .build();
+
+        // Lưu vào db
+        addressRepository.save(address);
+
+        // Vào:http://localhost:8080/h2-console/ để xem dữ liệu đã insert
+    }
+}
+</code></pre>
+<p>Kết quả trong database lúc này:</p>
+<p>!image</p>
+<p>Vậy là thằng <code>Address</code> đã liên kết tới <code>Person</code> có <code>id=1</code>. Đúng như ta mong đợi.</p>
+<p>Bài viết của mình không còn gì để ngắn hơn được nữa :((( thật hổ thẹn, mình có up code lên đây, bạn chạy code cái là hiểu liền à:</p>
+<p>Chúc các bạn học tập tốt! ahuu</p>
+<ol>
+<li><a href="">🚅「Jpa」Hướng dẫn @OneToMany và @ManyToOne</a></li>
+<li><a href="">🛵「Jpa」Hướng dẫn @ManyToMany</a></li>
+</ol>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpahướng-dẫn-onetomany-và-manytoone"><a class="header" href="#jpahướng-dẫn-onetomany-và-manytoone">「Jpa」Hướng dẫn @OneToMany và @ManyToOne</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Tạo project</li>
+<li>Tạo Table</li>
+<li>Chạy thử</li>
+<li>Thêm dữ liệu</li>
+</ul>
+<h3 id="giới-thiệu-3"><a class="header" href="#giới-thiệu-3"><strong>Giới thiệu</strong></a></h3>
+<p>Cách biểu thị quan hệ 1-n trong cơ sở dữ liệu là rất phổ biến, ví dụ một địa chỉ có thể có nhiều người ở (gia đình).</p>
+<p>Bình thường, khi các bạn tạo table trong csdl để biểu thị mối quan hệ này, thì bảng đại diện phía nhiều (phía n trong câu 1-n) sẽ chứa id của bảng tham chiếu (phía 1 trong câu 1-n)</p>
+<p>!image</p>
+<p>Thể hiện mỗi quan hệ này một cách đầy đủ trong <code>code</code> bằng <code>Hibernate</code> thì chúng ta sẽ dùng <code>@OneToMany</code> và <code>@ManyToOne</code>.</p>
+<p>Trong bài sử dụng các kiến thức:</p>
+<ol>
+<li>Hibernate là gì?</li>
+<li>Cách sử dụng Lombok để tiết kiệm thời gian code</li>
+</ol>
+<h3 id="tạo-project-1"><a class="header" href="#tạo-project-1"><strong>Tạo project</strong></a></h3>
+<p>Toàn bộ bài viết được up tại <code>Github</code>: github.com/loda-kun/java-all</p>
+<p>Chúng ta sẽ sử dụng <code>Gradle</code> để tạo một project có khai báo <code>Spring Boot</code> và <code>Jpa</code> để hỗ trợ cho việc demo <code>@ManyToOne</code>.</p>
+<p>Các bạn có thể tự tạo 1 project Spring-boot với gradle đơn giản tại: https://start.spring.io</p>
+<pre><code>plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+apply plugin: 'io.spring.dependency-management'
+
+group 'me.loda.java'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'com.h2database:h2'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+</code></pre>
+<p>Trong ứng dụng trên bạn sẽ thấy có <code>com.h2database:h2</code>. Đây là một <strong>database</strong>, tuy nhiên nó chỉ tồn tại trong bộ nhớ. Tức làm mỗi khi chạy chương trình này, nó sẽ tạo database trong <code>RAM</code>, và tắt chương trình đi nó sẽ mất.</p>
+<p>Chúng ta sẽ sử dụng <code>H2</code> thay cho <code>MySql</code> để cho.. tiện!</p>
+<p>Khi tạo xong project, sẽ có thư mục như sau:</p>
+<p>!image</p>
+<h3 id="tạo-table-1"><a class="header" href="#tạo-table-1"><strong>Tạo Table</strong></a></h3>
+<p>Để tạo table, chúng ta tạo ra các <code>Class</code> tương ứng.</p>
+<pre><code>import java.util.Collection;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity // Đánh dấu đây là table trong db
+@Data // lombok giúp generate các hàm constructor, get, set v.v.
+@AllArgsConstructor
+@NoArgsConstructor
+public class Address {
+
+    @Id //Đánh dấu là primary key
+    @GeneratedValue // Giúp tự động tăng
+    private Long id;
+
+    private String city;
+    private String province;
+
+    @OneToMany(mappedBy = &quot;address&quot;, cascade = CascadeType.ALL) // Quan hệ 1-n với đối tượng ở dưới (Person) (1 địa điểm có nhiều người ở)
+    // MapopedBy trỏ tới tên biến Address ở trong Person.
+    @EqualsAndHashCode.Exclude // không sử dụng trường này trong equals và hashcode
+    @ToString.Exclude // Khoonhg sử dụng trong toString()
+    private Collection&lt;Person&gt; persons;
+}
+</code></pre>
+<pre><code>@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Person {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+
+    // Many to One Có nhiều người ở 1 địa điểm.
+    @ManyToOne
+    @JoinColumn(name = &quot;address_id&quot;) // thông qua khóa ngoại address_id
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Address address;
+}
+</code></pre>
+<p>Nếu chúng ta chưa tạo ra các table trong cơ sở dữ liệu, thì mặc định <code>Hibernate</code> sẽ bind dữ liệu từ class xuống và tạo table cho chúng ta.</p>
+<p>Bạn phải tạo file config <code>src\main\resources\application.properties</code> như sau để kết nối tới <code>H2</code> database nhé:</p>
+<pre><code>spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+// Không có password, vào thẳng luôn
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+# Cho phép vào xem db thông qua web
+spring.h2.console.enabled=true
+</code></pre>
+<h3 id="chạy-thử-1"><a class="header" href="#chạy-thử-1"><strong>Chạy thử</strong></a></h3>
+<p>Bạn tạo file <code>OneToManyExampleApplication</code> và cấu hình <code>Spring Boot</code> và khởi chạy chương trình.</p>
+<pre><code>@SpringBootApplication
+@RequiredArgsConstructor
+public class OneToManyExampleApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OneToManyExampleApplication.class, args);
+    }
+}
+</code></pre>
+<p>Sau khi chạy xong, hãy truy cập vào <code>http://localhost:8080/h2-console/</code> để vào xem database có gì nhé.</p>
+<p>!image</p>
+<p>Bạn sẽ thấy nó tạo table giống với mô tả ở đầu bài. Với khóa ngoại <code>address_id</code> ở bảng <code>person</code>.</p>
+<h3 id="thêm-dữ-liệu-1"><a class="header" href="#thêm-dữ-liệu-1"><strong>Thêm dữ liệu</strong></a></h3>
+<p>Để thêm dữ liệu vào database, chúng ta sẽ dùng tới <code>Spring JPA</code> .</p>
+<pre><code>import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AddressRepository extends JpaRepository&lt;Address,Long&gt; {
+}
+public interface PersonRepository extends JpaRepository&lt;Person, Long&gt; {
+}
+</code></pre>
+<p>Chúng ta sẽ tạo một chương trình <code>Spring Boot</code> đơn giản bằng cách sử dụng <code>CommandLineRunner</code> để chạy code ngay khi khởi động.</p>
+<pre><code>import javax.transaction.Transactional;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.google.common.collect.Lists;
+
+import lombok.RequiredArgsConstructor;
+
+@SpringBootApplication
+@RequiredArgsConstructor
+public class OneToManyExampleApplication implements CommandLineRunner {
+    public static void main(String[] args) {
+        SpringApplication.run(OneToManyExampleApplication.class, args);
+    }
+
+    // Sử dụng @RequiredArgsConstructor và final để thay cho @Autowired
+    private final PersonRepository personRepository;
+    private final AddressRepository addressRepository;
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Tạo ra đối tượng Address có tham chiếu tới person
+        Address address = new Address();
+        address.setCity(&quot;Hanoi&quot;);
+
+        // Tạo ra đối tượng person
+        Person person = new Person();
+        person.setName(&quot;loda&quot;);
+        person.setAddress(address);
+
+        address.setPersons(Collections.singleton(person));
+        // Lưu vào db
+        // Chúng ta chỉ cần lưu address, vì cascade = CascadeType.ALL nên nó sẽ lưu luôn Person.
+        addressRepository.saveAndFlush(address);
+
+        // Vào:http://localhost:8080/h2-console/ để xem dữ liệu đã insert
+
+        personRepository.findAll().forEach(p -&gt; {
+            System.out.println(p.getId());
+            System.out.println(p.getName());
+            System.out.println(p.getAddress());
+        });
+
+    }
+}
+//output:
+// 2
+// loda
+// Address(id=1, city=Hanoi, province=null)
+// Chúng ta đã có thể gọi trực tiếp address trong person sau khi query
+</code></pre>
+<p>Kết quả trong database lúc này:</p>
+<p>!image</p>
+<p>Bài viết của mình không còn gì để ngắn hơn được nữa :((( thật hổ thẹn, mình có up code lên đây, bạn chạy code cái là hiểu liền à:</p>
+<p>Chúc các bạn học tập thật tốt! ahuu</p>
+<ol>
+<li><a href="">🪂「Jpa」Hướng dẫn sử dụng @OneToOne</a></li>
+<li><a href="">🛵「Jpa」Hướng dẫn @ManyToMany</a></li>
+</ol>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpahướng-dẫn-manytomany"><a class="header" href="#jpahướng-dẫn-manytomany">「Jpa」Hướng dẫn @ManyToMany</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Tạo project</li>
+<li>Tạo Table</li>
+<li>Chạy thử</li>
+<li>Thêm dữ liệu</li>
+</ul>
+<h3 id="giới-thiệu-4"><a class="header" href="#giới-thiệu-4"><strong>Giới thiệu</strong></a></h3>
+<p>Cách biểu thị quan hệ n-n trong cơ sở dữ liệu là rất phổ biến, ví dụ một địa chỉ có thể có nhiều người ở (gia đình). và một người có thể có nhiều hơn một địa chỉ.</p>
+<p>Bình thường, khi các bạn tạo table trong csdl để biểu thị mối quan hệ này, chúng ta sẽ tạo ra một bảng mới, tham chiếu tới cả bảng này.</p>
+<p>!image</p>
+<p>Thể hiện mỗi quan hệ này một cách đầy đủ trong <code>code</code> bằng <code>Hibernate</code> thì chúng ta sẽ dùng <code>@ManyToMany</code></p>
+<p>Trong bài sử dụng các kiến thức:</p>
+<ol>
+<li>Hibernate là gì?</li>
+<li>Cách sử dụng Lombok để tiết kiệm thời gian code</li>
+</ol>
+<h3 id="tạo-project-2"><a class="header" href="#tạo-project-2"><strong>Tạo project</strong></a></h3>
+<p>Toàn bộ bài viết được up tại <code>Github</code>: github.com/loda-kun/java-all</p>
+<p>Chúng ta sẽ sử dụng <code>Gradle</code> để tạo một project có khai báo <code>Spring Boot</code> và <code>Jpa</code> để hỗ trợ cho việc demo <code>@ManyToMany</code>.</p>
+<p>Các bạn có thể tự tạo 1 project Spring-boot với gradle đơn giản tại: https://start.spring.io</p>
+<pre><code>plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+apply plugin: 'io.spring.dependency-management'
+
+group 'me.loda.java'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'com.h2database:h2'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+</code></pre>
+<p>Trong ứng dụng trên bạn sẽ thấy có <code>com.h2database:h2</code>. Đây là một <strong>database</strong>, tuy nhiên nó chỉ tồn tại trong bộ nhớ. Tức làm mỗi khi chạy chương trình này, nó sẽ tạo database trong <code>RAM</code>, và tắt chương trình đi nó sẽ mất.</p>
+<p>Chúng ta sẽ sử dụng <code>H2</code> thay cho <code>MySql</code> để cho.. tiện!</p>
+<p>Khi tạo xong project, sẽ có thư mục như sau:</p>
+<p>!image</p>
+<h3 id="tạo-table-2"><a class="header" href="#tạo-table-2"><strong>Tạo Table</strong></a></h3>
+<p>Để tạo table, chúng ta tạo ra các <code>Class</code> tương ứng.</p>
+<pre><code>import java.util.Collection;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity // Đánh dấu đây là table trong db
+@Data // lombok giúp generate các hàm constructor, get, set v.v.
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Address {
+
+    @Id //Đánh dấu là primary key
+    @GeneratedValue // Giúp tự động tăng
+    private Long id;
+
+    private String city;
+    private String province;
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    // Quan hệ n-n với đối tượng ở dưới (Person) (1 địa điểm có nhiều người ở)
+    @EqualsAndHashCode.Exclude // không sử dụng trường này trong equals và hashcode
+    @ToString.Exclude // Khoonhg sử dụng trong toString()
+
+    @JoinTable(name = &quot;address_person&quot;, //Tạo ra một join Table tên là &quot;address_person&quot;
+            joinColumns = @JoinColumn(name = &quot;address_id&quot;),  // TRong đó, khóa ngoại chính là address_id trỏ tới class hiện tại (Address)
+            inverseJoinColumns = @JoinColumn(name = &quot;person_id&quot;) //Khóa ngoại thứ 2 trỏ tới thuộc tính ở dưới (Person)
+    )
+    private Collection&lt;Person&gt; persons;
+}
+</code></pre>
+<pre><code>@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Person {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+
+    // mappedBy trỏ tới tên biến persons ở trong Address.
+    @ManyToMany(mappedBy = &quot;persons&quot;)
+    // LAZY để tránh việc truy xuất dữ liệu không cần thiết. Lúc nào cần thì mới query
+    @EqualsAndHashCode.Exclude
+    @Exclude
+    private Collection&lt;Address&gt; addresses;
+}
+</code></pre>
+<p>Nếu chúng ta chưa tạo ra các table trong cơ sở dữ liệu, thì mặc định <code>Hibernate</code> sẽ bind dữ liệu từ class xuống và tạo table cho chúng ta.</p>
+<p>Bạn phải tạo file config <code>src\main\resources\application.properties</code> như sau để kết nối tới <code>H2</code> database nhé:</p>
+<pre><code>spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+// Không có password, vào thẳng luôn
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+# Cho phép vào xem db thông qua web
+spring.h2.console.enabled=true
+</code></pre>
+<h3 id="chạy-thử-2"><a class="header" href="#chạy-thử-2"><strong>Chạy thử</strong></a></h3>
+<p>Bạn tạo file <code>ManyToManyExampleApplication</code> và cấu hình <code>Spring Boot</code> và khởi chạy chương trình.</p>
+<pre><code>@SpringBootApplication
+@RequiredArgsConstructor
+public class ManyToManyExampleApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ManyToManyExampleApplication.class, args);
+    }
+}
+</code></pre>
+<p>Sau khi chạy xong, hãy truy cập vào <code>http://localhost:8080/h2-console/</code> để vào xem database có gì nhé.</p>
+<p>!image</p>
+<p>Bạn sẽ thấy nó tạo table giống với mô tả ở đầu bài. Gồm có hai bảng chính là <code>address</code> và <code>person</code>. Ngoài ra, sẽ tạo ra một bảng trung gian ở giữa liên kết hai bảng là <code>address_person</code>.</p>
+<h3 id="thêm-dữ-liệu-2"><a class="header" href="#thêm-dữ-liệu-2"><strong>Thêm dữ liệu</strong></a></h3>
+<p>Để thêm dữ liệu vào database, chúng ta sẽ dùng tới <code>Spring JPA</code> .</p>
+<pre><code>import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AddressRepository extends JpaRepository&lt;Address,Long&gt; {
+}
+public interface PersonRepository extends JpaRepository&lt;Person, Long&gt; {
+}
+</code></pre>
+<p>Chúng ta sẽ tạo một chương trình <code>Spring Boot</code> đơn giản bằng cách sử dụng <code>CommandLineRunner</code> để chạy code ngay khi khởi động.</p>
+<pre><code>import javax.transaction.Transactional;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.google.common.collect.Lists;
+
+import lombok.RequiredArgsConstructor;
+
+@SpringBootApplication
+@RequiredArgsConstructor
+public class ManyToManyExampleApplication implements CommandLineRunner {
+    public static void main(String[] args) {
+        SpringApplication.run(ManyToManyExampleApplication.class, args);
+    }
+
+    // Sử dụng @RequiredArgsConstructor và final để thay cho @Autowired
+    private final PersonRepository personRepository;
+    private final AddressRepository addressRepository;
+
+    @Override
+    @Transactional
+    public void run(String... args) throws Exception {
+        // Tạo ra đối tượng Address
+        Address hanoi = Address.builder()
+                                 .city(&quot;hanoi&quot;)
+                                 .build();
+        Address hatay = Address.builder()
+                               .city(&quot;hatay&quot;)
+                               .build();
+
+        // Tạo ra đối tượng person
+        Person person1 = Person.builder()
+                              .name(&quot;loda1&quot;)
+                              .build();
+        Person person2 = Person.builder()
+                              .name(&quot;loda2&quot;)
+                              .build();
+
+        // set Persons vào address
+        hanoi.setPersons(Lists.newArrayList(person1, person2));
+        hatay.setPersons(Lists.newArrayList(person1));
+
+        // Lưu vào db
+        // Chúng ta chỉ cần lưu address, vì cascade = CascadeType.ALL nên nó sẽ lưu luôn Person.
+        addressRepository.saveAndFlush(hanoi);
+        addressRepository.saveAndFlush(hatay);
+
+        // Vào:http://localhost:8080/h2-console/ để xem dữ liệu đã insert
+
+        Address queryResult = addressRepository.findById(1L).get();
+        System.out.println(queryResult.getCity());
+        System.out.println(queryResult.getPersons());
+
+    }
+
+}
+// Output:
+// hanoi
+// [Person(id=2, name=loda1), Person(id=3, name=loda2)]
+</code></pre>
+<p>Lưu ý ở đây chúng ta dùng <code>@Transactional</code>. Đê khiến toàn bộ code chạy trong hàm đều nằm trong <code>Session</code> quản lý của <code>Hibernate</code>.</p>
+<p>Nếu không có <code>@Transactional</code> thì việc bạn gọi <code>address.getPersons()</code> sẽ bị lỗi, vì nó không thể query xuống database để lấy dữ liệu person lên được. Bạn ghi nhớ chỗ này nhé.</p>
+<p>Kết quả trong database lúc này:</p>
+<p><code>Address</code></p>
+<p>!image</p>
+<p>!image</p>
+<p>!image</p>
+<p>Bài viết của mình không còn gì để ngắn hơn được nữa :((( thật hổ thẹn, mình có up code lên đây, bạn chạy code cái là hiểu liền à:</p>
+<p>Chúc các bạn học tập thật tốt! ahuu</p>
+<ol>
+<li><a href="">🪂「Jpa」Hướng dẫn sử dụng @OneToOne</a></li>
+<li><a href="">🚅「Jpa」Hướng dẫn @OneToMany và @ManyToOne</a></li>
+</ol>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpahướng-dẫn-query-phân-trang-bằng-pageable-phần-1"><a class="header" href="#jpahướng-dẫn-query-phân-trang-bằng-pageable-phần-1">「Jpa」Hướng dẫn Query phân trang bằng Pageable (Phần 1)</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Cài đặt</li>
+<li>Tạo Model và Repository</li>
+<li>Pageable</li>
+<li>Sorting</li>
+<li>Note</li>
+<li>Ví dụ DEMO</li>
+<li>Kết</li>
+</ul>
+<h3 id="giới-thiệu-5"><a class="header" href="#giới-thiệu-5"><strong>Giới thiệu</strong></a></h3>
+<p>Điều này có lẽ ai cũng biết, đó là đa phần chúng ta không lấy toàn bộ dữ liệu từ Database lên, mà chỉ lấy một số lượng nhất định, và chia nó thành nhiều trang.</p>
+<p>Mà cái blog này cũng là ví dụ điển hình:</p>
+<p>!image</p>
+<p>Tôi chia dữ liệu thành nhiều trang khác nhau, với mỗi trang thì sẽ lấy ra các bài viết cần thiết.</p>
+<p>Tạo sao cần dùng phân trang? vì nó giúp tiết kiệm băng thông và tăng tốc xử lý, ngoài ra nó cũng giảm thiểu việc hiển thị các thông tin thừa không cần thiết.</p>
+<p>Chúng ta sẽ tìm hiểu các làm việc này bằng <code>JPA Pageable</code></p>
+<p>Nếu chưa biết Spring JPA thì xem tại đây:</p>
+<ol>
+<li>Hibernate là gì?</li>
+<li>Spring JPA</li>
+</ol>
+<h3 id="cài-đặt-1"><a class="header" href="#cài-đặt-1"><strong>Cài đặt</strong></a></h3>
+<p>Nhớ thêm <code>spring-boot-starter-data-jpa</code> vào dependencies của bạn.</p>
+<p>Trong phần này, tôi xài H2 database để demo. (h2 là dạng memory database, nó sẽ lưu trong ram và khi tắt chương trình nó sẽ mất sạch)</p>
+<p><em>pom.xml</em></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;packaging&gt;pom&lt;/packaging&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.0.5.RELEASE&lt;/version&gt;
+        &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;me.loda.spring&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-learning&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;spring-boot-learning&lt;/name&gt;
+    &lt;description&gt;Everything about Spring Boot&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+
+        &lt;!--spring mvc, rest--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;!--spring jpa--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- h2 database --&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+        &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p>Cấu trúc thư mục:</p>
+<p>!image</p>
+<h3 id="tạo-model-và-repository"><a class="header" href="#tạo-model-và-repository"><strong>Tạo Model và Repository</strong></a></h3>
+<p>Tạo ra class <code>User</code> và insert sẵn 100 <code>User</code> vào Database.</p>
+<p><em>User.java</em></p>
+<pre><code>@Entity
+@Data
+@Builder
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+}
+</code></pre>
+<p><em>UserRepository.java</em></p>
+<pre><code>public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+}
+</code></pre>
+<p><em>DatasourceConfig.java</em></p>
+<pre><code>@Configuration
+@RequiredArgsConstructor
+public class DatasourceConfig {
+    // inject bởi RequiredArgsConstructor
+    private final UserRepository userRepository;
+
+    // Chỉ áp dụng trong demo :D
+    @PostConstruct
+    public void initData() {
+        // Insert 100 User vào H2 Database sau khi
+        // DatasourceConfig được khởi tạo
+        userRepository.saveAll(IntStream.range(0, 100)
+                                        .mapToObj(i -&gt; User.builder()
+                                                           .name(&quot;name-&quot; + i)
+                                                           .build())
+                                        .collect(Collectors.toList())
+        );
+    }
+}
+</code></pre>
+<h3 id="pageable"><a class="header" href="#pageable"><strong>Pageable</strong></a></h3>
+<p>Ukie, giả sử bây giờ chúng ta có 100 record trong DB rồi.</p>
+<p>Để có thể query lấy dữ liệu theo dạng Page, <strong>Spring Data JPA</strong> hỗ trợ chúng ta bằng đối tượng <code>Pageable</code>.</p>
+<p>Hàm <code>findAll(Pageable pageable)</code> là có sẵn và trả về đối tượng <code>Page&lt;T&gt;</code></p>
+<pre><code>// Lấy ra 5 user đầu tiên
+// PageRequest.of(0,5) tương đương với lấy ra page đầu tiên, và mỗi page sẽ có 5 phần tử
+// PageRequest là một đối tượng kế thừa Pageable
+Page&lt;User&gt; page = userRepository.findAll(PageRequest.of(0, 5));
+</code></pre>
+<p>Để lấy ra 5 <code>User</code> tiếp theo, chúng ta có thể làm theo 2 cách:</p>
+<pre><code>// tận dụng đối tượng Page trước đó
+page.nextPageable()
+
+// Sử dụng PageRequest mới
+PageRequest.of(1, 5)
+</code></pre>
+<h3 id="sorting"><a class="header" href="#sorting"><strong>Sorting</strong></a></h3>
+<p>Bạn có thể query dạng <code>Page</code> kèm theo yêu cầu sorting theo một trường nào đó.</p>
+<pre><code>Page&lt;User&gt; page = userRepository.findAll(PageRequest.of(1, 5, Sort.by(&quot;name&quot;).descending()));
+</code></pre>
+<h3 id="note"><a class="header" href="#note"><strong>Note</strong></a></h3>
+<p>Ngoài ra, bạn hoàn toàn có thể tự custom để hàm trả về <code>Page&lt;T&gt;</code>, <code>Slice&lt;T&gt;</code>, <code>List&lt;T&gt;</code>.</p>
+<pre><code>public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+    List&lt;User&gt; findAllByNameLike(String name, Pageable pageable);
+}
+</code></pre>
+<h3 id="ví-dụ-demo"><a class="header" href="#ví-dụ-demo"><strong>Ví dụ DEMO</strong></a></h3>
+<pre><code>@SpringBootApplication
+@RequiredArgsConstructor
+public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+
+    private final UserRepository userRepository;
+
+    @Bean
+    CommandLineRunner run() {
+        return args -&gt; {
+            // Lấy ra 5 user đầu tiên
+            // PageRequest.of(0,5) tương đương với lấy ra page đầu tiên, và mỗi page sẽ có 5 phần tử
+            Page&lt;User&gt; page = userRepository.findAll(PageRequest.of(0, 5));
+            // In ra 5 user đầu tiên
+            System.out.println(&quot;In ra 5 user đầu tiên: &quot;);
+            page.forEach(System.out::println);
+            // Lấy ra 5 user tiếp theo
+            page = userRepository.findAll(page.nextPageable());
+
+            System.out.println(&quot;In ra 5 user tiếp theo: &quot;);
+            page.forEach(System.out::println);
+
+            System.out.println(&quot;In ra số lượng user ở page hiện tại: &quot; + page.getSize());
+            System.out.println(&quot;In ra tổng số lượng user: &quot; + page.getTotalElements());
+            System.out.println(&quot;In ra tổng số page: &quot; + page.getTotalPages());
+
+            // Lấy ra 5 user ở page 1, sort theo tên
+            page = userRepository.findAll(PageRequest.of(1, 5, Sort.by(&quot;name&quot;).descending()));
+            System.out.println(&quot;In ra 5 user page 1, sắp xếp theo name descending:&quot;);
+            page.forEach(System.out::println);
+
+            // Custom method
+            List&lt;User&gt; list = userRepository.findAllByNameLike(&quot;name-%&quot;, PageRequest.of(0, 5));
+            System.out.println(list);
+        };
+    }
+
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>In ra 5 user đầu tiên:
+User(id=1, name=name-0)
+User(id=2, name=name-1)
+User(id=3, name=name-2)
+User(id=4, name=name-3)
+User(id=5, name=name-4)
+
+In ra 5 user tiếp theo:
+User(id=6, name=name-5)
+User(id=7, name=name-6)
+User(id=8, name=name-7)
+User(id=9, name=name-8)
+User(id=10, name=name-9)
+
+In ra số lượng user ở page hiện tại: 5
+In ra tổng số lượng user: 100
+In ra tổng số page: 20
+
+In ra 5 user page 1, sắp xếp theo name descending:
+User(id=95, name=name-94)
+User(id=94, name=name-93)
+User(id=93, name=name-92)
+User(id=92, name=name-91)
+User(id=91, name=name-90)
+
+Custom Method
+[User(id=1, name=name-0), User(id=2, name=name-1), User(id=3, name=name-2), User(id=4, name=name-3), User(id=5, name=name-4)]
+</code></pre>
+<h3 id="kết-1"><a class="header" href="#kết-1"><strong>Kết</strong></a></h3>
+<p><code>Pageable</code> là một cách tiếp cận rất tiện lợi, tuy nhiên bạn cần biết rằng các hàm sử dụng <code>Pageable</code> sẽ thực hiện query 2 lần xuống DB. Một lần là để lấy ra tổng số lượng bản ghi, một lần là query lấy ra page bạn cần. Cái này tôi sẽ nói kĩ hơn ở bài sau để chúng ta tối ưu hiệu năng</p>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpahướng-dẫn-sử-dụng-criteria-api-trong-hibernate"><a class="header" href="#jpahướng-dẫn-sử-dụng-criteria-api-trong-hibernate">「Jpa」Hướng dẫn sử dụng Criteria API trong Hibernate</a></h1>
+<p><code>JPA Criteria API</code> cho phép ta tạo ra các câu truy vấn bằng Java Object thay vì việc khai báo trực tiếp trong <code>String</code> (JPQL) như thế này:</p>
+<p>Tương đương với câu lệnh trên nhưng xây dựng bằng <code>Criteria API</code> thì sẽ như này:</p>
+<pre><code>CriteriaBuilder cb = em.getCriteriaBuilder();
+
+CriteriaQuery&lt;Office&gt; q = cb.createQuery(Office.class);
+Root&lt;Office&gt; c = q.from(Office.class);
+q.select(c);
+</code></pre>
+<p>Nhìn có vẻ dài dòng và khó hiểu phải không &gt;&quot;&lt; Yea, thì đúng là như thế đấy ==!</p>
+<p>Nếu nó dài dòng như vậy, tại sao người ta lại tạo ra và sử dụng nó thay cho câu lệnh <code>JPQL</code> bình thường? Các bạn đọc phần tiếp theo sẽ rõ nha.</p>
+<h3 id="jpql-vs-criteria-api"><a class="header" href="#jpql-vs-criteria-api"><strong>JPQL vs Criteria API</strong></a></h3>
+<p><code>JPQL</code> có thể làm đầy đủ chức năng chúng ta cần chỉ với 1 câu lệnh, tuy nhiên, chính vì điều đó, chúng ta thường khó tùy biến hay sử dụng lại nó, thậm chí khó kiểm soát lỗi của nó hơn. Với một câu lệnh phức tạp, chúng ta không biết được nó có lỗi hay không cho tới khi chạy chương trình hay debug (Mà chương trình đã chạy được rồi thì vẫn có lỗi tiềm ẩn :v chời đậu).</p>
+<p><code>Criteria API</code> thì ngược lại, nó cho phép chúng ta xây dựng câu lệnh một cách <code>Dynamic</code>, rất linh động, và không bị <code>hardcode</code> trong một <code>String</code> và có thể <code>tái sử dụng</code> lại được. Đặc biệt, vì là Java Object, nên chúng ta sẽ biết một câu lệnh bị lỗi, không đúng quy tắc ngay khi biên dịch chương trình rồi.</p>
+<p>Túm váy lại, với một lệnh đơn giản như ví dụ đầu bài, thì các bạn nên xài <code>JPQL</code>, còn với những câu lệnh phức hợp, thay đổi theo <code>context</code> của chương trình thì nên sử dụng <code>Criteria</code>.</p>
+<h3 id="how-to-use"><a class="header" href="#how-to-use"><strong>How to use.</strong></a></h3>
+<p>Quay trở lại với ví dụ ban đầu nhé:</p>
+<pre><code>CriteriaBuilder builder = em.getCriteriaBuilder();
+
+CriteriaQuery&lt;Office&gt; query =  builder.createQuery(Office.class);
+Root&lt;Office&gt; root = query.from(Office.class);
+query.select(root);
+</code></pre>
+<p>Chúng ta cùng tìm hiểu từng dòng lệnh:</p>
+<ul>
+<li>
+<p><code>CriteriaBuilder</code>: Để xây dựng một câu query, các bạn sẽ cần tới <code>interface``CriteriaBuilder</code>, mục đích của nó là giúp tạo ra đối tượng chứa câu lệnh truy vấn <code>CriteriaQuery</code> và cung cấp cơ số các phép biến đổi, phép logic, điều kiện cho câu lệnh (and, or, not, avg, greater than,v.v...)</p>
+</li>
+<li>
+<p><code>CriteriaQuery</code>: Đối tượng chính của chúng ta đây, nó được tạo ra bởi <code>builder.createQuery(Office.class)</code>. Mục đích là khai báo đối tượng bạn muốn lấy ra sau khi thực hiện query. Nó tương đương với đoạn ngoặc đơn ở dưới đây:</p>
+</li>
+<li>
+<p><code>Root</code>: root là khai báo đối tượng bạn sẽ sử dụng trong query, tương đương với đối tượng sau mệnh đề <code>FROM</code></p>
+</li>
+</ul>
+<p>Cuối cùng, để hoàn thiện câu lệnh <code>SELECT</code> chỉ đơn giản là lấy đối tượng <code>CriteriaQuery</code> đã khai báo là sử dụng function <code>select</code>. Đối tượng truyền vào chính là cái <code>root</code> (hay cái đối tượng của <code>FROM</code>) kia.</p>
+<p>Trông vậy chứ cũng dễ dễ rồi đấy nhỉ :)))</p>
+<p>Okie, có điều này không biết đã bạn nào để ý chưa 😅 chúng ta mới tạo ra câu lệnh, chứ chưa hề gọi nó xuống <code>Database</code> 😅</p>
+<p>Để sử dụng câu lệnh đã tạo, các bạn làm giống với <code>JPQL</code> đó là sử dụng đối tượng <code>EntityManager</code></p>
+<pre><code>TypedQuery&lt;Office&gt; query = em.createQuery(query);
+List&lt;Office&gt; results = query.getResultList();
+</code></pre>
+<p>Oh right, thế là implement xong ví dụ đơn giản đâu tiên, không cóa gì khó khăn 🤔 (chém). Bây giờ thử advanced lên tý nhỉ:</p>
+<p>Bây giờ mình muốn lấy tất cả <code>Office</code> ở thành phố <code>hanoi</code> thì sẽ làm như nào?</p>
+<pre><code>SELECT o FROM Office o WHERE o.city = 'hanoi'
+</code></pre>
+<p>Lúc này query của chúng ta sẽ như thế này:</p>
+<pre><code>query.select(root).where(builder.equal(root.get(&quot;city&quot;), &quot;hanoi&quot;));
+</code></pre>
+<p>Các bạn để ý đoạn này nhé. Mình sử <code>builder</code> để lấy hàm <code>equal</code> (phép toán logic, như mình đề cập ở trên, chuẩn chưa nào). Tiếp tới là cái <code>root.get(&quot;city&quot;)</code>, <code>root</code> chính là đối tượng chúng ta đã khai báo, bây giờ chúng ta sẽ lấy trường <code>city</code> của nó và kiểm tra nó với <code>hanoi</code>.</p>
+<p>Có thể nói <code>Criteria API</code> đã hiện thực hóa rất thành công câu lệnh JPQL (hay HQL) thành những api java cực kì dễ dọc, dễ hiểu và dễ sử dụng. Khi đã hiểu được câu lệnh gốc, bạn có thể dễ dàng chuyển nó thành <code>Criteria</code> và ngược lại.</p>
+<p>Trong bài viết tới ở chương <code>Spring</code>, mình sẽ hướng dẫn các bạn sử dụng tới <code>Specifications</code> kết hợp <code>Criteria API</code> để tạo ra một vụ nổ khi giao tiếp với db bằng <code>Java</code> (vãi cả chém 😂)</p>
+<p>Chúc các bạn sử dụng thành công <code>Criteria API</code> và đừng quên like or chia sẻ bài viết cho bạn bè hihi, cảm ơn các bạn đã theo dõi!</p>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpahướng-dẫn-sử-dụng-criteria-api-trong-hibernate-phần-2"><a class="header" href="#jpahướng-dẫn-sử-dụng-criteria-api-trong-hibernate-phần-2">「Jpa」Hướng dẫn sử dụng Criteria API trong Hibernate (Phần 2)</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Cài đặt</li>
+<li>JPA Meta Model</li>
+<li>Predicate</li>
+</ul>
+<h3 id="giới-thiệu-6"><a class="header" href="#giới-thiệu-6"><strong>Giới thiệu</strong></a></h3>
+<p>Trong bài viết trước, tôi đã giới thiệu với các bạn về <strong>Criteria API</strong> của <strong>Hibernate</strong>.</p>
+<ol>
+<li>Hibernate là gì?</li>
+<li>Hướng dẫn sử dụng Criteria API trong Hibernate</li>
+</ol>
+<p>Trong phần này chúng ta sẽ tìm hiểu một số các phần cần thiết khác trong <strong>Criteria API</strong>, thứ giúp cho bạn xây dựng query một cách đơn giản hơn.</p>
+<p>Trong bài có sử dụng:</p>
+<ol>
+<li>Lombok</li>
+</ol>
+<h3 id="cài-đặt-2"><a class="header" href="#cài-đặt-2"><strong>Cài đặt</strong></a></h3>
+<p>Nhớ thêm <code>spring-boot-starter-data-jpa</code> vào dependencies của bạn.</p>
+<p>Trong phần này, tôi xài <em>H2 database</em> để demo. (H2 là dạng memory database, nó sẽ lưu trong ram và khi tắt chương trình nó sẽ mất sạch)</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;projectxmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&lt;parent&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&lt;version&gt;2.0.5.RELEASE&lt;/version&gt;&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+	&lt;/parent&gt;&lt;groupId&gt;me.loda.spring&lt;/groupId&gt;&lt;artifactId&gt;example-independent-maven-spring-project&lt;/artifactId&gt;&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;&lt;name&gt;example-independent-maven-spring-project&lt;/name&gt;&lt;description&gt;Demo project for Spring Boot&lt;/description&gt;&lt;properties&gt;&lt;java.version&gt;1.8&lt;/java.version&gt;&lt;/properties&gt;&lt;dependencies&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;optional&gt;true&lt;/optional&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&lt;artifactId&gt;lombok&lt;/artifactId&gt;&lt;optional&gt;true&lt;/optional&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&lt;scope&gt;test&lt;/scope&gt;&lt;!--			&lt;exclusions&gt;--&gt;
+			&lt;!--				&lt;exclusion&gt;--&gt;
+			&lt;!--					&lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;--&gt;
+			&lt;!--					&lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;--&gt;
+			&lt;!--				&lt;/exclusion&gt;--&gt;
+			&lt;!--			&lt;/exclusions&gt;--&gt;
+		&lt;/dependency&gt;&lt;!--spring jpa--&gt;
+		&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&lt;/dependency&gt;&lt;!--in memory database--&gt;
+		&lt;dependency&gt;&lt;groupId&gt;com.h2database&lt;/groupId&gt;&lt;artifactId&gt;h2&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;/dependency&gt;&lt;!--https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen --&gt;
+		&lt;dependency&gt;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;&lt;artifactId&gt;hibernate-jpamodelgen&lt;/artifactId&gt;&lt;version&gt;5.4.9.Final&lt;/version&gt;&lt;scope&gt;provided&lt;/scope&gt;&lt;/dependency&gt;&lt;/dependencies&gt;&lt;build&gt;&lt;plugins&gt;&lt;plugin&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&lt;/plugin&gt;&lt;/plugins&gt;&lt;/build&gt;&lt;/project&gt;
+</code></pre>
+<p>Đặc biệt, chú ý <code>hibernate-jpamodelgen</code>, tôi sẽ giải thích tác dụng của nó trước.</p>
+<h3 id="jpa-meta-model"><a class="header" href="#jpa-meta-model"><strong>JPA Meta Model</strong></a></h3>
+<p>trong bài trước mọi người cũng biết cách cấu trúc của một câu query trong Criteria API:</p>
+<pre><code>SELECT o FROM Office o WHERE o.city = 'hanoi'
+</code></pre>
+<p>Lúc này query của chúng ta sẽ như thế này:</p>
+<pre><code>query.select(root).where(builder.equal(root.get(&quot;city&quot;), &quot;hanoi&quot;));
+</code></pre>
+<p>Để ý thì có thể thấy, khi muốn lấy column <code>city</code> để kiểm tra, chúng ta đang hardcode bằng <code>String</code>.</p>
+<p>Có một số bất lợi khi làm vậy, thứ nhất là bạn phải tự nhớ tên các column mỗi khi gọi, thứ hai là bạn sẽ phải tìm kiếm tất cả các chỗ sử dụng mỗi sửa đổi tên cột.</p>
+<p>Cách giải quyết hay nhất là tham chiếu tên các column của <strong>Table</strong> vào một <strong>Object</strong> để chúng ta có thể gọi tới mỗi khi sử dụng. Khi có sự thay đổi, chỉ cần thay đổi trong đối tượng này là xong. Đối tượng biểu diễn này được gọi là <strong>Meta Model</strong>.</p>
+<p>Và rất may là Hibernate hỗ trợ chúng ta tự động generate ra các Meta Model từ các class <code>@Entity</code></p>
+<p>Ví dụ:</p>
+<p>Chúng ta có Class Entity <code>User</code></p>
+<p><em>User.java</em></p>
+<pre><code>@Entity
+@Data
+@Builder
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private UserType type;
+    private String name;
+
+    public enum UserType {
+        NORMAL, VIP;
+    }
+}
+</code></pre>
+<p>Thì class Meta Model của <code>User</code> sẽ tên là <code>User_</code> và có cấu trúc như sau:</p>
+<pre><code>@Generated(value = &quot;org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor&quot;)
+@StaticMetamodel(User.class)
+public abstract class User_ {
+
+	public static volatile SingularAttribute&lt;User, String&gt; name;
+	public static volatile SingularAttribute&lt;User, Long&gt; id;
+	public static volatile SingularAttribute&lt;User, UserType&gt; type;
+
+	public static final String NAME = &quot;name&quot;;
+	public static final String ID = &quot;id&quot;;
+	public static final String TYPE = &quot;type&quot;;
+
+}
+</code></pre>
+<p>Để có thể Generate ra các class Meta Model, bạn sẽ cần thêm dependency <code>hibernate-jpamodelgen</code> vào project của mình.</p>
+<pre><code>&lt;dependency&gt;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;&lt;artifactId&gt;hibernate-jpamodelgen&lt;/artifactId&gt;&lt;version&gt;CURRENT-VERSION&lt;/version&gt;&lt;/dependency&gt;
+</code></pre>
+<p>Khi build jar nó sẽ tự động generate thêm cho bạn</p>
+<p>Để có thể sử dụng trong IDE, bạn có thể Config Annotation Processor (Giống với Lombok), để IDE hiểu và tự động generate ra giúp bạn lập trình dễ hơn.</p>
+<p>!image</p>
+<h3 id="predicate"><a class="header" href="#predicate"><strong>Predicate</strong></a></h3>
+<p>Để có thể xây dựng câu truy vấn một cách trọn vẹn, bạn cần biết <code>Predicate</code>.</p>
+<p>Tạm hiểu một cách đơn giản thì <code>Predicate</code> là một mệnh đề điều kiện trong câu lệnh truy vấn.</p>
+<p>Như ví dụ ở dưới đây:</p>
+<pre><code>@Repository
+public class CustomUserRepository {
+
+    @PersistenceContext
+    private EntityManager em;
+
+    public User getUserById(Long id) {
+        CriteriaBuilder builder = em.getCriteriaBuilder();
+        CriteriaQuery&lt;User&gt; query = builder.createQuery(User.class);
+        Root&lt;User&gt; root = query.from(User.class);
+
+        Predicate condition = builder.equal(root.get(User_.ID), id);
+
+        query.select(root).where(condition);
+
+        return em.createQuery(query).getSingleResult();
+    }
+}
+</code></pre>
+<p><code>Predicate</code> có thể liên kết với nhau bằng các phép quan hệ <code>and</code>, <code>or</code>, <code>not</code>, v.v..</p>
+<p>Ví dụ:</p>
+<pre><code>    public Collection&lt;User&gt; getUserByComplexConditions(String name, UserType type) {
+        CriteriaBuilder builder = em.getCriteriaBuilder();
+        CriteriaQuery&lt;User&gt; query = builder.createQuery(User.class);
+        Root&lt;User&gt; root = query.from(User.class);
+
+        Predicate hasNameLike = builder.like(root.get(User_.NAME), name);
+        Predicate hasType = builder.equal(root.get(User_.TYPE), type);
+
+        Predicate condition = builder.and(hasNameLike, hasType);
+
+        query.select(root).where(condition);
+        return em.createQuery(query).getResultList();
+    }
+</code></pre>
+<p>Tới đây bạn đã nắm được cơ bản <strong>Criteria API</strong> và đã có thể tự sử dụng nó trong đa số các câu lệnh đơn giản.</p>
+<p>Trong bài tiếp theo, tôi sẽ hướng dẫn nốt các join bảng nữa thôi là bạn sẽ mas con ông ter.</p>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="jpahướng-dẫn-tự-tạo-validator-để-kiểm-tra-model--entity"><a class="header" href="#jpahướng-dẫn-tự-tạo-validator-để-kiểm-tra-model--entity">「Jpa」Hướng dẫn tự tạo Validator để kiểm tra Model &amp; Entity</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Cài đặt</li>
+<li>Prepare</li>
+<li>Tạo Annotation</li>
+<li>Tạo Validator</li>
+<li>Chạy thử</li>
+<li>Kết</li>
+</ul>
+<h3 id="giới-thiệu-7"><a class="header" href="#giới-thiệu-7"><strong>Giới thiệu</strong></a></h3>
+<p>Bản thân Hibernate và Java đã cung cấp cho chúng ta rất nhiều các Annotation để validate dữ liệu của model.</p>
+<p>Chẳng hạn như: <code>@@NotBlank</code>, <code>@Size</code>, <code>@Email</code>, v.v..</p>
+<p>Tuy nhiên, trên thực tế, chúng ta có rất nhiều các điều kiện được đặt ra, tuỳ thuộc vào business và mô hình dự án.</p>
+<p>Ví dụ như trong dự án của tôi, tôi muốn tất cả <code>User</code> đều phải có một thuộc tính là <code>lodaId</code>.</p>
+<p>Một <code>lodaId</code> hợp lệ là chuỗi String có tiền tố: <code>loda://xxxx</code></p>
+<p>Lúc này, làm sao để tôi chắc chắn được rằng mọi <code>User</code> trước khi tạo đều phải có <code>lodaId</code> hợp lệ?</p>
+<p>Rõ ràng tôi phải tự tạo ra một bộ kiểm tra cho riêng mình để kiểm soát tính hợp lệ của <code>User</code>.</p>
+<p>Rất may, <code>hibernate-validator</code> sẽ giúp tôi làm điều đó.</p>
+<p>Trong bài có sử dụng các kiến thức:</p>
+<ol>
+<li>Spring Boot</li>
+<li>jpa</li>
+<li>lombok</li>
+</ol>
+<h3 id="cài-đặt-3"><a class="header" href="#cài-đặt-3"><strong>Cài đặt</strong></a></h3>
+<p><em>pom.xml</em></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;projectxmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&lt;parent&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&lt;version&gt;2.0.5.RELEASE&lt;/version&gt;&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+	&lt;/parent&gt;&lt;groupId&gt;me.loda.spring&lt;/groupId&gt;&lt;artifactId&gt;example-independent-maven-spring-project&lt;/artifactId&gt;&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;&lt;name&gt;example-independent-maven-spring-project&lt;/name&gt;&lt;description&gt;Demo project for Spring Boot&lt;/description&gt;&lt;properties&gt;&lt;java.version&gt;1.8&lt;/java.version&gt;&lt;/properties&gt;&lt;dependencies&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&lt;scope&gt;runtime&lt;/scope&gt;&lt;optional&gt;true&lt;/optional&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&lt;artifactId&gt;lombok&lt;/artifactId&gt;&lt;optional&gt;true&lt;/optional&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&lt;scope&gt;test&lt;/scope&gt;&lt;/dependency&gt;&lt;!--https://mvnrepository.com/artifact/org.hibernate/hibernate-validator --&gt;
+        &lt;dependency&gt;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;&lt;artifactId&gt;hibernate-validator&lt;/artifactId&gt;&lt;version&gt;6.1.0.Final&lt;/version&gt;&lt;/dependency&gt;&lt;/dependencies&gt;&lt;build&gt;&lt;plugins&gt;&lt;plugin&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&lt;/plugin&gt;&lt;/plugins&gt;&lt;/build&gt;&lt;/project&gt;
+</code></pre>
+<h3 id="prepare"><a class="header" href="#prepare"><strong>Prepare</strong></a></h3>
+<p>Trước khi tạo ra một bộ Validator cho riêng mình, chúng ta tạo ra các thành phần chính.</p>
+<p>Tạo ra model <code>User</code></p>
+<p><em>User.java</em></p>
+<pre><code>@Data
+public class User {
+    private String lodaId;
+}
+</code></pre>
+<p>Tạo Controller giao tiếp với client.</p>
+<p><em>UserController.java</em></p>
+<pre><code>@RestController
+@RequestMapping(&quot;api/v1/users&quot;)
+public class UserController {
+
+    /*
+        Đánh dấu object với @Valid để validator tự động kiểm tra object đó có hợp lệ hay không
+     */
+    @PostMapping
+    public Object createUser(@Valid @RequestBody User user) {
+        return user;
+    }
+
+}
+</code></pre>
+<h3 id="tạo-annotation"><a class="header" href="#tạo-annotation"><strong>Tạo Annotation</strong></a></h3>
+<p>Để tạo ra một validator với Hibernate-Validator, chúng ta cần khai báo một annotation mới.</p>
+<p>Ở đây, tôi tạo ra một Annotation của chính mình như sau:</p>
+<pre><code>/**
+ * Khai báo một custom annotation
+ */
+@Documented
+@Constraint(validatedBy = LodaIdValidator.class)
+@Target({ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface LodaId {
+    // trường message là bắt buộc, khai báo nội dung sẽ trả về khi field k hợp lệ
+    String message() default &quot;LodaId must start with loda://&quot;;
+    // Cái này là bắt buộc phải có để Hibernate Validator có thể hoạt động
+    Class&lt;?&gt;[] groups() default {};
+    // Cái này là bắt buộc phải có để Hibernate Validator có thể hoạt động
+    Class&lt;? extends Payload&gt;[] payload() default {};
+}
+</code></pre>
+<p>Vậy là xong, giờ chỉ cần gắn <code>@LodaId</code> lên trường nào cần kiểm tra tính hợp lệ.</p>
+<pre><code>@Data
+public class User {
+    // Đánh dấu field lodaId sẽ cần validate bởi @LodaId
+    @LodaId
+    private String lodaId;
+}
+</code></pre>
+<h3 id="tạo-validator"><a class="header" href="#tạo-validator"><strong>Tạo Validator</strong></a></h3>
+<p>Sau khi đã tạo ra <code>@LodaId</code>, chúng ta cần tạo ra bộ kiểm tra cho Annotation này.</p>
+<p>Rất đơn giản, bạn chỉ cần kế thừa lớp <code>ConstraintValidator</code> của Hibernate Validator</p>
+<pre><code>import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+public class LodaIdValidator implements ConstraintValidator&lt;LodaId, String&gt; {
+    private static final String LODA_PREFIX = &quot;loda://&quot;;
+
+    /**
+     * Kiểm tra tính hợp lệ của trường được đánh dấu bởi @LodaId
+     * @param s
+     * @param constraintValidatorContext
+     * @return
+     */
+    @Override
+    public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
+        if (s == null || s.isEmpty()) return false;
+
+        return s.startsWith(LODA_PREFIX);
+    }
+}
+</code></pre>
+<h3 id="chạy-thử-3"><a class="header" href="#chạy-thử-3"><strong>Chạy thử</strong></a></h3>
+<p>Request một <code>User</code> hợp lệ:</p>
+<pre><code>{
+	&quot;lodaId&quot;: &quot;loda://user_1&quot;
+}
+</code></pre>
+<p>trả về thành công <code>200</code>.</p>
+<p>!image</p>
+<p>Request một <code>User</code> không hợp lệ:</p>
+<pre><code>{
+	&quot;lodaId&quot;: &quot;Laula://user_1&quot;
+}
+</code></pre>
+<p>Trả về thất bại, Bad Request <code>400</code>.</p>
+<p>!image</p>
+<pre><code>{
+    &quot;timestamp&quot;: &quot;2019-12-19T10:26:14.554+0000&quot;,
+    &quot;status&quot;: 400,
+    &quot;error&quot;: &quot;Bad Request&quot;,
+    &quot;errors&quot;: [
+        {
+            &quot;codes&quot;: [
+                &quot;LodaId.user.lodaId&quot;,
+                &quot;LodaId.lodaId&quot;,
+                &quot;LodaId.java.lang.String&quot;,
+                &quot;LodaId&quot;
+            ],
+            &quot;arguments&quot;: [
+                {
+                    &quot;codes&quot;: [
+                        &quot;user.lodaId&quot;,
+                        &quot;lodaId&quot;
+                    ],
+                    &quot;arguments&quot;: null,
+                    &quot;defaultMessage&quot;: &quot;lodaId&quot;,
+                    &quot;code&quot;: &quot;lodaId&quot;
+                }
+            ],
+            &quot;defaultMessage&quot;: &quot;LodaId must start with loda://&quot;,
+            &quot;objectName&quot;: &quot;user&quot;,
+            &quot;field&quot;: &quot;lodaId&quot;,
+            &quot;rejectedValue&quot;: &quot;Laula://user_1&quot;,
+            &quot;bindingFailure&quot;: false,
+            &quot;code&quot;: &quot;LodaId&quot;
+        }
+    ],
+    &quot;message&quot;: &quot;Validation failed for object='user'. Error count: 1&quot;,
+    &quot;path&quot;: &quot;/api/v1/users&quot;
+}
+</code></pre>
+<h3 id="kết-2"><a class="header" href="#kết-2"><strong>Kết</strong></a></h3>
+<p>Rất đơn giản để có thể tự tạo ra cho mình các Validator với <code>Hibernate-Validator</code>. Nó sẽ giúp bạn tiết kiệm rất nhiều thời gian.</p>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../spring-boot/spring-boot.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../spring-boot/ss.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../spring-boot/spring-boot.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../spring-boot/ss.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

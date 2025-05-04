@@ -1,0 +1,993 @@
+<!DOCTYPE HTML>
+<html lang="vi" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>React - Kho code của duykhanh471</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Trang chủ dự án</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> HTML/CSS/JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../html-css/index.html"><strong aria-hidden="true">2.1.</strong> HTML/CSS</a></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.2.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/co-ban.html"><strong aria-hidden="true">2.2.1.</strong> Cơ bản</a></li><li class="chapter-item expanded "><a href="../js/array.html"><strong aria-hidden="true">2.2.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../js/ngay-gio.html"><strong aria-hidden="true">2.2.3.</strong> Ngày giờ</a></li><li class="chapter-item expanded "><a href="../js/string.html"><strong aria-hidden="true">2.2.4.</strong> String</a></li><li class="chapter-item expanded "><a href="../js/object.html"><strong aria-hidden="true">2.2.5.</strong> Object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../java/index.html"><strong aria-hidden="true">3.</strong> Java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/index.html"><strong aria-hidden="true">3.1.</strong> Kho snippets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/algorithms.html"><strong aria-hidden="true">3.1.1.</strong> Algorithms</a></li><li class="chapter-item expanded "><a href="../java/snippets/array.html"><strong aria-hidden="true">3.1.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../java/snippets/cls.html"><strong aria-hidden="true">3.1.3.</strong> CLS</a></li><li class="chapter-item expanded "><a href="../java/snippets/date.html"><strong aria-hidden="true">3.1.4.</strong> Date</a></li><li class="chapter-item expanded "><a href="../java/snippets/encoding.html"><strong aria-hidden="true">3.1.5.</strong> Encoding & Decoding</a></li><li class="chapter-item expanded "><a href="../java/snippets/file.html"><strong aria-hidden="true">3.1.6.</strong> File</a></li><li class="chapter-item expanded "><a href="../java/snippets/io.html"><strong aria-hidden="true">3.1.7.</strong> IO</a></li><li class="chapter-item expanded "><a href="../java/snippets/math.html"><strong aria-hidden="true">3.1.8.</strong> Math</a></li><li class="chapter-item expanded "><a href="../java/snippets/media.html"><strong aria-hidden="true">3.1.9.</strong> Media</a></li><li class="chapter-item expanded "><a href="../java/snippets/network.html"><strong aria-hidden="true">3.1.10.</strong> Network</a></li><li class="chapter-item expanded "><a href="../java/snippets/string.html"><strong aria-hidden="true">3.1.11.</strong> String</a></li><li class="chapter-item expanded "><a href="../java/snippets/thread.html"><strong aria-hidden="true">3.1.12.</strong> Thread</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../spring-boot/index.html"><strong aria-hidden="true">4.</strong> Spring Boot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../spring-boot/core.html"><strong aria-hidden="true">4.1.</strong> Core</a></li><li class="chapter-item expanded "><a href="../spring-boot/spring-boot.html"><strong aria-hidden="true">4.2.</strong> Spring Boot</a></li><li class="chapter-item expanded "><a href="../spring-boot/jpa.html"><strong aria-hidden="true">4.3.</strong> Jpa</a></li><li class="chapter-item expanded "><a href="../spring-boot/ss.html"><strong aria-hidden="true">4.4.</strong> Spring Security</a></li><li class="chapter-item expanded "><a href="../spring-boot/redis.html"><strong aria-hidden="true">4.5.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/thuat-toan.html"><strong aria-hidden="true">5.1.</strong> Thuật toán</a></li><li class="chapter-item expanded "><a href="../rust/command-line.html"><strong aria-hidden="true">5.2.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../rust/he-thong.html"><strong aria-hidden="true">5.3.</strong> System</a></li><li class="chapter-item expanded "><a href="../rust/internet.html"><strong aria-hidden="true">5.4.</strong> Internet</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Tệp</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/tep/epub.html"><strong aria-hidden="true">5.5.1.</strong> EPUB</a></li><li class="chapter-item expanded "><a href="../rust/tep/git.html"><strong aria-hidden="true">5.5.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../rust/tep/html.html"><strong aria-hidden="true">5.5.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../rust/tep/rss.html"><strong aria-hidden="true">5.5.4.</strong> RSS</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../react/index.html" class="active"><strong aria-hidden="true">6.</strong> React</a></li><li class="chapter-item expanded "><a href="../react-native/index.html"><strong aria-hidden="true">7.</strong> React Native</a></li><li class="chapter-item expanded "><a href="../bash/tong-hop.html"><strong aria-hidden="true">8.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../regex/tong-hop.html"><strong aria-hidden="true">9.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../khac/yt-dlp.html"><strong aria-hidden="true">10.</strong> yt-dlp</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kho code của duykhanh471</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="bắt-đầu"><a class="header" href="#bắt-đầu">Bắt đầu</a></h1>
+<h2 id="khởi-tạo-dự-án"><a class="header" href="#khởi-tạo-dự-án">Khởi tạo dự án</a></h2>
+<p>Đọc thêm trong <a href="https://react.dev/learn/creating-a-react-app">Creating a React App</a></p>
+<h3 id="creating-a-react-app"><a class="header" href="#creating-a-react-app">Creating a React App</a></h3>
+<pre><code>npx create-react-router@latest
+</code></pre>
+<p>Cái này sẽ tự động setup Framework cho các ông làm việc. Tôi cũng không hiểu lắm và vì cũng mới học nên tôi sẽ chọn &quot;Build a React app from Scratch&quot;.</p>
+<h3 id="build-a-react-app-from-scratch"><a class="header" href="#build-a-react-app-from-scratch">Build a React app from Scratch</a></h3>
+<p>Đọc thêm trong <a href="https://react.dev/learn/build-a-react-app-from-scratch">Build a React app from Scratch</a>. Chọn Vite vì thấy mấy ông dev cũng dùng và không biết gì về Parcel với Rsbuild.</p>
+<pre><code>npm create vite@latest my-app -- --template react
+</code></pre>
+<h3 id="chọn-cái-nào"><a class="header" href="#chọn-cái-nào">Chọn cái nào</a></h3>
+<p>Theo Documentation thì: </p>
+<blockquote>
+<p>If you want to build a new app or website with React, we recommend starting with a framework (Chính là cái <em>Creating a React App</em> ở trên).</p>
+</blockquote>
+<p>Và thêm nữa là:</p>
+<blockquote>
+<p>Starting from scratch is an easy way to get started using React, but a major tradeoff to be aware of is that going this route is often the same as building your own adhoc framework. As your requirements evolve, you may need to solve more framework-like problems that our recommended frameworks already have well developed and supported solutions for.</p>
+</blockquote>
+<h2 id="một-số-thiết-lập-khác"><a class="header" href="#một-số-thiết-lập-khác">Một số thiết lập khác</a></h2>
+<h3 id="adding-typescript-to-an-existing-react-project"><a class="header" href="#adding-typescript-to-an-existing-react-project">Adding TypeScript to an existing React project</a></h3>
+<pre><code>npm install @types/react @types/react-dom
+</code></pre>
+<p>The following compiler options need to be set in your <code>tsconfig.json</code>:</p>
+<ol>
+<li><code>dom</code> must be included in <a href="https://www.typescriptlang.org/tsconfig/#lib"><code>lib</code></a> (Note: If no <code>lib</code> option is specified, <code>dom</code> is included by default).</li>
+<li><a href="https://www.typescriptlang.org/tsconfig/#jsx"><code>jsx</code></a> must be set to one of the valid options. <code>preserve</code> should suffice for most applications.</li>
+</ol>
+<h3 id=""><a class="header" href="#"></a></h3>
+<p>Diểm khác biệt khi sử dụng thêm TypeScript thì là... có thể thêm kiểu dữ liệu vào kiểu như này:</p>
+<pre><code class="language-jsx">function MyButton({ title }: { title: string }) {
+  return (
+    &lt;button&gt;{title}&lt;/button&gt;
+  );
+}
+
+export default function MyApp() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Welcome to my app&lt;/h1&gt;
+      &lt;MyButton title=&quot;I'm a button&quot; /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="usestate"><a class="header" href="#usestate">useState</a></h3>
+<pre><code class="language-jsx">// Infer the type as &quot;boolean&quot;
+const [enabled, setEnabled] = useState(false);
+// Trong trường hợp mà cần phải khai báo thêm kiểu thì
+type Status = &quot;idle&quot; | &quot;loading&quot; | &quot;success&quot; | &quot;error&quot;;
+const [status, setStatus] = useState&lt;Status&gt;(&quot;idle&quot;);
+</code></pre>
+<h1 id="khởi-động-chút-react"><a class="header" href="#khởi-động-chút-react">Khởi động chút React</a></h1>
+<p>Theo như trang hướng dẫn nói thì cái trang này sẽ bao gồm khoảng 80% những gì mà bạn sẽ dùng trong React hàng ngày. Gọi bài này là dịch thì <em>vừa đúng vừa không đúng</em> vì mình đã thêm bớt khá nhiều sao cho hợp với cái hiểu của mình. Nhưng cấu trúc từng phần về cơ bản vẫn vậy.</p>
+<p>Mình nghĩ là các nguyên lý cơ bản sẽ không dễ bị thay đổi quá nhanh cho nên là chắc để vậy cũng oke.</p>
+<h3 id="tạo-và-nest-các-components"><a class="header" href="#tạo-và-nest-các-components">Tạo và nest các components</a></h3>
+<p>Về cơ bản thì ứng dụng React toàn là <em>components</em> (A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page). React components về cơ bản là JavaScript functions, nhưng trả về Markup:</p>
+<pre><code class="language-js">function MyButton() {
+  return (&lt;button&gt;I'm a button&lt;/button&gt;);
+}
+// Đã khai báo `MyButton` rồi nên có thể dùng trong Component khác, kiểu như này:
+export default function MyApp() {
+  return (&lt;div&gt;&lt;h1&gt;Welcome to my app&lt;/h1&gt;&lt;MyButton /&gt;&lt;/div&gt;);
+}
+</code></pre>
+<p>Nhớ là <code>&lt;MyButton /&gt;</code> bắt đầu bằng chữ cái in hoa để nhận diện component, còn in thường là cho HTML tag. </p>
+<h3 id="viết-markup-bằng-jsx"><a class="header" href="#viết-markup-bằng-jsx">Viết markup bằng JSX</a></h3>
+<p>Cú pháp markup được dùng ở đây là <em>JSX</em> (Dù nó là <em>optional</em>, nhưng mấy ông dev bảo chẳng ai khổ dâm mà không dùng <em>JSX</em> cả)</p>
+<p>JSX thì cứng nhắc hơn HTML. Ví dụ như cần phải đóng tag <code>&lt;br /&gt;</code>. Và cũng chỉ được trả một JSX tag. Hoặc là gói trong một <em>shared parent</em>, kiểu như <code>&lt;div&gt;...&lt;/div&gt;</code> hoặc <code>&lt;&gt;...&lt;/&gt;</code> </p>
+<pre><code>function AboutPage() {return (&lt;&gt;&lt;h1&gt;About&lt;/h1&gt;&lt;p&gt;Hello there.&lt;br /&gt;How do you do?&lt;/p&gt;&lt;/&gt;);}
+</code></pre>
+<p>If you have a lot of HTML to port to JSX, you can use an <a href="https://transform.tools/html-to-jsx">online converter</a></p>
+<h3 id="thêm-chút-kiểu-cách-styles"><a class="header" href="#thêm-chút-kiểu-cách-styles">Thêm chút kiểu cách (styles)</a></h3>
+<p>Trong React thì khai báo CSS class bằng <code>className</code>. Hoạt động tương đương thuộc tính <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code></a> của HTML:</p>
+<pre><code class="language-html">&lt;img className=&quot;avatar&quot; /&gt;
+</code></pre>
+<p>Rồi viết quy tắc CSS sang một tệp khác</p>
+<pre><code class="language-css">/* In your CSS */
+.avatar {border-radius: 50%;}
+</code></pre>
+<p>Thêm CSS thì tương tự như bình thường, có thể là thêm tag <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> vào tệp HTML.</p>
+<h3 id="hiện-data"><a class="header" href="#hiện-data">Hiện data</a></h3>
+<p>Sử dụng cặp ngoặc nhọn để thêm chút JavaScript vào <code>{}</code> ví dụ như <code>user.name</code>:</p>
+<pre><code>return (&lt;h1&gt;{user.name}&lt;/h1&gt;);
+</code></pre>
+<p>Cũng có thể làm tương tự trong các thuộc tính của &quot;tag&quot; JSX. Ví dụ như <code>src={user.imageUrl}</code> sẽ đọc biến <code>user.imageUrl</code> trong JavaScript, và đưa vào thuộc tính <code>src</code>:</p>
+<pre><code>return (&lt;imgclassName=&quot;avatar&quot;src={user.imageUrl}/&gt;);
+</code></pre>
+<!-- In the above example, `style={{}}` is not a special syntax, but a regular `{}` object inside the `style={ }` JSX curly braces. You can use the `style` attribute when your styles depend on JavaScript variables. -->
+<h3 id="conditional-rendering"><a class="header" href="#conditional-rendering">Conditional rendering</a></h3>
+<p>Về cơ bản thì dùng như viết JavaScript, như đoạn code dưới đây:</p>
+<pre><code class="language-js">let doAn;
+if (duTienMua) {
+  doAn = &lt;BanhMi /&gt;;
+} else {
+  doAn = &lt;LamGiCoGiMaAn /&gt;; 
+}
+return (
+  &lt;div&gt;
+    {doAn}
+  &lt;/div&gt;
+);
+</code></pre>
+<p>Hoặc đơn giản hơn thì dùng Elvis operator</p>
+<pre><code>&lt;div&gt;{duTienMua ? (&lt;BanhMi /&gt;) : (&lt;LamGiCoGiMaAn /&gt;)}&lt;/div&gt;
+// Nếu không cần `else` thì gọn nữa
+&lt;div&gt;{duTienMua &amp;&amp; &lt;BanhMi /&gt;}&lt;/div&gt;
+</code></pre>
+<h3 id="rendering-lists"><a class="header" href="#rendering-lists">Rendering lists</a></h3>
+<p>Dùng các chức năng của bên JS <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for"><code>for</code> loop</a> hoặc <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">array <code>map()</code> function</a> để render list components.</p>
+<pre><code class="language-js">const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 }
+];
+// Inside your component, use the `map()` function to transform an array of products into an array of `&lt;li&gt;` items:
+const listItems = products.map(
+  product =&gt;
+    &lt;li key={product.id}&gt;{product.title}&lt;/li&gt;
+);
+return (&lt;ul&gt;{listItems}&lt;/ul&gt;);
+
+</code></pre>
+<p>Để ý là <code>&lt;li&gt;</code> có thuộc tính <code>key</code> sử dụng để nhận diện giữa các Item với nhau.</p>
+<h3 id="responding-to-events"><a class="header" href="#responding-to-events">Responding to events</a></h3>
+<p>Khai báo <em>event handler</em> function trong component:</p>
+<pre><code class="language-js">function MyButton() {
+  function handleClick() {
+    alert('Mày bấm cái nút này xem');
+  }
+
+  return (
+    &lt;button onClick={handleClick}&gt;
+      Click me
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p><code>onClick={handleClick}</code> không sử dụng dấu <code>()</code> nha, không phải là <code>onClick={handleClick()}</code> vì chúng ta đang coi <code>handleClick()</code> là một argument của <code>onClick</code> chứ không phải để gọi. </p>
+<h3 id="cập-nhật-màn-hình"><a class="header" href="#cập-nhật-màn-hình">Cập nhật màn hình</a></h3>
+<p>Often, you'll want your component to &quot;remember&quot; some information and display it. For example, maybe you want to count the number of times a button is clicked. To do this, add <em>state</em> to your component.</p>
+<p>Đầu tiên hãy import <a href="https://react.dev/reference/react/useState"><code>useState</code></a>.</p>
+<pre><code>import { useState } from 'react';
+</code></pre>
+<p>Now you can declare a <em>state variable</em> inside your component:</p>
+<pre><code class="language-js">function MyButton() {
+  const [count, setCount] = useState(0);
+  // ...
+</code></pre>
+<p>Bạn sẽ nhận được hai thứ từ <code>useState</code>: state (trạng thái) hiện tại (<code>count</code>), và function để update cái state đấy (<code>setCount</code>). Theo convention (Cách mà mọi người thường làm, mà nó tiện và đúng nhá) <code>[something, setSomething]</code>.</p>
+<p>Xem thêm phần ví dụ chạy phần Code cho phần này trong <a href="https://react.dev/learn#responding-to-events">Quick Start</a></p>
+<h3 id="dùng-hooks"><a class="header" href="#dùng-hooks">Dùng Hooks</a></h3>
+<p>Functions bắt đầu bằng <code>use</code> được gọi <em>Hooks</em>, ví dụ như <code>useState</code>. Đọc danh sách các đồ đã có sẵn<a href="https://react.dev/reference/react">API reference.</a>, hoặc tự tạo cũng được.</p>
+<p>Hooks are more restrictive than other functions. You can only call Hooks <em>at the top</em> of your components (or other Hooks). If you want to use <code>useState</code> in a condition or a loop, extract a new component and put it there.</p>
+<p>Sẽ cần nói thêm về Hook, nhưng chắc để sau.</p>
+<h3 id="chia-sẻ-data-giữa-các-components"><a class="header" href="#chia-sẻ-data-giữa-các-components">Chia sẻ data giữa các components</a></h3>
+<p>Thường thì như bạn có thể đã biết, mỗi một Component đều có cho mình một State riêng. Nhưng đôi khi, bạn cần các components share data và luôn cập nhật (giống nhau).# Bàn về UI trong React</p>
+<h2 id="your-first-component"><a class="header" href="#your-first-component">Your First Component</a></h2>
+<p>Trong biển code React chẳng có gì ngoài Components, có thể nói vậy.</p>
+<blockquote>
+<p>Components are one of the core concepts of React.</p>
+</blockquote>
+<pre><code class="language-jsx">// The `export default` prefix is a standard JavaScript syntax (not specific to React). It lets you mark the main function in a file so that you can later import it from other files.
+// React components are regular JavaScript functions, but **their names must start with a capital letter** or they won't work!
+export default function Profile() {
+  // But if your markup isn’t all on the same line as the return keyword, you must wrap it in a pair of parentheses:
+  // Without parentheses, any code on the lines after return will be ignored!
+  return (
+    &lt;img
+      src=&quot;https://i.imgur.com/MK3eW3Am.jpg&quot;
+      alt=&quot;Katherine Johnson&quot;
+    /&gt;
+  )
+}
+</code></pre>
+<p>Gọi component ra kiểu như thế này</p>
+<pre><code class="language-jsx">export default function Gallery() {
+  return (
+    &lt;section&gt;
+      &lt;h1&gt;Amazing scientists&lt;/h1&gt;
+      &lt;Profile /&gt;
+    &lt;/section&gt;
+  );
+}
+</code></pre>
+<p>Nó sẽ trả ra như này (Note: Mình thấy bình thường họ hay trả <code>&lt;&gt;{}&lt;/&gt;</code> hoặc dùng <code>&lt;div&gt;</code>, nếu trả <code>&lt;section&gt;</code> thì HTML sẽ <em>semantic</em>)</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Amazing scientists&lt;/h1&gt;
+  &lt;img src=&quot;https://i.imgur.com/MK3eW3As.jpg&quot; alt=&quot;Katherine Johnson&quot; /&gt;
+  &lt;img src=&quot;https://i.imgur.com/MK3eW3As.jpg&quot; alt=&quot;Katherine Johnson&quot; /&gt;
+  &lt;img src=&quot;https://i.imgur.com/MK3eW3As.jpg&quot; alt=&quot;Katherine Johnson&quot; /&gt;
+&lt;/section&gt;
+</code></pre>
+<p>Components can render other components (so you can keep multiple components in the same file), but you must never nest their definitions:</p>
+<pre><code class="language-jsx">// Như này là sai vl
+export default function Gallery() {
+  // 🔴 Never define a component inside another component!
+  function Profile() {
+    // ...
+  }
+  // ...
+}
+
+// Mà phải như này (Cũng không tối ưu lắm)
+export default function Gallery() {
+  return (
+    &lt;section&gt;
+      &lt;Profile /&gt;
+    &lt;/section&gt;
+  )
+}
+
+function Profile() {
+  // ...
+}
+</code></pre>
+<h2 id="importing-and-exporting-components"><a class="header" href="#importing-and-exporting-components">Importing and Exporting Components</a></h2>
+<h3 id="the-root-component-file"><a class="header" href="#the-root-component-file">The root component file</a></h3>
+<p>These currently live in a root component file, named <code>App.js</code> in this example. Depending on your setup, your root component could be in another file, though</p>
+<p>Nếu đây là tệp <code>App.jsx</code> </p>
+<pre><code class="language-jsx">function Profile() {
+  return (
+    &lt;img
+      src=&quot;https://i.imgur.com/MK3eW3As.jpg&quot;
+      alt=&quot;Katherine Johnson&quot;
+    /&gt;
+  );
+}
+
+export default function Gallery() {
+  return (
+    &lt;section&gt;
+      &lt;Profile /&gt;
+    &lt;/section&gt;
+  );
+}
+
+</code></pre>
+<p>Giả sử tệp trên được ném sang một tệp khác <code>Gallery.jsx</code> chẳng hạn, thì muốn sử dụng <code>&lt;Gallery /&gt;</code> ở tệp khác thì cần <code>import</code> vào:</p>
+<pre><code class="language-jsx">import Gallery from './Gallery.js';
+// Như này cũng được, mà nên như trên hơn: import Gallery from './Gallery';
+export default function App() {
+  return (
+    &lt;Gallery /&gt;
+  );
+}
+</code></pre>
+<h3 id="exporting-and-importing-multiple-components-from-the-same-file"><a class="header" href="#exporting-and-importing-multiple-components-from-the-same-file">Exporting and importing multiple components from the same file</a></h3>
+<p>A file can only have one default export, but it can have numerous named exports!</p>
+<p>When you write a <em>default</em> import, you can put any name you want after <code>import</code>. For example, you could write <code>import Banana from './Button.js'</code> instead and it would still provide you with the same default export.</p>
+<div class="table-wrapper"><table><thead><tr><th>Syntax</th><th>Export statement</th><th>Import statement</th></tr></thead><tbody>
+<tr><td>Default</td><td><code>export default function Button() {}</code></td><td><code>import Button from './Button.js';</code></td></tr>
+<tr><td>Named</td><td><code>export function Button() {}</code></td><td><code>import { Button } from './Button.js';</code></td></tr>
+</tbody></table>
+</div>
+<p>Ví như trong tệp <code>Gallery.js</code> ở trên</p>
+<pre><code class="language-jsx">export function Profile() {
+  // ...
+}
+</code></pre>
+<pre><code class="language-jsx">import { Profile } from './Gallery.js';
+// Finally, render &lt;Profile /&gt; from the App component:
+export default function App() {
+  return &lt;Profile /&gt;;
+}
+</code></pre>
+<h2 id="jsx"><a class="header" href="#jsx">JSX</a></h2>
+<h3 id="the-rules-of-jsx"><a class="header" href="#the-rules-of-jsx">The Rules of JSX</a></h3>
+<ul>
+<li>Return a single root element: Kiểu <code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li>camelCase: stroke-width you use strokeWidth. Since class is a reserved word, in React you write className instead, named after the corresponding DOM property (<strong>Pitfall</strong>: For historical reasons, aria-* and data-* attributes are written as in HTML with dashes.)</li>
+</ul>
+<h3 id="javascript-in-jsx-with-curly-braces"><a class="header" href="#javascript-in-jsx-with-curly-braces">JavaScript in JSX with Curly Braces</a></h3>
+<p>Kiểu như này</p>
+<pre><code class="language-jsx">export default function Avatar() {
+  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const description = 'Gregorio Y. Zara';
+  return (
+    &lt;img
+      className=&quot;avatar&quot;
+      src={avatar}
+      alt={description}
+    /&gt;
+  );
+}
+</code></pre>
+<p>You can only use curly braces in two ways inside JSX:</p>
+<ol>
+<li><strong>As text</strong> directly inside a JSX tag: <code>&lt;h1&gt;{name}'s To Do List&lt;/h1&gt;</code> works, but <code>&lt;{tag}&gt;Gregorio Y. Zara's To Do List&lt;/{tag}&gt;</code> will not.</li>
+<li><strong>As attributes</strong> immediately following the <code>=</code> sign: <code>src={avatar}</code> will read the <code>avatar</code> variable, but <code>src=&quot;{avatar}&quot;</code> will pass the string <code>&quot;{avatar}&quot;</code>.</li>
+</ol>
+<p>Using “double curlies”: CSS and other objects in JSX: Can even pass objects in JSX. Objects are also denoted with curly braces, like <code>{ name: &quot;Hedy Lamarr&quot;, inventions: 5 }</code>. To pass a JS object in JSX: <code>person={{ name: &quot;Hedy Lamarr&quot;, inventions: 5 }}</code>.</p>
+<p>Inline <code>style</code> properties are written in camelCase. For example, HTML <code>&lt;ul style=&quot;background-color: black&quot;&gt;</code> would be written as <code>&lt;ul style={{ backgroundColor: 'black' }}&gt;</code> in your component.</p>
+<pre><code class="language-jsx">export default function TodoList() {
+  return (
+    // Là cái này này
+    &lt;ul style={{
+      backgroundColor: 'black',
+      color: 'pink'
+    }}&gt;
+      &lt;li&gt;Improve the videophone&lt;/li&gt;
+      &lt;li&gt;Prepare aeronautics lectures&lt;/li&gt;
+      &lt;li&gt;Work on the alcohol-fuelled engine&lt;/li&gt;
+    &lt;/ul&gt;
+  );
+}
+
+</code></pre>
+<pre><code class="language-jsx">const person = {
+  name: 'Gregorio Y. Zara',
+  theme: {
+    backgroundColor: 'black',
+    color: 'pink'
+  }
+};
+
+
+export default function TodoList() {
+  return (
+    &lt;div style={person.theme}&gt;
+      &lt;h1&gt;{person.name}'s Todos&lt;/h1&gt;
+      &lt;img
+        className=&quot;avatar&quot;
+        src=&quot;https://i.imgur.com/7vQD0fPs.jpg&quot;
+        alt=&quot;Gregorio Y. Zara&quot;
+      /&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Improve the videophone&lt;/li&gt;
+        &lt;li&gt;Prepare aeronautics lectures&lt;/li&gt;
+        &lt;li&gt;Work on the alcohol-fuelled engine&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>Tips: Kết hợp String vào với nhau cũng oke: <code>src={baseUrl + person.imageId + person.imageSize + '.jpg'}</code></p>
+<h2 id="passing-props-to-a-component"><a class="header" href="#passing-props-to-a-component">Passing Props to a Component</a></h2>
+<p>Props are the information that you pass to a JSX tag. For example, <code>className</code>, <code>src</code>, <code>alt</code>, <code>width</code>, and <code>height</code> are some of the props you can pass to an <code>&lt;img&gt;</code>:</p>
+<pre><code class="language-jsx">export default function Profile() {
+  return (
+    // Adding the props to the component looks like this
+    &lt;Avatar
+      person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
+      size={100}
+    /&gt;
+  );
+}
+
+function Avatar({ person, size }) {  // person and size are available here
+}
+// Or setting the default value for the props' propert(ies)
+
+// function Avatar({ person, size = 100 }) {
+//   // ...
+// }
+</code></pre>
+<h3 id="pitfall"><a class="header" href="#pitfall">### Pitfall</a></h3>
+<p><strong>Don't miss the pair of <code>{</code> and <code>}</code> curlies</strong> inside of <code>(</code> and <code>)</code> when declaring props:</p>
+<pre><code class="language-jsx">function Avatar({ person, size }) {  
+  // ...
+}
+</code></pre>
+<p>This syntax is called <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Unpacking_fields_from_objects_passed_as_a_function_parameter">&quot;destructuring&quot;</a> and is equivalent to reading properties from a function parameter:</p>
+<pre><code class="language-jsx">function Avatar(props) {  
+  let person = props.person;  
+  let size = props.size;  
+  // ...
+}
+</code></pre>
+<p>Mà dùng cái spread syntax này hạn chế thôi nha</p>
+<h3 id="-1"><a class="header" href="#-1"></a></h3>
+<pre><code class="language-jsx">function Profile(props) {
+  return (
+    &lt;div className=&quot;card&quot;&gt;
+      &lt;Avatar props={...props} /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>fact không vui: props là immutable, vậy nên chuyển qua cái <code>setState</code></p>
+<p>Thay vì tạo Class (?) hmm</p>
+<pre><code class="language-jsx">
+function Profile({
+  imageId,
+  name,
+  profession,
+  awards,
+  discovery,
+  imageSize = 70
+}) {
+  return (
+    &lt;section className=&quot;profile&quot;&gt;
+      &lt;h2&gt;{name}&lt;/h2&gt;
+      &lt;img
+        className=&quot;avatar&quot;
+        src={getImageUrl(imageId)}
+        alt={name}
+        width={imageSize}
+        height={imageSize}
+      /&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;b&gt;Profession:&lt;/b&gt; {profession}&lt;/li&gt;
+        &lt;li&gt;
+          &lt;b&gt;Awards: {awards.length} &lt;/b&gt;
+          ({awards.join(', ')})
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;b&gt;Discovered: &lt;/b&gt;
+          {discovery}
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  );
+}
+
+</code></pre>
+<h2 id="Điều-kiện-các-thứ"><a class="header" href="#Điều-kiện-các-thứ">Điều kiện các thứ</a></h2>
+<pre><code class="language-jsx">if (isPacked) {
+  return &lt;li className=&quot;item&quot;&gt;{name} ✅&lt;/li&gt;;
+}
+return &lt;li className=&quot;item&quot;&gt;{name}&lt;/li&gt;;
+
+// or
+
+if (isPacked) {
+  return (
+  &lt;li className=&quot;item&quot;&gt;
+    {isPacked ? name + ' ✅' : name}
+  &lt;/li&gt;
+);
+}
+</code></pre>
+<h2 id="render-list"><a class="header" href="#render-list">Render list</a></h2>
+<pre><code class="language-jsx">const people = [
+  'Creola Katherine Johnson: mathematician',
+  'Mario José Molina-Pasquel Henríquez: chemist',
+  'Mohammad Abdus Salam: physicist',
+  'Percy Lavon Julian: chemist',
+  'Subrahmanyan Chandrasekhar: astrophysicist'
+];
+
+export default function List() {
+  const listItems = people.map(person =&gt;
+    &lt;li&gt;{person}&lt;/li&gt;
+  );
+  return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+}
+
+</code></pre>
+<p>will display a warning</p>
+<blockquote>
+<p>Warning: Each child in a list should have a unique “key” prop.</p>
+</blockquote>
+<p>giai phap: them id vao</p>
+<pre><code class="language-jsx">&lt;li key={person.id}&gt;...&lt;/li&gt;
+</code></pre>
+<h3 id="pitfall-không-biết-thứ-bao-nhiêu"><a class="header" href="#pitfall-không-biết-thứ-bao-nhiêu">Pitfall không biết thứ bao nhiêu</a></h3>
+<p>Arrow functions implicitly return the expression right after <code>=&gt;</code>, so you didn't need a <code>return</code> statement:</p>
+<pre><code>const listItems = chemists.map(person =&gt;  &lt;li&gt;...&lt;/li&gt; // Implicit return!);
+</code></pre>
+<p>However, <strong>you must write <code>return</code> explicitly if your <code>=&gt;</code> is followed by a <code>{</code> curly brace!</strong></p>
+<pre><code>const listItems = chemists.map(person =&gt; { // Curly brace  return &lt;li&gt;...&lt;/li&gt;;});
+</code></pre>
+<h2 id="keeping-components-pure"><a class="header" href="#keeping-components-pure">Keeping Components Pure</a></h2>
+<h3 id="về-cơ-bản-là-fp"><a class="header" href="#về-cơ-bản-là-fp">Về cơ bản là FP</a></h3>
+<p>Fact 1: Detecting impure calculations with StrictMode (Trong Main.jsx hay gì đó sẽ có cái này):</p>
+<pre><code>&lt;StrictMode&gt;
+  &lt;App /&gt;
+&lt;/StrictMode&gt;
+</code></pre>
+<h3 id="local-mutation-your-components-little-secret"><a class="header" href="#local-mutation-your-components-little-secret">Local mutation: Your component’s little secret</a></h3>
+<p>However, it’s completely fine to change variables and objects that you’ve just created while rendering. In this example, you create an [] array, assign it to a cups variable, and then push a dozen cups into it</p>
+<h2 id="understanding-your-ui-as-a-tree"><a class="header" href="#understanding-your-ui-as-a-tree">Understanding Your UI as a Tree</a></h2>
+<p>Đọc không thấy hiểu lắm nên tạm thời bỏ qua nha.# Adding Interactivity
+In React, data that changes over time is called <em>state</em>.</p>
+<h2 id="responding-to-events-1"><a class="header" href="#responding-to-events-1">Responding to events</a></h2>
+<h3 id="adding-event-handlers"><a class="header" href="#adding-event-handlers">Adding event handlers</a></h3>
+<p>You defined the <code>handleClick</code> function and then <a href="https://react.dev/learn/passing-props-to-a-component">passed it as a prop</a> to <code>&lt;button&gt;</code>. <code>handleClick</code> is an <strong>event handler.</strong> Event handler functions:</p>
+<ul>
+<li>Are usually defined <em>inside</em> your components.</li>
+<li>Have names that start with <code>handle</code>, followed by the name of the event.</li>
+</ul>
+<p>By convention, it is common to name event handlers as <code>handle</code> followed by the event name. You'll often see <code>onClick={handleClick}</code>, <code>onMouseEnter={handleMouseEnter}</code>, and so on.</p>
+<pre><code class="language-jsx">export default function Button() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    &lt;button onClick={handleClick}&gt;
+      Click me
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>Hoặc</p>
+<pre><code class="language-jsx">
+&lt;button onClick={function handleClick() {
+  alert('You clicked me!');
+}}&gt;
+
+// Or, more concisely, using an arrow function:
+
+&lt;button onClick={() =&gt; {
+  alert('You clicked me!');
+}}&gt;
+</code></pre>
+<p><strong>Pitfall</strong></p>
+<p>Functions passed to event handlers must be passed, not called. For example:</p>
+<div class="table-wrapper"><table><thead><tr><th>passing a function (correct)</th><th>calling a function (incorrect)</th></tr></thead><tbody>
+<tr><td><code>&lt;button onClick={handleClick}&gt;</code></td><td><code>&lt;button onClick={handleClick()}&gt;</code></td></tr>
+</tbody></table>
+</div>
+<p>The difference is subtle. In the first example, the <code>handleClick</code> function is passed as an <code>onClick</code> event handler. This tells React to remember it and only call your function when the user clicks the button.</p>
+<p>In the second example, the <code>()</code> at the end of <code>handleClick()</code> fires the function <em>immediately</em> during <a href="https://react.dev/learn/render-and-commit">rendering</a>, without any clicks. This is because JavaScript inside the <a href="https://react.dev/learn/javascript-in-jsx-with-curly-braces">JSX <code>{</code> and <code>}</code></a> executes right away. When you write code inline, the same pitfall presents itself in a different way:</p>
+<div class="table-wrapper"><table><thead><tr><th>passing a function (correct)</th><th>calling a function (incorrect)</th></tr></thead><tbody>
+<tr><td><code>&lt;button onClick={() =&gt; alert('...')}&gt;</code></td><td><code>&lt;button onClick={alert('...')}&gt;</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="passing-event-handlers-as-props"><a class="header" href="#passing-event-handlers-as-props">Passing event handlers as props</a></h3>
+<p>Kiểu như này, tạo thêm một cái Component tên là <code>Button</code> rồi thêm onClick làm prop.</p>
+<pre><code class="language-jsx">function Button({ onClick, children }) {
+  return (
+    &lt;button onClick={onClick}&gt;
+      {children}
+    &lt;/button&gt;
+  );
+}
+
+function PlayButton({ movieName }) {
+  function handlePlayClick() {
+    alert(`Playing ${movieName}!`);
+  }
+
+  return (
+    &lt;Button onClick={handlePlayClick}&gt;
+      Play &quot;{movieName}&quot;
+    &lt;/Button&gt;
+  );
+}
+</code></pre>
+<h3 id="naming-event-handler-props"><a class="header" href="#naming-event-handler-props">Naming event handler props</a></h3>
+<p>Built-in components like <code>&lt;button&gt;</code> and <code>&lt;div&gt;</code> only support <a href="https://react.dev/reference/react-dom/components/common#common-props">browser event names</a> like <code>onClick</code>. However, when you're building your own components, you can name their event handler props any way that you like.</p>
+<p>By convention, event handler props should start with <code>on</code>, followed by a capital letter. Kiểu thế này:</p>
+<pre><code class="language-jsx">function Button({ onSmash, children }) {
+  return (
+    &lt;button onClick={onSmash}&gt;
+      {children}
+    &lt;/button&gt;
+  );
+}
+
+export default function App() {
+  return (
+    &lt;div&gt;
+      &lt;Button onSmash={() =&gt; alert('Playing!')}&gt;
+        Play Movie
+      &lt;/Button&gt;
+      &lt;Button onSmash={() =&gt; alert('Uploading!')}&gt;
+        Upload Image
+      &lt;/Button&gt;
+    &lt;/div&gt;
+  );
+}
+
+</code></pre>
+<h3 id="event-propagation"><a class="header" href="#event-propagation">Event propagation</a></h3>
+<p>Event handlers will also catch events from any children your component might have. We say that an event “bubbles” or “propagates” up the tree: it starts with where the event happened, and then goes up the tree.</p>
+<p>Tức là, event con khi được chạy xong thì nó cũng sẽ nhảy lên event cha để chạy nốt, đọc code nha</p>
+<pre><code class="language-jsx">export default function Toolbar() {
+  return (
+    &lt;div className=&quot;Toolbar&quot; onClick={() =&gt; {
+      alert('You clicked on the toolbar!');
+    }}&gt;
+      &lt;button onClick={() =&gt; alert('Playing!')}&gt;
+        Play Movie
+      &lt;/button&gt;
+      &lt;button onClick={() =&gt; alert('Uploading!')}&gt;
+        Upload Image
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>Giả sử bạn bấm nút 'Playing' thì đoạn alert 'Playing!' đó sẽ được chạy trước (component con), rồi sau đó alert 'You clicked on the toolbar!' sẽ được chạy.</p>
+<p>Hoặc: That event object also lets you stop the propagation. If you want to prevent an event from reaching parent components, you need to call <code>e.stopPropagation()</code> like this <code>Button</code> component does:</p>
+<p>Ở phần trên thì thay <code>&lt;button&gt;</code> thành component <code>&lt;Button&gt;</code> rồi sửa lại thành thế này:</p>
+<pre><code class="language-jsx">function Button({ onClick, children }) {
+  return (
+    &lt;button onClick={e =&gt; {
+      e.stopPropagation();
+      onClick();
+    }}&gt;
+      {children}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>Ở cái toolbar ở trên nó sẽ thành thế này:</p>
+<pre><code class="language-jsx">&lt;Button onClick={() =&gt; alert('Playing!')}&gt;
+    Play Movie
+&lt;/Button&gt;
+&lt;Button onClick={() =&gt; alert('Uploading!')}&gt;
+Upload Image
+&lt;/Button&gt;
+</code></pre>
+<p>Không liên quan: Events may have unwanted default browser behavior. Call <code>e.preventDefault()</code> to prevent that.</p>
+<h2 id="state-a-components-memory"><a class="header" href="#state-a-components-memory">State: A Component's Memory</a></h2>
+<pre><code class="language-js">const [index, setIndex] = useState(0);
+</code></pre>
+<h3 id="meet-your-first-hook"><a class="header" href="#meet-your-first-hook">Meet your first Hook</a></h3>
+<p>In React, <code>useState</code>, as well as any other function starting with &quot;<code>use</code>&quot;, is called a Hook.</p>
+<p><em>Hooks</em> are special functions that are only available while React is <a href="https://react.dev/learn/render-and-commit#step-1-trigger-a-render">rendering</a> (which we'll get into in more detail on the next page). They let you &quot;hook into&quot; different React features.</p>
+<blockquote>
+<p>Hooks — functions starting with use—can only be called at the top level of your components or your own Hooks. You can’t call Hooks inside conditions, loops, or other nested functions. Hooks are functions, but it’s helpful to think of them as unconditional declarations about your component’s needs.</p>
+</blockquote>
+<p>The convention is to name this pair like <code>const [something, setSomething]</code>. You could name it anything you like, but conventions make things easier to understand across projects.</p>
+<h3 id="state-is-isolated-and-private"><a class="header" href="#state-is-isolated-and-private">State is isolated and private</a></h3>
+<h2 id="render-and-commit"><a class="header" href="#render-and-commit">Render and Commit</a></h2>
+<p>Viết về cách hoạt động cơ bản của React, kiểu như này</p>
+<h3 id="step-1-triggering-a-render"><a class="header" href="#step-1-triggering-a-render">Step 1: Triggering a render</a></h3>
+<ol>
+<li>It's the component's <strong>initial render.</strong></li>
+<li>The component's (or one of its ancestors') <strong>state has been updated.</strong></li>
+</ol>
+<p>Đây là một, còn hai là cái set-Gì-Gì-Đó như kiểu setNumber, sẽ khiến React render lại:</p>
+<pre><code class="language-jsx">import Image from './Image.js';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.getElementById('root'));
+root.render(&lt;Image /&gt;);
+</code></pre>
+<h3 id="step-2-react-renders-your-components"><a class="header" href="#step-2-react-renders-your-components">Step 2: React renders your components</a></h3>
+<ul>
+<li><strong>On initial render,</strong> React will call the root component.</li>
+<li><strong>For subsequent renders,</strong> React will call the function component whose state update triggered the render.</li>
+</ul>
+<h2 id="state-as-a-snapshot"><a class="header" href="#state-as-a-snapshot">State as a Snapshot</a></h2>
+<p>State hoạt động không giống như một biến bình thường trong JS.</p>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;{number}&lt;/h1&gt;
+      &lt;button onClick={() =&gt; {
+        setNumber(number + 1);
+        setNumber(number + 1);
+        setNumber(number + 1);
+      }}&gt;+3&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre>
+<p>Có thể nhiều người sẽ nghĩ sau mỗi lần bấm thì nó sẽ là +3, nhưng nó chỉ +1 thôi =)).</p>
+<p><strong>Setting state only changes it for the <em>next</em> render.</strong> During the first render, <code>number</code> was <code>0</code>. This is why, in <em>that render's</em> <code>onClick</code> handler, the value of <code>number</code> is still <code>0</code> even after <code>setNumber(number + 1)</code> was called.</p>
+<p>Hay trong ví dụ này</p>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;{number}&lt;/h1&gt;
+      &lt;button onClick={() =&gt; {
+        setNumber(number + 5);
+        alert(number);
+      }}&gt;+5&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre>
+<p>Kết quả vẫn sẽ là:</p>
+<pre><code class="language-jsx">setNumber(0 + 5);
+setTimeout(() =&gt; {
+  alert(0);
+}, 3000);
+</code></pre>
+<p>Bất ngờ chưa, cái alert vẫn sẽ hiện giá trị 0 thay vì 5.</p>
+<blockquote>
+<p><strong>A state variable's value never changes within a render,</strong> even if its event handler's code is asynchronous. Inside <em>that render's</em> <code>onClick</code>, the value of <code>number</code> continues to be <code>0</code> even after <code>setNumber(number + 5)</code> was called. Its value was &quot;fixed&quot; when React &quot;took the snapshot&quot; of the UI by calling your component.</p>
+</blockquote>
+<h2 id="queueing-a-series-of-state-updates"><a class="header" href="#queueing-a-series-of-state-updates">Queueing a Series of State Updates</a></h2>
+<p>Ở cái ví dụ trên:</p>
+<pre><code class="language-jsx">  return (
+    &lt;&gt;
+      &lt;h1&gt;{number}&lt;/h1&gt;
+      &lt;button onClick={() =&gt; {
+        setNumber(n =&gt; n + 1);
+        setNumber(n =&gt; n + 1);
+        setNumber(n =&gt; n + 1);
+      }}&gt;+3&lt;/button&gt;
+    &lt;/&gt;
+  )
+</code></pre>
+<h2 id="updating-objects-in-state"><a class="header" href="#updating-objects-in-state">Updating Objects in State</a></h2>
+<h3 id="treat-state-as-read-only"><a class="header" href="#treat-state-as-read-only">Treat state as read-only</a></h3>
+<p>In other words, you should treat any JavaScript object that you put into state as read-only.</p>
+<p>To actually trigger a re-render in this case, create a new object and pass it to the state setting function:</p>
+<pre><code class="language-jsx">const [position, setPosition] = useState({
+  x: 0,
+  y: 0
+});
+onPointerMove={e =&gt; {
+  setPosition({
+    x: e.clientX,
+    y: e.clientY
+  });
+}}
+</code></pre>
+<pre><code class="language-jsx">setPerson({
+  ...person, // Copy other fields
+  artwork: { // but replace the artwork
+    ...person.artwork, // with the same one
+    city: 'New Delhi' // but in New Delhi!
+  }
+});
+</code></pre>
+<h2 id="updating-arrays-in-state"><a class="header" href="#updating-arrays-in-state">Updating Arrays in State</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Functions</th><th>avoid (mutates the array)</th><th>prefer (returns a new array)</th></tr></thead><tbody>
+<tr><td>adding</td><td><code>push</code>, <code>unshift</code></td><td><code>concat</code>, <code>[...arr]</code> spread syntax (<a href="https://react.dev/learn/updating-arrays-in-state#adding-to-an-array">example</a>)</td></tr>
+<tr><td>removing</td><td><code>pop</code>, <code>shift</code>, <code>splice</code></td><td><code>filter</code>, <code>slice</code> (<a href="https://react.dev/learn/updating-arrays-in-state#removing-from-an-array">example</a>)</td></tr>
+<tr><td>replacing</td><td><code>splice</code>, <code>arr[i] = ...</code> assignment</td><td><code>map</code> (<a href="https://react.dev/learn/updating-arrays-in-state#replacing-items-in-an-array">example</a>)</td></tr>
+<tr><td>sorting</td><td><code>reverse</code>, <code>sort</code></td><td>copy the array first (<a href="https://react.dev/learn/updating-arrays-in-state#making-other-changes-to-an-array">example</a>)</td></tr>
+</tbody></table>
+</div>
+<p>Alternatively, you can <a href="https://react.dev/learn/updating-arrays-in-state#write-concise-update-logic-with-immer">use Immer</a> which lets you use methods from both columns.</p>
+<p>Instead, create a new array which contains the existing items and a new item at the end. There are multiple ways to do this, but the easiest one is to use the ... array spread syntax:</p>
+<pre><code class="language-jsx">setArtists( // Replace the state
+  [ // with a new array
+    ...artists, // that contains all the old items
+    { id: nextId++, name: name } // and one new item at the end
+  ]
+);
+// or
+
+setArtists([
+  { id: nextId++, name: name },
+  ...artists // Put old items at the end
+]);
+</code></pre>
+<p>Delete</p>
+<pre><code class="language-jsx">setArtists(
+  artists.filter(a =&gt; a.id !== artist.id)
+);
+</code></pre>
+<p>Here, artists.filter(a =&gt; a.id !== artist.id) means “create an array that consists of those artists whose IDs are different from artist.id”.</p>
+<p>In other words, each artist’s “Delete” button will filter that artist out of the array, and then request a re-render with the resulting array. Note that filter does not modify the original array.</p>
+<p>Thay đổi cho một vài hoặc tất cả các item trong array bằng <code>map()</code></p>
+<pre><code class="language-js">function handleClick() {
+  const nextShapes = shapes.map(shape =&gt; {
+    if (shape.type === 'square') {
+      // No change
+      return shape;
+    } else {
+      // Return a new circle 50px below
+      return {
+        ...shape,
+        y: shape.y + 50,
+      };
+    }
+  });
+  // Re-render with the new array
+  setShapes(nextShapes);
+}
+</code></pre>
+<p>Replace</p>
+<pre><code class="language-js">
+const [counters, setCounters] = useState(
+  initialCounters
+);
+
+function handleIncrementClick(index) {
+  const nextCounters = counters.map((c, i) =&gt; {
+    if (i === index) {
+      // Increment the clicked counter
+      return c + 1;
+    } else {
+      // The rest haven't changed
+      return c;
+    }
+  });
+  setCounters(nextCounters);
+}
+</code></pre>
+<p>Insert ở giữa</p>
+<pre><code class="language-jsx">function handleClick() {
+  const insertAt = 1; // Could be any index
+  const nextArtists = [
+    // Items before the insertion point:
+    ...artists.slice(0, insertAt),
+    // New item:
+    { id: nextId++, name: name },
+    // Items after the insertion point:
+    ...artists.slice(insertAt)
+  ];
+  setArtists(nextArtists);
+  // Để khởi tạo lại cái hộp ghi tên thành rỗng
+  setName('');
+}
+
+</code></pre>
+<p>Reverse hay sort các thứ</p>
+<pre><code class="language-js">const [list, setList] = useState(initialList);
+
+function handleClick() {
+  const nextList = [...list];
+  nextList.reverse();
+  setList(nextList);
+}
+</code></pre>
+<p>Here, you use the <code>[...list]</code> spread syntax to create a copy of the original array first. Now that you have a copy, you can use mutating methods like <code>nextList.reverse()</code> or <code>nextList.sort()</code>, or even assign individual items with <code>nextList[0] = &quot;something&quot;</code>.</p>
+<p>Đến đây thì dừng lại việc học phần 3 và 4 vì nó được đánh dấu là trung cấp, mình sẽ sửa lại sau.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../rust/tep/rss.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../react-native/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../rust/tep/rss.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../react-native/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

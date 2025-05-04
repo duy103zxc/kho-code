@@ -1,0 +1,1211 @@
+<!DOCTYPE HTML>
+<html lang="vi" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Spring Security - Kho code của duykhanh471</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Trang chủ dự án</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> HTML/CSS/JS</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../html-css/index.html"><strong aria-hidden="true">2.1.</strong> HTML/CSS</a></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.2.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/co-ban.html"><strong aria-hidden="true">2.2.1.</strong> Cơ bản</a></li><li class="chapter-item expanded "><a href="../js/array.html"><strong aria-hidden="true">2.2.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../js/ngay-gio.html"><strong aria-hidden="true">2.2.3.</strong> Ngày giờ</a></li><li class="chapter-item expanded "><a href="../js/string.html"><strong aria-hidden="true">2.2.4.</strong> String</a></li><li class="chapter-item expanded "><a href="../js/object.html"><strong aria-hidden="true">2.2.5.</strong> Object</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../java/index.html"><strong aria-hidden="true">3.</strong> Java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/index.html"><strong aria-hidden="true">3.1.</strong> Kho snippets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/snippets/algorithms.html"><strong aria-hidden="true">3.1.1.</strong> Algorithms</a></li><li class="chapter-item expanded "><a href="../java/snippets/array.html"><strong aria-hidden="true">3.1.2.</strong> Array</a></li><li class="chapter-item expanded "><a href="../java/snippets/cls.html"><strong aria-hidden="true">3.1.3.</strong> CLS</a></li><li class="chapter-item expanded "><a href="../java/snippets/date.html"><strong aria-hidden="true">3.1.4.</strong> Date</a></li><li class="chapter-item expanded "><a href="../java/snippets/encoding.html"><strong aria-hidden="true">3.1.5.</strong> Encoding & Decoding</a></li><li class="chapter-item expanded "><a href="../java/snippets/file.html"><strong aria-hidden="true">3.1.6.</strong> File</a></li><li class="chapter-item expanded "><a href="../java/snippets/io.html"><strong aria-hidden="true">3.1.7.</strong> IO</a></li><li class="chapter-item expanded "><a href="../java/snippets/math.html"><strong aria-hidden="true">3.1.8.</strong> Math</a></li><li class="chapter-item expanded "><a href="../java/snippets/media.html"><strong aria-hidden="true">3.1.9.</strong> Media</a></li><li class="chapter-item expanded "><a href="../java/snippets/network.html"><strong aria-hidden="true">3.1.10.</strong> Network</a></li><li class="chapter-item expanded "><a href="../java/snippets/string.html"><strong aria-hidden="true">3.1.11.</strong> String</a></li><li class="chapter-item expanded "><a href="../java/snippets/thread.html"><strong aria-hidden="true">3.1.12.</strong> Thread</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../spring-boot/index.html"><strong aria-hidden="true">4.</strong> Spring Boot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../spring-boot/core.html"><strong aria-hidden="true">4.1.</strong> Core</a></li><li class="chapter-item expanded "><a href="../spring-boot/spring-boot.html"><strong aria-hidden="true">4.2.</strong> Spring Boot</a></li><li class="chapter-item expanded "><a href="../spring-boot/jpa.html"><strong aria-hidden="true">4.3.</strong> Jpa</a></li><li class="chapter-item expanded "><a href="../spring-boot/ss.html" class="active"><strong aria-hidden="true">4.4.</strong> Spring Security</a></li><li class="chapter-item expanded "><a href="../spring-boot/redis.html"><strong aria-hidden="true">4.5.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/thuat-toan.html"><strong aria-hidden="true">5.1.</strong> Thuật toán</a></li><li class="chapter-item expanded "><a href="../rust/command-line.html"><strong aria-hidden="true">5.2.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../rust/he-thong.html"><strong aria-hidden="true">5.3.</strong> System</a></li><li class="chapter-item expanded "><a href="../rust/internet.html"><strong aria-hidden="true">5.4.</strong> Internet</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Tệp</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust/tep/epub.html"><strong aria-hidden="true">5.5.1.</strong> EPUB</a></li><li class="chapter-item expanded "><a href="../rust/tep/git.html"><strong aria-hidden="true">5.5.2.</strong> Git</a></li><li class="chapter-item expanded "><a href="../rust/tep/html.html"><strong aria-hidden="true">5.5.3.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../rust/tep/rss.html"><strong aria-hidden="true">5.5.4.</strong> RSS</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../react/index.html"><strong aria-hidden="true">6.</strong> React</a></li><li class="chapter-item expanded "><a href="../react-native/index.html"><strong aria-hidden="true">7.</strong> React Native</a></li><li class="chapter-item expanded "><a href="../bash/tong-hop.html"><strong aria-hidden="true">8.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../regex/tong-hop.html"><strong aria-hidden="true">9.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../khac/yt-dlp.html"><strong aria-hidden="true">10.</strong> yt-dlp</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kho code của duykhanh471</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ss-hướng-dẫn-spring-security-cơ-bản-dễ-hiểu"><a class="header" href="#ss-hướng-dẫn-spring-security-cơ-bản-dễ-hiểu">[SS] Hướng dẫn Spring Security cơ bản, dễ hiểu</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Cài đặt</li>
+<li>Implement</li>
+<li>Kích hoạt tính năng WebSecurity</li>
+<li>Tạo tài khoản user</li>
+<li>Phân quyền truy cập</li>
+<li>Thêm controller.</li>
+<li>Chạy thử</li>
+<li>Kết</li>
+</ul>
+<h3 id="giới-thiệu"><a class="header" href="#giới-thiệu"><strong>Giới thiệu</strong></a></h3>
+<p><strong>Spring Security</strong> là một trong những core feature quan trọng của Spring Framework, nó giúp chúng ta phân quyền và xác thực người dùng trước khi cho phép họ truy cập vào các tài nguyên của chúng ta.</p>
+<p>Trong bài hướng dẫn này, tôi sẽ hướng dẫn các bạn cách implement <strong>Spring Security</strong> một cách cơ bản nhất, đơn giản nhất, chúng ta sẽ nâng cao dần ở các bài sau.</p>
+<h3 id="cài-đặt"><a class="header" href="#cài-đặt"><strong>Cài đặt</strong></a></h3>
+<p>Chúng ta cài thư viện qua maven, các dependencies bao gồm:</p>
+<p><em>pom.xml</em></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-security-example&lt;/artifactId&gt;
+    &lt;version&gt;0.1.0&lt;/version&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.0.5.RELEASE&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p>Thư mục code gồm có:</p>
+<p>!image</p>
+<h3 id="implement"><a class="header" href="#implement"><strong>Implement</strong></a></h3>
+<h3 id="kích-hoạt-tính-năng-websecurity"><a class="header" href="#kích-hoạt-tính-năng-websecurity"><strong>Kích hoạt tính năng WebSecurity</strong></a></h3>
+<p>Trước tiên, để kích hoạt tính năng Spring Security trên ứng dụng Web của mình, các bạn cần gắn annotation <code>@EnableWebSecurity</code> trên một bean bất kỳ của mình.</p>
+<p>Ở đây, tôi tạo ra một class <code>WebSecurityConfig</code> để là nơi tập trung các xử lý các thông tin liên quan tới security.</p>
+<pre><code>@EnableWebSecurity
+public class WebSecurityConfig {
+    // ...
+}
+</code></pre>
+<h3 id="tạo-tài-khoản-user"><a class="header" href="#tạo-tài-khoản-user"><strong>Tạo tài khoản user</strong></a></h3>
+<p>Thông thường, tài khoản user của người dùng sẽ được lưu trong csdl và mã hóa. Tuy nhiên, trong ví dụ cực kì basic này, tôi sẽ lưu một tài khoản người dùng trong chính bộ nhớ chương trình.</p>
+<p>Cách này chỉ để demo thôi nhé, vì nó dữ liệu sẽ bị mất khi tắt ứng dụng, chúng ta sẽ tìm hiểu cách xác thực bằng csdl ở bài sau.</p>
+<pre><code>@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        // Tạo ra user trong bộ nhớ
+        // lưu ý, chỉ sử dụng cách này để minh họa
+        // Còn thực tế chúng ta sẽ kiểm tra user trong csdl
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(
+                User.withDefaultPasswordEncoder() // Sử dụng mã hóa password đơn giản
+                    .username(&quot;loda&quot;)
+                    .password(&quot;loda&quot;)
+                    .roles(&quot;USER&quot;) // phân quyền là người dùng.
+                    .build()
+        );
+        return manager;
+    }
+}
+</code></pre>
+<p><code>WebSecurityConfigurerAdapter</code> là một interface tiện ích của Spring Security giúp chúng ta cài đặt các thông tin dễ dàng hơn.</p>
+<p><em>Method</em><code>userDetailsService()</code> có tác dụng cung cấp thông tin user cho Spring Security, chúng ta <em>Override</em> lại method này và cung cấp cho nó một <code>User</code> là <code>loda</code>.</p>
+<h3 id="phân-quyền-truy-cập"><a class="header" href="#phân-quyền-truy-cập"><strong>Phân quyền truy cập</strong></a></h3>
+<p>Khi đã có <code>User</code>, chúng ta sẽ cần phân quyền xem một <code>User</code> sẽ được phép truy cập vào những tài nguyên nào.</p>
+<p>Lúc này, vẫn ở trong <code>WebSecurityConfigurerAdapter</code>, chúng ta override lại method <code>protected void configure(HttpSecurity http)</code> để thực hiện việc phân quyền.</p>
+<pre><code>import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        // Tạo ra user trong bộ nhớ
+        // lưu ý, chỉ sử dụng cách này để minh họa
+        // Còn thực tế chúng ta sẽ kiểm tra user trong csdl
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(
+                User.withDefaultPasswordEncoder() // Sử dụng mã hóa password đơn giản
+                    .username(&quot;loda&quot;)
+                    .password(&quot;loda&quot;)
+                    .roles(&quot;USER&quot;) // phân quyền là người dùng.
+                    .build()
+        );
+        return manager;
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                    .antMatchers(&quot;/&quot;, &quot;/home&quot;).permitAll() // Cho phép tất cả mọi người truy cập vào 2 địa chỉ này
+                    .anyRequest().authenticated() // Tất cả các request khác đều cần phải xác thực mới được truy cập
+                    .and()
+                .formLogin() // Cho phép người dùng xác thực bằng form login
+                    .defaultSuccessUrl(&quot;/hello&quot;)
+                    .permitAll() // Tất cả đều được truy cập vào địa chỉ này
+                    .and()
+                .logout() // Cho phép logout
+                    .permitAll();
+    }
+}
+</code></pre>
+<p><code>HttpSecurity</code> là đối tượng chính của Spring Security, cho phép chúng ta cấu hình mọi thứ cần bảo mật, và nó được xây dựng dưới design pattern giống với <code>Builder Pattern</code>, nên mọi cài đặt có thể viết liên tục thông qua toán tử <code>.</code></p>
+<p>Ở ví dụ trên, những gì chúng ta muốn cho phép, chúng ta sẽ xài method <code>.permit()</code>, còn những gì cấm hoặc yêu cầu xác thực sẽ dùng <code>.authenticated()</code></p>
+<p>Khi gọi <code>.formLogin()</code> thì chúng ta cấu hình cho phép người dùng đăng nhập, thông qua địa chỉ mặc định <code>/login</code> do Spring Security tự tạo ra (Cái này có thể custom theo ý mình được, nhưng chúng ta sẽ tiếp cận ở bài sau).</p>
+<p>Tương tự <code>.logout()</code> cho phép người dùng logout, Nếu không nói gì thêm, Spring Security sẽ mặc định tự tạo ra một trang logout với địa chỉ <code>/logout</code>.</p>
+<h3 id="thêm-controller"><a class="header" href="#thêm-controller"><strong>Thêm controller.</strong></a></h3>
+<p>Chúng ta tạo ra trang web của mình gồm có trang <code>homepage</code> và trang <code>hello</code>.</p>
+<ul>
+<li>Trang <code>homepage</code> thì ai cũng truy cập được.</li>
+<li>Trang <code>hello</code> thì phải xác thực mới được truy cập.</li>
+</ul>
+<p>Các địa chỉ <code>/login</code> và <code>/logout</code> thì không cần tạo, Spring Security đã tạo sẵn rồi, chúng ta dùng lại luôn.</p>
+<pre><code>import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class WebController {
+
+    @GetMapping(value = {&quot;/&quot;, &quot;/home&quot;})
+    public String homepage() {
+        return &quot;home&quot;; // Trả về home.html
+    }
+
+    @GetMapping(&quot;/hello&quot;)
+    public String hello() {
+        return &quot;hello&quot;; // Trả về hello.html
+    }
+
+}
+</code></pre>
+<p>Ukie, đơn giản vậy thôi, bây giờ cần tạo ra các trang <code>home.html</code> và <code>hello.html</code>.</p>
+<p>Vì ở trong file <em>pom.xml</em> chúng ta đã cài thư viện <code>thymeleaf</code>. Nên nó sẽ tự động mapping tên tương ứng trong <code>Controller</code> trả về với các file ở bên trong thư mục <code>resources/templates/</code></p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p><em>hello.html</em></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;Hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Chỉ những ai đăng nhập mới truy cập được trang này!&lt;/h1&gt;
+
+&lt;form th:action=&quot;@{/logout}&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Sign Out&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Cú pháp <code>th:action=&quot;@{/logout}&quot;</code> là của thymeleaf, có tác dụng request tới địa chỉ <code>/logout</code></p>
+<p><em>home.html</em></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;Spring Security Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome!&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;/login&quot;&gt;login&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&quot;https://loda.me&quot;&gt;here&lt;/a&gt; to see a loda homepage.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="chạy-thử"><a class="header" href="#chạy-thử"><strong>Chạy thử</strong></a></h3>
+<p>Chạy ứng dụng bằng cách implement <code>@SpringBootApplication</code></p>
+<pre><code>import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+}
+</code></pre>
+<p>Khi chạy xong, truy cập vào đường dẫn <code>http://localhost:8080/home</code> để vào trang chủ.</p>
+<p>!image</p>
+<p>Khi chưa đăng nhập, chúng ta truy cập vào đường dẫn <code>/hello</code>. Thì nó sẽ tự redirect sang trang <code>/login</code>.</p>
+<p>!image</p>
+<p>Khi đã đăng nhập thành công, chúng ta sẽ có thể vào trang <code>/hello</code> như bình thường.</p>
+<p>!image</p>
+<p>Khi click vào <code>Sign Out</code> thì sẽ đăng xuất.</p>
+<p>!image</p>
+<h3 id="kết"><a class="header" href="#kết"><strong>Kết</strong></a></h3>
+<p>Trong bài này, tôi đã giới thiệu với các bạn về <strong>Spring Security</strong> đồng thời giới thiệu các khái niệm cơ bản về User và phân quyền. Ở các bài nâng cao sau, tôi sẽ giới thiệu thêm với các bạn về cách xác thực người dùng trong csdl và xác thực bằng <code>OAuth 2.0</code></p>
+<p>Bài viết liên quan:</p>
+<ol>
+<li>[⛳SS] Hướng dẫn Spring Security + Jpa Hibernate</li>
+</ol>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="ss-hướng-dẫn-spring-security--jpa-hibernate"><a class="header" href="#ss-hướng-dẫn-spring-security--jpa-hibernate">[SS] Hướng dẫn Spring Security + Jpa Hibernate</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Cài đặt</li>
+<li>Implement</li>
+<li>Tạo User</li>
+<li>Tham chiếu User với UserDetails</li>
+<li>Cấu hình và phân quyền</li>
+<li>Tạo Controller và webpage</li>
+<li>Tạo thông tin User trong database</li>
+<li># Chạy thử</li>
+<li>Kết</li>
+</ul>
+<h3 id="giới-thiệu-1"><a class="header" href="#giới-thiệu-1"><strong>Giới thiệu</strong></a></h3>
+<p>Trong bài trước, tôi đã hướng dẫn với các bạn về cách để sử dụng <strong>Spring Security</strong> cơ bản, cách kích hoạt, tạo user và phân quyền.</p>
+<p>Trong bài này, chúng sẽ tìm hiểu cách để kiểm tra một <code>User</code> ở bên trong csdl.</p>
+<p>Trong bài viết giả định bạn đã có các kiến thức sau:</p>
+<ol>
+<li>Hibernate</li>
+<li>Lombok</li>
+<li>Spring Security Cơ bản</li>
+</ol>
+<h3 id="cài-đặt-1"><a class="header" href="#cài-đặt-1"><strong>Cài đặt</strong></a></h3>
+<p>Chúng ta sử dụng <strong>Maven</strong>, Cài đặt file <em>pom.xml</em> của bạn như sau.</p>
+<p>Khác với project trước đó, lần này chúng ta sử dụng thêm database <code>com.h2database</code>. Đây là một <em>in memory database</em>. Đại khái là mọi thứ bạn lưu trên database chỉ tồn tại trong bộ nhớ, khi tắt ứng dụng, database sẽ mất sạch, thích hợp cho việc demo.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-security-hibernate&lt;/artifactId&gt;
+    &lt;version&gt;0.1.0&lt;/version&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.0.5.RELEASE&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p>Thư mục code gồm có:</p>
+<p>!image</p>
+<h3 id="implement-1"><a class="header" href="#implement-1"><strong>Implement</strong></a></h3>
+<h3 id="tạo-user"><a class="header" href="#tạo-user"><strong>Tạo User</strong></a></h3>
+<p>Tạo ra class <code>User</code> tham chiếu với database.</p>
+<pre><code>import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = &quot;user&quot;)
+@Data // lombok
+public class User {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(nullable = false, unique = true)
+    private String username;
+    private String password;
+}
+</code></pre>
+<p>Tạo <code>UserRepository</code> kế thừa <code>JpaRepository</code> để truy xuất thông tin từ database.</p>
+<pre><code>import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+    User findByUsername(String username);
+}
+</code></pre>
+<h3 id="tham-chiếu-user-với-userdetails"><a class="header" href="#tham-chiếu-user-với-userdetails"><strong>Tham chiếu User với UserDetails</strong></a></h3>
+<p>Mặc định <strong>Spring Security</strong> sử dụng một đối tượng <code>UserDetails</code> để chứa toàn bộ thông tin về người dùng. Vì vậy, chúng ta cần tạo ra một class mới giúp chuyển các thông tin của <code>User</code> thành <code>UserDetails</code></p>
+<p><em>CustomUserDetails.java</em></p>
+<pre><code>import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class CustomUserDetails implements UserDetails {
+    User user;
+
+    @Override
+    public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
+        // Mặc định mình sẽ để tất cả là ROLE_USER. Để demo cho đơn giản.
+        return Collections.singleton(new SimpleGrantedAuthority(&quot;ROLE_USER&quot;));
+    }
+
+    @Override
+    public String getPassword() {
+        return user.getPassword();
+    }
+
+    @Override
+    public String getUsername() {
+        return user.getUsername();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}
+</code></pre>
+<p>Khi người dùng đăng nhập thì <strong>Spring Security</strong> sẽ cần lấy các thông tin <code>UserDetails</code> hiện có để kiểm tra. Vì vậy, bạn cần tạo ra một class kế thừa lớp <code>UserDetailsService</code> mà <strong>Spring Security</strong> cung cấp để làm nhiệm vụ này.</p>
+<p><em>UserService.java</em></p>
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService implements UserDetailsService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) {
+        // Kiểm tra xem user có tồn tại trong database không?
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        return new CustomUserDetails(user);
+    }
+
+}
+</code></pre>
+<h3 id="cấu-hình-và-phân-quyền"><a class="header" href="#cấu-hình-và-phân-quyền"><strong>Cấu hình và phân quyền</strong></a></h3>
+<p>Giống với bài trước, chúng ta cần kích hoạt <strong>Spring Security</strong> và phân quyền người dùng.</p>
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import me.loda.spring.springsecurityhibernate.user.UserService;
+
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    UserService userService;
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        // Password encoder, để Spring Security sử dụng mã hóa mật khẩu người dùng
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth)
+            throws Exception {
+        auth.userDetailsService(userService) // Cung cáp userservice cho spring security
+            .passwordEncoder(passwordEncoder()); // cung cấp password encoder
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .antMatchers(&quot;/&quot;, &quot;/home&quot;).permitAll() // Cho phép tất cả mọi người truy cập vào 2 địa chỉ này
+                .anyRequest().authenticated() // Tất cả các request khác đều cần phải xác thực mới được truy cập
+                .and()
+                .formLogin() // Cho phép người dùng xác thực bằng form login
+                .defaultSuccessUrl(&quot;/hello&quot;)
+                .permitAll() // Tất cả đều được truy cập vào địa chỉ này
+                .and()
+                .logout() // Cho phép logout
+                .permitAll();
+    }
+}
+</code></pre>
+<h3 id="tạo-controller-và-webpage"><a class="header" href="#tạo-controller-và-webpage"><strong>Tạo Controller và webpage</strong></a></h3>
+<p>Chúng ta tạo ra trang web của mình gồm có trang <code>homepage</code> và trang <code>hello</code>.</p>
+<ul>
+<li>Trang <code>homepage</code> thì ai cũng truy cập được.</li>
+<li>Trang <code>hello</code> thì phải xác thực mới được truy cập.</li>
+</ul>
+<p>Mặc định <code>/login</code> và <code>/logout</code><strong>Spring Security</strong> đã tạo cho chúng ta rồi.</p>
+<pre><code>@Controller
+public class WebController {
+
+    @GetMapping(value = {&quot;/&quot;, &quot;/home&quot;})
+    public String homepage() {
+        return &quot;home&quot;;
+    }
+
+    @GetMapping(&quot;/hello&quot;)
+    public String hello() {
+        return &quot;hello&quot;;
+    }
+
+}
+</code></pre>
+<p><em>hello.html</em></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;Hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Chỉ những ai đăng nhập mới truy cập được trang này!&lt;/h1&gt;
+
+&lt;form th:action=&quot;@{/logout}&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Sign Out&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Cú pháp <code>th:action=&quot;@{/logout}&quot;</code> là của thymeleaf, có tác dụng request tới địa chỉ <code>/logout</code></p>
+<p><em>home.html</em></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;Spring Security Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome!&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;/login&quot;&gt;login&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&quot;https://loda.me&quot;&gt;here&lt;/a&gt; to see a loda homepage.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="tạo-thông-tin-user-trong-database"><a class="header" href="#tạo-thông-tin-user-trong-database"><strong>Tạo thông tin User trong database</strong></a></h3>
+<p>Trước hết bạn cần cấu hình cho hibernate kết tới tới h2 database trong file <code>resources/appication.properties</code></p>
+<pre><code>spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+# Enabling H2 Console
+spring.h2.console.enabled=true
+</code></pre>
+<p>Để phục vụ demo, mỗi khi chạy chương trình, chúng ta cần insert một <code>User</code> vào database.</p>
+<p>Có thể làm việc này bằng cách sử dụng <code>CommandLineRunner</code>. Một interface của Spring cung cấp, có tác dụng thực hiện một nhiệm vụ khi Spring khởi chạy lần đầu.</p>
+<pre><code>@SpringBootApplication
+public class App implements CommandLineRunner {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+
+    @Autowired
+    UserRepository userRepository;
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Khi chương trình chạy
+        // Insert vào csdl một user.
+        User user = new User();
+        user.setUsername(&quot;loda&quot;);
+        user.setPassword(passwordEncoder.encode(&quot;loda&quot;));
+        userRepository.save(user);
+        System.out.println(user);
+    }
+}
+</code></pre>
+<h3 id="chạy-thử-1"><a class="header" href="#chạy-thử-1">**#**<strong>Chạy thử</strong></a></h3>
+<p>Truy cập vào đường dẫn <code>http://localhost:8080/home</code> để vào trang chủ.</p>
+<p>!image</p>
+<p>Khi chưa đăng nhập, chúng ta truy cập vào đường dẫn <code>/hello</code>. Thì nó sẽ tự redirect sang trang <code>/login</code>.</p>
+<p>!image</p>
+<p>Khi đã đăng nhập thành công, chúng ta sẽ có thể vào trang <code>/hello</code> như bình thường.</p>
+<p>!image</p>
+<p>Khi click vào <code>Sign Out</code> thì sẽ đăng xuất.</p>
+<p>!image</p>
+<h3 id="kết-1"><a class="header" href="#kết-1"><strong>Kết</strong></a></h3>
+<p>Trong bài này, chúng ta đã tìm hiểu cách sử dụng Spring Security kết hợp với Hibernate để có thể xác thực người dùng trong cơ sở dữ liệu. Chúng ta sẽ tìm hiểu các cách xác thực <code>OAuth 2.0</code> ở các bài sau.</p>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+<h1 id="ss-hướng-dẫn-spring-security--jwt-json-web-token--hibernate"><a class="header" href="#ss-hướng-dẫn-spring-security--jwt-json-web-token--hibernate">[SS] Hướng dẫn Spring Security + JWT (Json Web Token) + Hibernate</a></h1>
+<ul>
+<li>Giới thiệu</li>
+<li>Cài đặt</li>
+<li>Implement</li>
+<li>Tạo User</li>
+<li>Tham chiếu User với UserDetails</li>
+<li>JWT</li>
+<li>Cấu hình và phân quyền</li>
+<li>Tạo Controller</li>
+<li>Tạo thông tin User trong database</li>
+<li>Chạy thử</li>
+<li>Kết</li>
+</ul>
+<h3 id="giới-thiệu-2"><a class="header" href="#giới-thiệu-2"><strong>Giới thiệu</strong></a></h3>
+<p>Xin chào các bạn, Trong hai bài trước tôi đã giới thiệu cách sử dụng <strong>Spring Security</strong> và kết nối với database để xác thực người dùng.</p>
+<ol>
+<li>Spring Security Cơ bản</li>
+<li>Spring Security + Hibernate</li>
+</ol>
+<p>Trong bài hôm nay chúng ta sẽ tìm hiểu một phần cực kỳ quan trọng trong các hệ thống bảo mật ngày nay, đó là <strong>JWT</strong>.</p>
+<p><strong>JWT (Json web Token)</strong> là một chuỗi mã hóa được gửi kèm trong Header của client request có tác dụng giúp phía server xác thực request người dùng có hợp lệ hay không. Được sử dụng phổ biến trong các hệ thống API ngày nay.</p>
+<p>!image</p>
+<h3 id="cài-đặt-2"><a class="header" href="#cài-đặt-2"><strong>Cài đặt</strong></a></h3>
+<p>Chúng ta sử dụng Maven giống bài trước, tuy nhiên có update thêm thư viện <code>io.jsonwebtoken.jwtt</code> để giúp chúng ta mã hóa thông tin thành <code>jwt</code></p>
+<p><em>pom.xml</em></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-security-jwt&lt;/artifactId&gt;
+    &lt;version&gt;0.1.0&lt;/version&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.0.5.RELEASE&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
+            &lt;artifactId&gt;jjwt&lt;/artifactId&gt;
+            &lt;version&gt;0.9.1&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p>Cấu trúc thư mục code bao gồm:</p>
+<p>!image</p>
+<h3 id="implement-2"><a class="header" href="#implement-2"><strong>Implement</strong></a></h3>
+<p>Ban đầu, chúng ta sẽ tạo ra class <code>User</code> và <code>UserDetails</code> để giao tiếp với <strong>Spring Security</strong>. Phần này giống hệt với bài viết Spring Security + Hibernate</p>
+<p>Trong bài viết có sử dụng Lombok</p>
+<h3 id="tạo-user-1"><a class="header" href="#tạo-user-1"><strong>Tạo User</strong></a></h3>
+<p>Tạo ra class <code>User</code> tham chiếu với database.</p>
+<pre><code>import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = &quot;user&quot;)
+@Data // lombok
+public class User {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(nullable = false, unique = true)
+    private String username;
+    private String password;
+}
+</code></pre>
+<p>Tạo <code>UserRepository</code> kế thừa <code>JpaRepository</code> để truy xuất thông tin từ database.</p>
+<pre><code>import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+    User findByUsername(String username);
+}
+</code></pre>
+<h3 id="tham-chiếu-user-với-userdetails-1"><a class="header" href="#tham-chiếu-user-với-userdetails-1"><strong>Tham chiếu User với UserDetails</strong></a></h3>
+<p>Mặc định <strong>Spring Security</strong> sử dụng một đối tượng <code>UserDetails</code> để chứa toàn bộ thông tin về người dùng. Vì vậy, chúng ta cần tạo ra một class mới giúp chuyển các thông tin của <code>User</code> thành <code>UserDetails</code></p>
+<p><em>CustomUserDetails.java</em></p>
+<pre><code>import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class CustomUserDetails implements UserDetails {
+    User user;
+
+    @Override
+    public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
+        // Mặc định mình sẽ để tất cả là ROLE_USER. Để demo cho đơn giản.
+        return Collections.singleton(new SimpleGrantedAuthority(&quot;ROLE_USER&quot;));
+    }
+
+    @Override
+    public String getPassword() {
+        return user.getPassword();
+    }
+
+    @Override
+    public String getUsername() {
+        return user.getUsername();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}
+</code></pre>
+<p>Khi người dùng đăng nhập thì <strong>Spring Security</strong> sẽ cần lấy các thông tin <code>UserDetails</code> hiện có để kiểm tra. Vì vậy, bạn cần tạo ra một class kế thừa lớp <code>UserDetailsService</code> mà <strong>Spring Security</strong> cung cấp để làm nhiệm vụ này.</p>
+<p><em>UserService.java</em></p>
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService implements UserDetailsService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) {
+        // Kiểm tra xem user có tồn tại trong database không?
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        return new CustomUserDetails(user);
+    }
+
+}
+</code></pre>
+<h3 id="jwt"><a class="header" href="#jwt"><strong>JWT</strong></a></h3>
+<p>Sau khi có các thông tin về người dùng, chúng ta cần mã hóa thông tin người dùng thành chuỗi <code>JWT</code>. Tôi sẽ tạo ra một class <code>JwtTokenProvider</code> để làm nhiệm vụ này.</p>
+<pre><code>import org.springframework.stereotype.Component;
+import io.jsonwebtoken.*;
+import lombok.extern.slf4j.Slf4j;
+import me.loda.springsecurityhibernatejwt.user.CustomUserDetails;
+
+@Component
+@Slf4j
+public class JwtTokenProvider {
+    // Đoạn JWT_SECRET này là bí mật, chỉ có phía server biết
+    private final String JWT_SECRET = &quot;lodaaaaaa&quot;;
+
+    //Thời gian có hiệu lực của chuỗi jwt
+    private final long JWT_EXPIRATION = 604800000L;
+
+    // Tạo ra jwt từ thông tin user
+    public String generateToken(CustomUserDetails userDetails) {
+        Date now = new Date();
+        Date expiryDate = new Date(now.getTime() + JWT_EXPIRATION);
+        // Tạo chuỗi json web token từ id của user.
+        return Jwts.builder()
+                   .setSubject(Long.toString(userDetails.getUser().getId()))
+                   .setIssuedAt(now)
+                   .setExpiration(expiryDate)
+                   .signWith(SignatureAlgorithm.HS512, JWT_SECRET)
+                   .compact();
+    }
+
+    // Lấy thông tin user từ jwt
+    public Long getUserIdFromJWT(String token) {
+        Claims claims = Jwts.parser()
+                            .setSigningKey(JWT_SECRET)
+                            .parseClaimsJws(token)
+                            .getBody();
+
+        return Long.parseLong(claims.getSubject());
+    }
+
+    public boolean validateToken(String authToken) {
+        try {
+            Jwts.parser().setSigningKey(JWT_SECRET).parseClaimsJws(authToken);
+            return true;
+        } catch (MalformedJwtException ex) {
+            log.error(&quot;Invalid JWT token&quot;);
+        } catch (ExpiredJwtException ex) {
+            log.error(&quot;Expired JWT token&quot;);
+        } catch (UnsupportedJwtException ex) {
+            log.error(&quot;Unsupported JWT token&quot;);
+        } catch (IllegalArgumentException ex) {
+            log.error(&quot;JWT claims string is empty.&quot;);
+        }
+        return false;
+    }
+}
+</code></pre>
+<h3 id="cấu-hình-và-phân-quyền-1"><a class="header" href="#cấu-hình-và-phân-quyền-1"><strong>Cấu hình và phân quyền</strong></a></h3>
+<p>Bây giờ, chúng ta bắt đầu cấu hình <strong>Spring Security</strong> bao gồm việc kích hoạt bằng <code>@EnableWebSecurity</code>.</p>
+<p>Bước này giống với bài viết Spring + Hibernate nên tôi sẽ không nói những phần lặp lại.</p>
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.BeanIds;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import me.loda.springsecurityhibernatejwt.jwt.JwtAuthenticationFilter;
+import me.loda.springsecurityhibernatejwt.user.UserService;
+
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    UserService userService;
+
+    @Bean
+    public JwtAuthenticationFilter jwtAuthenticationFilter() {
+        return new JwtAuthenticationFilter();
+    }
+
+    @Bean(BeanIds.AUTHENTICATION_MANAGER)
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        // Get AuthenticationManager bean
+        return super.authenticationManagerBean();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        // Password encoder, để Spring Security sử dụng mã hóa mật khẩu người dùng
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth)
+            throws Exception {
+        auth.userDetailsService(userService) // Cung cáp userservice cho spring security
+            .passwordEncoder(passwordEncoder()); // cung cấp password encoder
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .cors() // Ngăn chặn request từ một domain khác
+                    .and()
+                .authorizeRequests()
+                    .antMatchers(&quot;/api/login&quot;).permitAll() // Cho phép tất cả mọi người truy cập vào địa chỉ này
+                    .anyRequest().authenticated(); // Tất cả các request khác đều cần phải xác thực mới được truy cập
+
+        // Thêm một lớp Filter kiểm tra jwt
+        http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+    }
+}
+</code></pre>
+<p>Điểm khác biệt ở đây là sự xuất hiện của <code>JwtAuthenticationFilter</code>. Đây là một lớp <code>Filter</code> do tôi tự tạo ra.</p>
+<p><code>JwtAuthenticationFilter</code> Có nhiệm vụ kiểm tra request của người dùng trước khi nó tới đích. Nó sẽ lấy <code>Header Authorization</code> ra và kiểm tra xem chuỗi JWT người dùng gửi lên có hợp lệ không.</p>
+<pre><code>@Slf4j
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
+    @Autowired
+    private JwtTokenProvider tokenProvider;
+
+    @Autowired
+    private UserService customUserDetailsService;
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
+        try {
+            // Lấy jwt từ request
+            String jwt = getJwtFromRequest(request);
+
+            if (StringUtils.hasText(jwt) &amp;&amp; tokenProvider.validateToken(jwt)) {
+                // Lấy id user từ chuỗi jwt
+                Long userId = tokenProvider.getUserIdFromJWT(jwt);
+                // Lấy thông tin người dùng từ id
+                UserDetails userDetails = customUserDetailsService.loadUserById(userId);
+                if(userDetails != null) {
+                    // Nếu người dùng hợp lệ, set thông tin cho Seturity Context
+                    UsernamePasswordAuthenticationToken
+                            authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                    authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+
+                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                }
+            }
+        } catch (Exception ex) {
+            log.error(&quot;failed on set user authentication&quot;, ex);
+        }
+
+        filterChain.doFilter(request, response);
+    }
+
+    private String getJwtFromRequest(HttpServletRequest request) {
+        String bearerToken = request.getHeader(&quot;Authorization&quot;);
+        // Kiểm tra xem header Authorization có chứa thông tin jwt không
+        if (StringUtils.hasText(bearerToken) &amp;&amp; bearerToken.startsWith(&quot;Bearer &quot;)) {
+            return bearerToken.substring(7);
+        }
+        return null;
+    }
+}
+</code></pre>
+<h3 id="tạo-controller"><a class="header" href="#tạo-controller"><strong>Tạo Controller</strong></a></h3>
+<p>Vì phần này chúng ta làm việc với <code>JWT</code>, nên các request sẽ dưới dạng Rest API.</p>
+<p>Tôi tạo ra 2 api:</p>
+<ol>
+<li><code>/api/login</code>: Cho phép request mà không cần xác thực.</li>
+<li><code>/api/random</code>: Là một api bất kỳ nào đó, phải xác thực mới lấy được thông tin.</li>
+</ol>
+<pre><code>@RestController
+@RequestMapping(&quot;/api&quot;)
+public class LodaRestController {
+
+    @Autowired
+    AuthenticationManager authenticationManager;
+
+    @Autowired
+    private JwtTokenProvider tokenProvider;
+
+    @PostMapping(&quot;/login&quot;)
+    public LoginResponse authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+
+        // Xác thực từ username và password.
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        loginRequest.getUsername(),
+                        loginRequest.getPassword()
+                )
+        );
+
+        // Nếu không xảy ra exception tức là thông tin hợp lệ
+        // Set thông tin authentication vào Security Context
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        // Trả về jwt cho người dùng.
+        String jwt = tokenProvider.generateToken((CustomUserDetails) authentication.getPrincipal());
+        return new LoginResponse(jwt);
+    }
+
+    // Api /api/random yêu cầu phải xác thực mới có thể request
+    @GetMapping(&quot;/random&quot;)
+    public RandomStuff randomStuff(){
+        return new RandomStuff(&quot;JWT Hợp lệ mới có thể thấy được message này&quot;);
+    }
+
+}
+</code></pre>
+<h3 id="tạo-thông-tin-user-trong-database-1"><a class="header" href="#tạo-thông-tin-user-trong-database-1"><strong>Tạo thông tin User trong database</strong></a></h3>
+<p>Trước hết bạn cần cấu hình cho hibernate kết tới tới h2 database trong file <code>resources/appication.properties</code></p>
+<pre><code>spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+# Enabling H2 Console
+spring.h2.console.enabled=true
+</code></pre>
+<p>Để phục vụ demo, mỗi khi chạy chương trình, chúng ta cần insert một <code>User</code> vào database.</p>
+<p>Có thể làm việc này bằng cách sử dụng <code>CommandLineRunner</code>. Một interface của Spring cung cấp, có tác dụng thực hiện một nhiệm vụ khi Spring khởi chạy lần đầu.</p>
+<pre><code>@SpringBootApplication
+public class App implements CommandLineRunner {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+
+    @Autowired
+    UserRepository userRepository;
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Khi chương trình chạy
+        // Insert vào csdl một user.
+        User user = new User();
+        user.setUsername(&quot;loda&quot;);
+        user.setPassword(passwordEncoder.encode(&quot;loda&quot;));
+        userRepository.save(user);
+        System.out.println(user);
+    }
+}
+</code></pre>
+<h3 id="chạy-thử-2"><a class="header" href="#chạy-thử-2"><strong>Chạy thử</strong></a></h3>
+<p>Khi server on, chúng ta request thử tới địa chỉ <code>http://localhost:8080/api/random</code> mà không xác thực.</p>
+<p>!image</p>
+<p>Kết quả trả về mã lỗi <code>403</code> kèm theo message <code>Access Denied</code>.</p>
+<p>Để có thể request được, chúng ta đăng nhập vào hệ thống bằng <code>api/login</code> để lấy <code>jwt</code>.</p>
+<p>!image</p>
+<p>Sau đó sử dụng thông tin <code>jwt</code> server trả về để thực hiện các request khác.</p>
+<p>!image</p>
+<h3 id="kết-2"><a class="header" href="#kết-2"><strong>Kết</strong></a></h3>
+<p>Trong bài này, chúng ta đã tìm hiểu cách sử dụng <strong>Spring Security</strong> và <strong>JWT</strong> để có thể xác thực người dùng trong các hệ thống Restful API. Chúng ta sẽ tìm hiểu các cách xác thực <code>OAuth 2.0</code> ở các bài sau.</p>
+<p>💁 Nếu có, toàn bộ project / code mẫu được lưu trữ tại <strong>GitHub</strong></p>
+<p>🌟 Đây là một bài viết trong Series <strong>Làm chủ Spring Boot – Zero to Hero</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../spring-boot/jpa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../spring-boot/redis.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../spring-boot/jpa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../spring-boot/redis.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
